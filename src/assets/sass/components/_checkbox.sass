@@ -1,0 +1,100 @@
+$checkbox-width: 12px
+$checkbox-height: 12px
+$checkbox-gap: 16px
+
+$checkbox-active-color: #fff
+$checkbox-bg: #fff 
+$checkbox-background-size: 55%
+
+$checkbox-border-color: dark($gray, 15%) 
+$checkbox-border-radius: 2px 
+
+.checkbox 
+	position: relative
+	display: flex
+	align-items: center 
+	+adap('gap', 16, 8) 
+
+	user-select: none
+	cursor: pointer
+
+	$offset: $checkbox-width * 0.4
+ 
+	&__input
+		position: relative
+		
+		display: flex
+		margin: 0
+		flex: 0 0 $checkbox-width
+		width: $checkbox-width
+		height: $checkbox-height
+
+		cursor: pointer
+
+		&:before
+			content: '' 
+
+			aspect-ratio: 1
+
+			border: 1px solid $checkbox-border-color
+			border-radius: $checkbox-border-radius 
+			transition: background-color .3s, border-color .3s
+			box-sizing: border-box
+
+		&:after
+			content: ''
+			position: absolute
+			left: 50%
+			top: 50%
+			translate: -50% -50%
+			width: 50%
+			height: 50%
+
+			border-radius: 1px
+			background: $orange
+			opacity: 0
+			+t(.2)
+
+		&:checked
+			&:after
+				opacity: 1
+
+			&:before
+				border-color: $orange
+
+		&:disabled~span
+			opacity: .4 
+			cursor: not-allowed 
+
+		&:focus-visible
+			outline: none 
+			
+			&:before 
+				border-color: dark($checkbox-active-color, 20%)
+						
+	&-text 
+		position: relative
+
+		.checkbox
+			&__text 
+				+t 
+
+			&__input 
+				+hidden 
+
+				&:focus-visible+.checkbox__text
+					&:after
+						content: ''
+
+						position: absolute
+						inset: 0
+						z-index: -1
+						+box-shadow-border($active)
+						border-radius: $checkbox-border-radius 
+
+				&:before
+					display: none
+
+				&:checked~.checkbox__text
+					color: $orange
+

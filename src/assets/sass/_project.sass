@@ -1,0 +1,375 @@
+.project
+	&-wrapper
+		display: grid
+		grid-template-columns: minmax(260px, percent(280, $containerWidth)) 1fr 
+		+adap('gap', 40, 20)
+		align-items: start
+
+	&__items
+		display: grid
+		column-gap: var(--gap)
+		+adap('row-gap', 40, 16)
+		--gap: min(16px + 4px, 16px + 4 * ((100vw - 320px) / 1600))
+		--min-columns-width: 310px
+		--max-columns: 3
+		grid-template-columns: repeat(auto-fill, minmax(clamp(var(--min-columns-width), 30vw, calc(100% / var(--max-columns) - var(--gap)/var(--max-columns)*(var(--max-columns) - 1))), 1fr))
+		
+	&__item 
+		border: 1px solid $gray
+		+adap('border-radius', 20, 16)
+
+		&-logo 
+			display: flex
+			align-items: center
+			justify-content: center
+			+adap('height', 280, 140)
+
+			img 
+				max-height: 100%
+
+		&-content 
+			display: grid
+			+adap('gap', 20, 16)
+			align-content: start
+			+adap('padding-top', 20, 16)
+			+adap('padding-inline', 40, 16)
+			+adap('padding-bottom', 40, 16)
+
+		&-list 
+			display: grid
+			+adap('gap', 12, 8)
+
+			dl
+				display: grid
+				grid-template-columns: 80px 1fr 
+				+adap('gap', 12, 8)
+				font-weight: 500
+
+			dt
+				color: $active
+
+		&-row 
+			display: flex
+			align-items: center
+			justify-content: space-between
+			gap: 8px
+			flex-wrap: wrap
+
+		&-date 
+			display: flex
+			align-items: center
+			gap: 4px
+
+			color: $light
+
+			svg 
+				max-width: 16px
+				max-height: 18px
+
+				fill: none
+				stroke: #b9c8d8
+
+		&-link 
+			padding: 4px 12px
+
+
+	@media (max-width: 991px)
+		&-wrapper
+			display: grid
+			grid-template-columns: 100%
+			gap: 0
+
+		&__right 
+			display: contents
+
+		&__top 
+			order: -1
+
+		&__item 
+			&-logo 
+				img 
+					max-width: 80%
+					max-height: 80%
+
+		&__pagination 
+			.pagination
+				&-wrapper
+					grid-template-columns: 100%
+					justify-items: center
+					
+				&_center
+					.pagination__items
+						justify-self: center
+
+
+	@media (max-width: 767px)
+		&__items 
+			grid-template-columns: 100%
+
+.single-project
+	&-wrapper
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		+adap('gap', 20, 16)
+		align-items: start
+
+	&__img 
+		img
+			+adap('border-radius', 20, 16)
+
+	&__content 
+		+adap('padding', 40, 16)
+
+	&__text 
+		font-weight: 500
+
+	&__info 
+		display: grid
+		+adap('gap', 20, 12)
+
+	&__item
+		display: grid
+		grid-template-columns: 80px 1fr
+		+adap('gap', 12, 8)
+		font-weight: 500
+
+		
+
+		&-title 
+			color: $active
+
+	&__date 
+		display: flex
+		align-items: center
+		gap: 8px
+
+		svg 
+			fill: none
+			stroke: $light
+
+	.text-block 
+		&>h3
+			&:not(:last-child)
+				margin-bottom: 12px
+
+	@media (max-width: 991px)
+		&-wrapper
+			grid-template-columns: 1fr 1.5fr 
+
+		&__content
+			padding: 0
+
+	@media (max-width: 767px)
+		&-wrapper
+			grid-template-columns: 100%
+
+
+.filter 
+	position: sticky
+	left: 0
+	top: var(--headerFixedHeight)
+	z-index: 5	
+
+	display: grid
+	grid-template-columns: 100%
+	+adap('gap', 36, 20)
+
+	background: #fff
+
+	@media (min-width: 992px)
+		+scrollbar(calc(100dvh - var(--headerFixedHeight)), $scrollBarWidth: 4, $padding: 5) 
+		padding-inline: 8px 
+		margin-inline: -8px
+		overscroll-behavior: contain
+
+	&__title 
+		&:not(.filter__title-button)
+			@media (max-width: 991px)
+				display: none
+
+		&-button 
+			display: flex
+			align-items: center
+			gap: 12px
+			cursor: pointer
+
+			&.active 
+				color: $active
+
+			svg 
+				fill: currentColor
+				transition: none
+
+			@media (min-width: 992px)
+				display: none
+
+	&__items 
+		display: grid
+		grid-template-columns: 100% 
+		+adap('gap', 36, 16)
+
+	&__item 
+		display: grid
+		gap: 8px
+		grid-template-columns: 100%
+
+		&-title 
+			font-weight: 500
+			font-size: 14px
+			line-height: 1.71429
+			color: #173f64
+
+		&-checkboxes 
+			display: grid
+			grid-template-columns: 100%
+			justify-items: start
+			gap: 8px
+
+	&__buttons 
+		display: flex
+		align-items: center
+		gap: 20px
+		flex-wrap: wrap
+
+		@media (max-width: #{$firstBreakpoint + px})
+			gap: 12px	
+
+	&__button 
+		white-space: nowrap
+		flex-grow: 1
+
+		@media (min-width: #{$firstBreakpoint + 1 + px})
+			min-width: 130px
+
+		@media (max-width: #{$firstBreakpoint + px})
+			min-width: 110px
+
+	&__content 
+		display: none
+		overscroll-behavior: contain
+
+		@media (min-width: 992px)
+			display: contents !important
+
+	@media (max-width: 991px)
+		gap: 0
+		padding-block: 12px
+
+		&__content 
+			position: absolute
+			left: 0
+			top: 100%
+			z-index: 5
+			padding: 4px
+
+			background: #fff
+			border-radius: 12px
+			border: 1px solid $light
+
+		&__items 
+			grid-template-columns: repeat(2, 1fr)
+			padding-block: 12px 
+			padding-inline: 12px
+			+scrollbar(50vh, $scrollBarWidth: 4, $padding: 5) 
+
+		&__item
+			&-checkboxes
+				display: flex
+				flex-wrap: wrap
+
+	@media (max-width: 767px)
+		&__items 
+			grid-template-columns: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

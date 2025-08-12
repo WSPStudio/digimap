@@ -1,0 +1,187 @@
+.info
+	position: relative
+	z-index: 1
+
+	&:has(.who)
+		@media (min-width: 1200px)
+			+adap('margin-top', 260, 100 , $min: true)
+	
+	.container 
+		position: static
+
+	&__bg 
+		+abs
+		overflow: hidden
+
+		@media (min-width: 768px)
+			&:after
+				content: ''
+
+				position: absolute
+				left: 50%
+				top: 20px
+				z-index: -1
+				translate: -50% 0
+				+adap('width', 1800, 1000 , $min: true)
+				+adap('height', 1800, 1000 , $min: true)
+
+				background: url(../img/info/bg.svg) center / contain no-repeat
+				animation: rotate 100s infinite linear
+				pointer-events: none
+
+				@keyframes rotate
+					0%
+						rotate: 0
+						
+					100%
+						rotate: 360deg
+					
+	&-wrapper
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+		+adap('gap', 20, 12)
+
+	&__item 
+		position: relative
+		+adap('padding-top', 20, 16)
+		+adap('padding-inline', 20, 16)
+		+adap('padding-bottom', 182, 88)
+
+		background: #fff
+		+adap('border-radius', 20, 16)
+
+		color: $text
+
+		&-top 
+			+adap('font-size', 20, 18)
+			font-weight: 700
+			line-height: 1.2
+
+		&-title 
+			+adap('font-size', 44, 28)
+			font-weight: 900
+			line-height: 1.09
+			color: #173f64
+
+		&-subtitle 
+			font-weight: 700
+			line-height: 1.25
+			color: #173f64
+
+		&-img 
+			position: absolute
+			right: 0
+			bottom: 0
+
+			+adap('max-height', 154, 80)
+
+
+	@media (max-width: 1199px)
+		&-wrapper
+			display: flex
+			flex-wrap: wrap
+
+		&__item 
+			flex: 1 0 25%
+
+	@media (max-width: 767px)
+		&__item 
+			flex-basis: 40%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

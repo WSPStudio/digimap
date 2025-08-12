@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ru" class="scrollbar-auto">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/img/favicon/favicon.svg">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Шрифты -->
+  <link rel="preload" href="assets/css/fonts.css" as="style" onload="this.rel='stylesheet'">
+
+  <!-- Библиотеки -->
+  <link rel="preload" href="assets/css/vendor.css" as="style" onload="this.rel='stylesheet'; this.media='all'; this.onload=null;">
+
+  <!-- Общие стили -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Индексация -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Геоинформационные технологии</title>
+
+</head>
+
+<body id="home" class="">
+  <div class="wrapper">
+    <main class="main">
+
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top-wrapper">
+            <a href="/digimap" class="logo header__logo">
+              <img src="assets/img/logo.svg" width="188" height="40" alt="">
+            </a>
+            <form role="search" method="get" action="/" class="search header__search" data-da=".header__mobile,767,0">
+              <div class="search__input">
+                <input type="search" name="s" placeholder="Поиск по сайту" value="">
+                <button type="submit" class="search__button">
+                  <svg class="search-icon">
+                    <use xlink:href="assets/img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <div class="header__contacts" data-da=".header__mobile,1199,2">
+              <div class="address">
+                <div class="icon">
+                  <svg class="location-icon">
+                    <use xlink:href="assets/img/sprite.svg#location"></use>
+                  </svg>
+                </div>
+                <span>Москва</span>
+              </div>
+              <div class="call header__call">
+                <a href="tel:+74957750549" class="hover-active tel">
+                  <div class="icon">
+                    <svg class="phone-icon">
+                      <use xlink:href="assets/img/sprite.svg#phone"></use>
+                    </svg>
+                  </div>
+                  <span>+7 (495) 775-05-49</span>
+                </a>
+                <div class="social header__social">
+                  <a href="https://wa.me/+79789999999" class="social__item" target="_blank">
+                    <svg class="whatsapp-icon">
+                      <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+                    </svg>
+                  </a>
+                  <a href="https://t.me/+70000000000" class="social__item" target="_blank">
+                    <svg class="telegram-icon">
+                      <use xlink:href="assets/img/sprite.svg#telegram"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="time">
+                <div class="icon">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_678_33058" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                      <path d="M7 13C10.3138 13 13 10.3138 13 7C13 3.6862 10.3138 1 7 1C3.6862 1 1 3.6862 1 7C1 10.3138 3.6862 13 7 13Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round" />
+                      <path d="M7 3.57153V7.08837L9.57143 9.57153" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    </mask>
+                    <g mask="url(#mask0_678_33058)">
+                      <path d="M-1.23438 -1.22852H15.2228V15.2286H-1.23438V-1.22852Z" fill="#478ED0" />
+                    </g>
+                  </svg>
+                </div>
+                <span>Пн-Пт &nbsp; 9:00-19:00</span>
+              </div>
+              <a href="mailto:sale@digimap.ru" class="hover-active email header__email">
+                <div class="icon">
+                  <svg class="email-icon">
+                    <use xlink:href="assets/img/sprite.svg#email"></use>
+                  </svg>
+                </div>
+                <span>sale@digimap.ru</span>
+              </a>
+            </div>
+            <div class="header__buttons" data-da=".header__mobile,991,3">
+              <button class="button" type="button">PRO-Rumap</button>
+              <button class="button button_orange" type="button" data-modal="popup-call">Связаться с нами</button>
+            </div>
+            <button class="menu-link">
+              <span class="menu-lines"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <header class="header">
+        <div class="header-fixed">
+          <div class="container">
+            <div class="header__mobile">
+              <nav class="nav header__nav">
+                <ul class="menu header__menu">
+                  <li class="menu-item-has-children current-menu-item">
+                    <a href="about.html">
+                      О нас
+                      <span class="menu-item-arrow"></span>
+                    </a>
+                    <div class="sub-menu-wrapper">
+                      <ul class="sub-menu">
+                        <li><a href="license.html">Лицензии</a></li>
+                        <li><a href="feedback.html">Отзывы</a></li>
+                        <li><a href="vacancy.html">Вакансии</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="category.html">
+                      Продукты
+                      <span class="menu-item-arrow"></span>
+                    </a>
+                    <div class="sub-menu-wrapper">
+                      <ul class="sub-menu">
+                        <li><a href="category-2.html">RuMap-GIS</a></li>
+                        <li><a href="category-2.html">RuMap Сервисы</a></li>
+                        <li><a href="category-2.html">Геопортал RuMap</a></li>
+                        <li><a href="category-2.html">RuMap приложения</a></li>
+                        <li><a href="category-2.html">Геоинформационные системы</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="text.html">
+                      Услуги
+                      <span class="menu-item-arrow"></span>
+                    </a>
+                    <div class="sub-menu-wrapper">
+                      <ul class="sub-menu">
+                        <li><a href="text.html">Разработка Программного обеспечения</a></li>
+                        <li><a href="text.html">Разработка пространственных данных</a></li>
+                        <li><a href="text.html">Геомаркетинговые исследования</a></li>
+                        <li><a href="text.html">Аналитические исследования</a></li>
+                        <li><a href="text.html">Разработка Программного обеспечения</a></li>
+                        <li><a href="text.html">Разработка пространственных данных</a></li>
+                        <li><a href="text.html">Геомаркетинговые исследования</a></li>
+                        <li><a href="text.html">Аналитические исследования</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="project.html">Проекты</a></li>
+                  <li><a href="feedback.html">Отзывы</a></li>
+                  <li><a href="news.html">Новости</a></li>
+                  <li><a href="contact.html">Контакты</a></li>
+
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="crumbs-wrapper">
+        <div class="container">
+          <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" class="crumbs">
+            <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+              <a rel="nofollow" itemprop="item" href="/digimap/">
+                <span itemprop="name">Главная</span>
+                <meta itemprop="position" content="1">
+              </a>
+            </li>
+            <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href='#'>
+                <span itemprop="name">Карта сайта</span>
+                <meta itemprop="position" content=2>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- Карта сайта -->
+      <div class="section">
+        <div class="container">
+          <div class="text-block">
+            <div class="flex flex-wrap align-start">
+              <ul style="flex: 0 0 300px;">
+                <li><a target="_blank" href="/digimap">Главная</a></li>
+
+                <li><a target="_blank" href="about.html">О нас</a></li>
+                <li><a target="_blank" href="vacancy.html">Вакансии</a></li>
+                <li><a target="_blank" href="feedback.html">Отзывы</a></li>
+                <li><a target="_blank" href="news.html">Новости</a></li>
+                <li><a target="_blank" href="single-news.html">Статья</a></li>
+                <li><a target="_blank" href="license.html">Лицензии</a></li>
+                <li><a target="_blank" href="customers.html">Наши заказчики</a></li>
+                <li><a target="_blank" href="registry.html">Реестр</a></li>
+                <li><a target="_blank" href="contact.html">Контакты</a></li>
+              </ul>
+              <ul style="flex: 0 0 300px;">
+                <li><a target="_blank" href="category.html">Категории</a></li>
+                <li><a target="_blank" href="category-2.html">Категории - 2</a></li>
+                <li><a target="_blank" href="category-3.html">Категории - 3</a></li>
+                <li><a target="_blank" href="category-4.html">Категории - 4</a></li>
+                <li><a target="_blank" href="category-5.html">Категории - 5</a></li>
+                <li><a target="_blank" href="project.html">Проекты</a></li>
+                <li><a target="_blank" href="single-project.html">Проект</a></li>
+              </ul>
+              <ul style="flex: 0 0 300px;">
+                <li><a target="_blank" href="404.html">404</a></li>
+                <li><a target="_blank" href="search.html">Поиск</a></li>
+                <li><a target="_blank" href="search-empty.html">Поиск - ничего не найдено</a></li>
+                <li><a target="_blank" href="text.html">Текстовая</a></li>
+
+                <br>
+
+                <li><a data-modal="popup-call">Заказать звонок</a></li>
+                <li><a data-modal="popup-thank">Спасибо</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top-wrapper">
+        <div class="container">
+          <div class="footer__top">
+            <div class="col footer__left">
+              <a href="/digimap" class="logo footer__logo">
+                <img src="assets/img/logo-white.svg" width="222" height="48" alt="">
+              </a>
+              <div class="footer__text">
+                <p>ООО “GEO CENTRE”</p>
+                <p>
+                  ОГРН: 00000000000000 <br>
+                  ИНН: 0000000000 <br>
+                  КПП: 0000000000
+                </p>
+              </div>
+            </div>
+            <div class="footer__item footer__item-menu">
+              <div class="title-3 footer__item-title">Меню</div>
+              <ul class="menu footer__menu">
+                <li class="menu-item-has-children current-menu-item">
+                  <a href="about.html">
+                    О нас
+                    <span class="menu-item-arrow"></span>
+                  </a>
+                  <div class="sub-menu-wrapper">
+                    <ul class="sub-menu">
+                      <li><a href="license.html">Лицензии</a></li>
+                      <li><a href="feedback.html">Отзывы</a></li>
+                      <li><a href="vacancy.html">Вакансии</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="feedback.html">Отзывы</a></li>
+                <li class="menu-item-has-children">
+                  <a href="category.html">
+                    Продукты
+                    <span class="menu-item-arrow"></span>
+                  </a>
+                  <div class="sub-menu-wrapper">
+                    <ul class="sub-menu">
+                      <li><a href="category-2.html">RuMap-GIS</a></li>
+                      <li><a href="category-2.html">RuMap Сервисы</a></li>
+                      <li><a href="category-2.html">Геопортал RuMap</a></li>
+                      <li><a href="category-2.html">RuMap приложения</a></li>
+                      <li><a href="category-2.html">Геоинформационные системы</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="news.html">Новости</a></li>
+                <li class="menu-item-has-children">
+                  <a href="text.html">
+                    Услуги
+                    <span class="menu-item-arrow"></span>
+                  </a>
+                  <div class="sub-menu-wrapper">
+                    <ul class="sub-menu">
+                      <li><a href="text.html">Разработка Программного обеспечения</a></li>
+                      <li><a href="text.html">Разработка пространственных данных</a></li>
+                      <li><a href="text.html">Геомаркетинговые исследования</a></li>
+                      <li><a href="text.html">Аналитические исследования</a></li>
+                      <li><a href="text.html">Разработка Программного обеспечения</a></li>
+                      <li><a href="text.html">Разработка пространственных данных</a></li>
+                      <li><a href="text.html">Геомаркетинговые исследования</a></li>
+                      <li><a href="text.html">Аналитические исследования</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="project.html">Проекты</a></li>
+              </ul>
+            </div>
+            <div class="footer__item footer__item-contacts">
+              <div class="title-3 footer__item-title">Контакты и время работы</div>
+
+              <div class="footer__contacts">
+                <div class="call footer__call">
+                  <a href="tel:+74957750549" class="hover-active tel">
+                    <div class="icon">
+                      <svg class="phone-icon">
+                        <use xlink:href="assets/img/sprite.svg#phone"></use>
+                      </svg>
+                    </div>
+                    <span>+7 (495) 775-05-49</span>
+                  </a>
+                  <div class="social header__social">
+                    <a href="https://wa.me/+79789999999" class="social__item" target="_blank">
+                      <svg class="whatsapp-icon">
+                        <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+                      </svg>
+                    </a>
+                    <a href="https://t.me/+70000000000" class="social__item" target="_blank">
+                      <svg class="telegram-icon">
+                        <use xlink:href="assets/img/sprite.svg#telegram"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <a href="mailto:sale@digimap.ru" class="hover-active email footer__email">
+                  <div class="icon">
+                    <svg class="email-icon">
+                      <use xlink:href="assets/img/sprite.svg#email"></use>
+                    </svg>
+                  </div>
+                  <span>sale@digimap.ru</span>
+                </a>
+                <div class="address">
+                  <div class="icon">
+                    <svg class="location-icon">
+                      <use xlink:href="assets/img/sprite.svg#location"></use>
+                    </svg>
+                  </div>
+                  <span>г. Москва, пр-т Маршала Жукова, д. 2, корп. 2, стр. 1, оф. 305</span>
+                </div>
+                <div class="time">
+                  <div class="icon">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_678" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                        <path d="M7 13C10.3138 13 13 10.3138 13 7C13 3.6862 10.3138 1 7 1C3.6862 1 1 3.6862 1 7C1 10.3138 3.6862 13 7 13Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round" />
+                        <path d="M7 3.57153V7.08837L9.57143 9.57153" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                      </mask>
+                      <g mask="url(#mask0_678)">
+                        <path d="M-1.23438 -1.22852H15.2228V15.2286H-1.23438V-1.22852Z" fill="#478ED0" />
+                      </g>
+                    </svg>
+                  </div>
+                  <span>Пн-Пт &nbsp; 9:00-19:00</span>
+                </div>
+                <div class="footer__buttons">
+                  <button class="button" type="button" data-modal="popup-call">PRO-Rumap</button>
+                  <button class="button button_orange" type="button" data-modal="popup-call">Связаться с нами</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom-wrapper">
+        <div class="container">
+          <div class="footer__bottom">
+            <span>Copyright ©2022 – 2025 GEOCENTRE</span>
+            <a href="sitemap.html" target="_blank">Карта сайта</a>
+            <a href="text.html" target="_blank">Политика конфиденциальности</a>
+            <a href="text.html" target="_blank">Пользовательское соглашение</a>
+            <a href="https://wsp-studio.ru" target="_blank" rel="nofollow noindex">Разработано WSP Studio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Модалки -->
+
+  <div class="popups">
+    <!-- Заказать звонок -->
+    <div class="popup popup-call" id="popup-call">
+      <div class="popup__dialog">
+        <div class="popup-wrapper">
+          <button class="popup__close" type="button" data-popup-close>
+            <svg class="close">
+              <use xlink:href="assets/img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__content">
+            <div class="form popup__form">
+              <div class="title-2 popup__title">Нужна помощь с подбором продукции?</div>
+              <form>
+                <input type="hidden" name="info" class="popup-info">
+                <div class="input-wrapper">
+                  <input class="input" type="text" name="name" placeholder="Ваше имя" required>
+                  <input class="input" type="tel" name="phone" placeholder="Телефон" data-required-choice>
+                  <input class="input" type="tel" name="phone" placeholder="Телефон" data-required-choice>
+                </div>
+                <div class="form__row">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" checked required>
+                    <span class="checkbox__text">Нажимая на кнопку “Отправить”, Вы соглашаетесь с <a href="text.html" class="underline" target="_blank">Пользовательским соглашением</a> и <a href="text.html" class="underline" target="_blank">Политикой конфиденциальности</a></span>
+                  </label>
+                  <button class="button button_orange submit">Оставить заявку</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Окно благодарности -->
+    <div class="popup popup-thank" id="popup-thank">
+      <div class="popup__dialog">
+        <div class="popup__content">
+          <div class="title-2">Спасибо за заявку!</div>
+          <img src="assets/img/icons/check.svg" width="80" alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Библиотеки -->
+  <script src="assets/js/vendor.js" defer></script>
+
+  <!-- Общие скрипты -->
+  <script src="assets/js/script.js" defer></script>
+
+  <!-- Worker -->
+  <script>
+    if (location.hostname !== 'localhost' && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register(new URL('worker.js', location.href)).catch(console.error);
+    }
+  </script>
+
+  <!-- Карта -->
+  <script>
+    function initMaps(id, address) {
+      if (document.querySelector(`#${id}`)) {
+        let locationX = parseFloat(address[0][0].split(',')[0]);
+        let locationY = parseFloat(address[0][0].split(',')[1]);
+        myMap = new ymaps.Map(id, {
+          center: [locationX, locationY],
+          zoom: 14,
+          controls: ['largeMapDefaultSet'],
+        }, {
+          searchControlProvider: 'yandex#search'
+        });
+        for (let i = 0; i < address.length; i++) {
+          myPlacemarkTemp = new ymaps.Placemark(address[i][0].split(','), {
+            balloonContent: address[i][1],
+          }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: "assets/img/icons/location.svg",
+            iconImageSize: [39, 50],
+            iconImageOffset: [-15, -44],
+          });
+          myMap.geoObjects.add(myPlacemarkTemp);
+        }
+        if (address.length > 1) {
+          // Автомасштаб меток
+          myMap.setBounds(myMap.geoObjects.getBounds(), {
+            checkZoomRange: true,
+            zoomMargin: 30
+          });
+        }
+        // Запретить скролл мышью
+        myMap.behaviors.disable('scrollZoom')
+        // Удаление прелоадера
+        layer = myMap.layers.get(0).get(0);
+        waitForTilesLoad(layer).then(function() {
+          document.querySelectorAll('.is-active').forEach(element => {
+            if (element.parentElement.querySelector(`#${id}`)) {
+              element.classList.remove('is-active')
+            }
+          });
+        });
+      }
+    }
+
+    function init() {
+      initMaps('map', [
+        [
+          '55.777864, 37.504960',
+          'г. Москва, проспект Маршала Жукова, д. 2, корп.2, стр.1, оф.305',
+        ],
+      ])
+    }
+  </script>
+
+</body>
+
+</html>

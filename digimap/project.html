@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="ru" class="scrollbar-auto">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/img/favicon/favicon.svg">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Шрифты -->
+  <link rel="preload" href="assets/css/fonts.css" as="style" onload="this.rel='stylesheet'">
+
+  <!-- Библиотеки -->
+  <link rel="preload" href="assets/css/vendor.css" as="style" onload="this.rel='stylesheet'; this.media='all'; this.onload=null;">
+
+  <!-- Общие стили -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Индексация -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Геоинформационные технологии</title>
+
+</head>
+
+<body id="home" class=" ">
+  <div class="wrapper">
+    <main class="main">
+
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top-wrapper">
+            <a href="/digimap" class="logo header__logo">
+              <img src="assets/img/logo.svg" width="188" height="40" alt="">
+            </a>
+            <form role="search" method="get" action="/" class="search header__search" data-da=".header__mobile,767,0">
+              <div class="search__input">
+                <input type="search" name="s" placeholder="Поиск по сайту" value="">
+                <button type="submit" class="search__button">
+                  <svg class="search-icon">
+                    <use xlink:href="assets/img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <div class="header__contacts" data-da=".header__mobile,1199,2">
+              <div class="address">
+                <div class="icon">
+                  <svg class="location-icon">
+                    <use xlink:href="assets/img/sprite.svg#location"></use>
+                  </svg>
+                </div>
+                <span>Москва</span>
+              </div>
+              <div class="call header__call">
+                <a href="tel:+74957750549" class="hover-active tel">
+                  <div class="icon">
+                    <svg class="phone-icon">
+                      <use xlink:href="assets/img/sprite.svg#phone"></use>
+                    </svg>
+                  </div>
+                  <span>+7 (495) 775-05-49</span>
+                </a>
+                <div class="social header__social">
+                  <a href="https://wa.me/+79789999999" class="social__item" target="_blank">
+                    <svg class="whatsapp-icon">
+                      <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+                    </svg>
+                  </a>
+                  <a href="https://t.me/+70000000000" class="social__item" target="_blank">
+                    <svg class="telegram-icon">
+                      <use xlink:href="assets/img/sprite.svg#telegram"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="time">
+                <div class="icon">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_678_33058" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                      <path d="M7 13C10.3138 13 13 10.3138 13 7C13 3.6862 10.3138 1 7 1C3.6862 1 1 3.6862 1 7C1 10.3138 3.6862 13 7 13Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round" />
+                      <path d="M7 3.57153V7.08837L9.57143 9.57153" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    </mask>
+                    <g mask="url(#mask0_678_33058)">
+                      <path d="M-1.23438 -1.22852H15.2228V15.2286H-1.23438V-1.22852Z" fill="#478ED0" />
+                    </g>
+                  </svg>
+                </div>
+                <span>Пн-Пт &nbsp; 9:00-19:00</span>
+              </div>
+              <a href="mailto:sale@digimap.ru" class="hover-active email header__email">
+                <div class="icon">
+                  <svg class="email-icon">
+                    <use xlink:href="assets/img/sprite.svg#email"></use>
+                  </svg>
+                </div>
+                <span>sale@digimap.ru</span>
+              </a>
+            </div>
+            <div class="header__buttons" data-da=".header__mobile,991,3">
+              <button class="button" type="button">PRO-Rumap</button>
+              <button class="button button_orange" type="button" data-modal="popup-call">Связаться с нами</button>
+            </div>
+            <button class="menu-link">
+              <span class="menu-lines"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <header class="header">
+        <div class="header-fixed">
+          <div class="container">
+            <div class="header__mobile">
+              <nav class="nav header__nav">
+                <ul class="menu header__menu">
+                  <li class="menu-item-has-children current-menu-item">
+                    <a href="about.html">
+                      О нас
+                      <span class="menu-item-arrow"></span>
+                    </a>
+                    <div class="sub-menu-wrapper">
+                      <ul class="sub-menu">
+                        <li><a href="license.html">Лицензии</a></li>
+                        <li><a href="feedback.html">Отзывы</a></li>
+                        <li><a href="vacancy.html">Вакансии</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="category.html">
+                      Продукты
+                      <span class="menu-item-arrow"></span>
+                    </a>
+                    <div class="sub-menu-wrapper">
+                      <ul class="sub-menu">
+                        <li><a href="category-2.html">RuMap-GIS</a></li>
+                        <li><a href="category-2.html">RuMap Сервисы</a></li>
+                        <li><a href="category-2.html">Геопортал RuMap</a></li>
+                        <li><a href="category-2.html">RuMap приложения</a></li>
+                        <li><a href="category-2.html">Геоинформационные системы</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="text.html">
+                      Услуги
+                      <span class="menu-item-arrow"></span>
+                    </a>
+                    <div class="sub-menu-wrapper">
+                      <ul class="sub-menu">
+                        <li><a href="text.html">Разработка Программного обеспечения</a></li>
+                        <li><a href="text.html">Разработка пространственных данных</a></li>
+                        <li><a href="text.html">Геомаркетинговые исследования</a></li>
+                        <li><a href="text.html">Аналитические исследования</a></li>
+                        <li><a href="text.html">Разработка Программного обеспечения</a></li>
+                        <li><a href="text.html">Разработка пространственных данных</a></li>
+                        <li><a href="text.html">Геомаркетинговые исследования</a></li>
+                        <li><a href="text.html">Аналитические исследования</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="project.html">Проекты</a></li>
+                  <li><a href="feedback.html">Отзывы</a></li>
+                  <li><a href="news.html">Новости</a></li>
+                  <li><a href="contact.html">Контакты</a></li>
+
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="crumbs-wrapper">
+        <div class="container">
+          <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" class="crumbs">
+            <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+              <a rel="nofollow" itemprop="item" href="/digimap/">
+                <span itemprop="name">Главная</span>
+                <meta itemprop="position" content="1">
+              </a>
+            </li>
+            <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#">
+                <span itemprop="name">Проекты</span>
+                <meta itemprop="position" content=2>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- Проекты -->
+      <div class="section project">
+        <div class="container">
+          <div class="project-wrapper">
+            <form action="#" class="filter project__filter">
+              <button class="title-3 filter__title filter__title-button" type="button">
+                <span>Выберите параметры</span>
+                <span class="icon">
+                  <svg class="filter-icon">
+                    <use xlink:href="assets/img/sprite.svg#filter"></use>
+                  </svg>
+                </span>
+              </button>
+              <div class="title-3 filter__title">Выберите параметры</div>
+              <div class="filter__content">
+                <div class="filter__items">
+                  <div class="filter__item">
+                    <div class="title-5 filter__item-title">Дата проекта</div>
+                    <div class="range">
+                      <div class="range__inputs">
+                        <label class="input range__input">
+                          <span class="range__input-label">с</span>
+                          <input type="number" data-role="min" placeholder="2001">
+                        </label>
+                        <label class="input range__input">
+                          <span class="range__input-label">по</span>
+                          <input type="number" data-role="max" placeholder="2025">
+                        </label>
+                      </div>
+                      <div class="range__track">
+                        <input type="range" data-role="min" min="2001" max="2025" value="2001">
+                        <input type="range" data-role="max" min="2001" max="2025" value="2025">
+                        <div class="range__between"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <div class="title-5 filter__item-title">Тип проекта</div>
+                    <div class="filter__item-checkboxes">
+                      <label class="button button_small button_gray checkbox checkbox-text">
+                        <input class="checkbox__input" type="checkbox" name="type" value="Разработка ПО">
+                        <span class="checkbox__text">Разработка ПО</span>
+                      </label>
+                      <label class="button button_small button_gray checkbox checkbox-text">
+                        <input class="checkbox__input" type="checkbox" name="type" value="Цифровые продукты">
+                        <span class="checkbox__text">Цифровые продукты</span>
+                      </label>
+                      <label class="button button_small button_gray checkbox checkbox-text">
+                        <input class="checkbox__input" type="checkbox" name="type" value="Издательские проекты">
+                        <span class="checkbox__text">Издательские проекты</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <div class="title-5 filter__item-title">Выберите отрасль</div>
+                    <select name="industry">
+                      <option data-placeholder="true">Любая</option>
+                      <option value="Логистические компании">Логистические компании</option>
+                      <option value="Логистические компании 2">Логистические компании 2</option>
+                      <option value="Логистические компании 3">Логистические компании 3</option>
+                    </select>
+                  </div>
+                  <div class="filter__item">
+                    <div class="title-5 filter__item-title">Выберите заказчика</div>
+                    <select name="customer">
+                      <option data-placeholder="true">Любая</option>
+                      <option value="ООО 'Бизнес логистика'">ООО "Бизнес логистика"</option>
+                      <option value="Samsung Electronics">Samsung Electronics</option>
+                      <option value="Банк ВТБ (ПАО)">Банк ВТБ (ПАО)</option>
+                    </select>
+                  </div>
+                  <div class="filter__buttons">
+                    <button class="button filter__button">Применить</button>
+                    <button class="button button_gray filter__button" type="reset">Сбросить</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="project__right">
+              <div class="section__top project__top">
+                <h1 class="title">Проекты</h1>
+              </div>
+              <div class="project__items">
+
+                <div class="wow fadeIn hover-translate project__item" data-wow-delay='.2s'>
+                  <a href="single-project.html" class="project__item-logo">
+                    <img src="assets/img/project/1.svg" width="360" height="133" alt="" loading="lazy" decoding="async">
+                  </a>
+                  <div class="project__item-content">
+                    <a href="single-project.html" class="title-3 project__item-title">Сервис прямого геокодирования</a>
+                    <div class="project__item-list">
+                      <dl>
+                        <dt>Тип:</dt>
+                        <dd>Цифровые продукты</dd>
+                      </dl>
+                      <dl>
+                        <dt>Заказчик:</dt>
+                        <dd>ООО "Бизнес логистика" (Курьер сервис экспресс - КСЕ)</dd>
+                      </dl>
+                      <dl>
+                        <dt>Отрасль:</dt>
+                        <dd>Логистические компании</dd>
+                      </dl>
+                    </div>
+                    <div class="project__item-row">
+                      <time datetime="2025-04-25" class="project__item-date">
+                        <span class="icon">
+                          <svg class="calendar-icon">
+                            <use xlink:href="assets/img/sprite.svg#calendar"></use>
+                          </svg>
+                        </span>
+                        <span>25.04.2025</span>
+                      </time>
+                      <a href="single-project.html" class="hover-active title-5 project__item-link">Смотреть проект</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="wow fadeIn hover-translate project__item" data-wow-delay='.25s'>
+                  <a href="single-project.html" class="project__item-logo">
+                    <img src="assets/img/project/2.svg" width="255" height="86" alt="" loading="lazy" decoding="async">
+                  </a>
+                  <div class="project__item-content">
+                    <a href="single-project.html" class="title-3 project__item-title">Сервис прямого геокодирования</a>
+                    <div class="project__item-list">
+                      <dl>
+                        <dt>Тип:</dt>
+                        <dd>Цифровые продукты</dd>
+                      </dl>
+                      <dl>
+                        <dt>Заказчик:</dt>
+                        <dd>ООО "Бизнес логистика" (Курьер сервис экспресс - КСЕ)</dd>
+                      </dl>
+                      <dl>
+                        <dt>Отрасль:</dt>
+                        <dd>Логистические компании</dd>
+                      </dl>
+                    </div>
+                    <div class="project__item-row">
+                      <time datetime="2025-04-25" class="project__item-date">
+                        <span class="icon">
+                          <svg class="calendar-icon">
+                            <use xlink:href="assets/img/sprite.svg#calendar"></use>
+                          </svg>
+                        </span>
+                        <span>25.04.2025</span>
+                      </time>
+                      <a href="single-project.html" class="hover-active title-5 project__item-link">Смотреть проект</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="wow fadeIn hover-translate project__item" data-wow-delay='.3s'>
+                  <a href="single-project.html" class="project__item-logo">
+                    <img src="assets/img/project/3.svg" width="327" height="90" alt="" loading="lazy" decoding="async">
+                  </a>
+                  <div class="project__item-content">
+                    <a href="single-project.html" class="title-3 project__item-title">Сервис прямого геокодирования</a>
+                    <div class="project__item-list">
+                      <dl>
+                        <dt>Тип:</dt>
+                        <dd>Цифровые продукты</dd>
+                      </dl>
+                      <dl>
+                        <dt>Заказчик:</dt>
+                        <dd>ООО "Бизнес логистика" (Курьер сервис экспресс - КСЕ)</dd>
+                      </dl>
+                      <dl>
+                        <dt>Отрасль:</dt>
+                        <dd>Логистические компании</dd>
+                      </dl>
+                    </div>
+                    <div class="project__item-row">
+                      <time datetime="2025-04-25" class="project__item-date">
+                        <span class="icon">
+                          <svg class="calendar-icon">
+                            <use xlink:href="assets/img/sprite.svg#calendar"></use>
+                          </svg>
+                        </span>
+                        <span>25.04.2025</span>
+                      </time>
+                      <a href="single-project.html" class="hover-active title-5 project__item-link">Смотреть проект</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wow fadeIn hover-translate project__item" data-wow-delay='.2s'>
+                  <a href="single-project.html" class="project__item-logo">
+                    <img src="assets/img/project/1.svg" width="360" height="133" alt="" loading="lazy" decoding="async">
+                  </a>
+                  <div class="project__item-content">
+                    <a href="single-project.html" class="title-3 project__item-title">Сервис прямого геокодирования</a>
+                    <div class="project__item-list">
+                      <dl>
+                        <dt>Тип:</dt>
+                        <dd>Цифровые продукты</dd>
+                      </dl>
+                      <dl>
+                        <dt>Заказчик:</dt>
+                        <dd>ООО "Бизнес логистика" (Курьер сервис экспресс - КСЕ)</dd>
+                      </dl>
+                      <dl>
+                        <dt>Отрасль:</dt>
+                        <dd>Логистические компании</dd>
+                      </dl>
+                    </div>
+                    <div class="project__item-row">
+                      <time datetime="2025-04-25" class="project__item-date">
+                        <span class="icon">
+                          <svg class="calendar-icon">
+                            <use xlink:href="assets/img/sprite.svg#calendar"></use>
+                          </svg>
+                        </span>
+                        <span>25.04.2025</span>
+                      </time>
+                      <a href="single-project.html" class="hover-active title-5 project__item-link">Смотреть проект</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="wow fadeIn hover-translate project__item" data-wow-delay='.25s'>
+                  <a href="single-project.html" class="project__item-logo">
+                    <img src="assets/img/project/2.svg" width="255" height="86" alt="" loading="lazy" decoding="async">
+                  </a>
+                  <div class="project__item-content">
+                    <a href="single-project.html" class="title-3 project__item-title">Сервис прямого геокодирования</a>
+                    <div class="project__item-list">
+                      <dl>
+                        <dt>Тип:</dt>
+                        <dd>Цифровые продукты</dd>
+                      </dl>
+                      <dl>
+                        <dt>Заказчик:</dt>
+                        <dd>ООО "Бизнес логистика" (Курьер сервис экспресс - КСЕ)</dd>
+                      </dl>
+                      <dl>
+                        <dt>Отрасль:</dt>
+                        <dd>Логистические компании</dd>
+                      </dl>
+                    </div>
+                    <div class="project__item-row">
+                      <time datetime="2025-04-25" class="project__item-date">
+                        <span class="icon">
+                          <svg class="calendar-icon">
+                            <use xlink:href="assets/img/sprite.svg#calendar"></use>
+                          </svg>
+                        </span>
+                        <span>25.04.2025</span>
+                      </time>
+                      <a href="single-project.html" class="hover-active title-5 project__item-link">Смотреть проект</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="wow fadeIn hover-translate project__item" data-wow-delay='.3s'>
+                  <a href="single-project.html" class="project__item-logo">
+                    <img src="assets/img/project/3.svg" width="327" height="90" alt="" loading="lazy" decoding="async">
+                  </a>
+                  <div class="project__item-content">
+                    <a href="single-project.html" class="title-3 project__item-title">Сервис прямого геокодирования</a>
+                    <div class="project__item-list">
+                      <dl>
+                        <dt>Тип:</dt>
+                        <dd>Цифровые продукты</dd>
+                      </dl>
+                      <dl>
+                        <dt>Заказчик:</dt>
+                        <dd>ООО "Бизнес логистика" (Курьер сервис экспресс - КСЕ)</dd>
+                      </dl>
+                      <dl>
+                        <dt>Отрасль:</dt>
+                        <dd>Логистические компании</dd>
+                      </dl>
+                    </div>
+                    <div class="project__item-row">
+                      <time datetime="2025-04-25" class="project__item-date">
+                        <span class="icon">
+                          <svg class="calendar-icon">
+                            <use xlink:href="assets/img/sprite.svg#calendar"></use>
+                          </svg>
+                        </span>
+                        <span>25.04.2025</span>
+                      </time>
+                      <a href="single-project.html" class="hover-active title-5 project__item-link">Смотреть проект</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wow fadeIn hover-translate project__item" data-wow-delay='.2s'>
+                  <a href="single-project.html" class="project__item-logo">
+                    <img src="assets/img/project/1.svg" width="360" height="133" alt="" loading="lazy" decoding="async">
+                  </a>
+                  <div class="project__item-content">
+                    <a href="single-project.html" class="title-3 project__item-title">Сервис прямого геокодирования</a>
+                    <div class="project__item-list">
+                      <dl>
+                        <dt>Тип:</dt>
+                        <dd>Цифровые продукты</dd>
+                      </dl>
+                      <dl>
+                        <dt>Заказчик:</dt>
+                        <dd>ООО "Бизнес логистика" (Курьер сервис экспресс - КСЕ)</dd>
+                      </dl>
+                      <dl>
+                        <dt>Отрасль:</dt>
+                        <dd>Логистические компании</dd>
+                      </dl>
+                    </div>
+                    <div class="project__item-row">
+                      <time datetime="2025-04-25" class="project__item-date">
+                        <span class="icon">
+                          <svg class="calendar-icon">
+                            <use xlink:href="assets/img/sprite.svg#calendar"></use>
+                          </svg>
+                        </span>
+                        <span>25.04.2025</span>
+                      </time>
+                      <a href="single-project.html" class="hover-active title-5 project__item-link">Смотреть проект</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="wow fadeIn hover-translate project__item" data-wow-delay='.25s'>
+                  <a href="single-project.html" class="project__item-logo">
+                    <img src="assets/img/project/2.svg" width="255" height="86" alt="" loading="lazy" decoding="async">
+                  </a>
+                  <div class="project__item-content">
+                    <a href="single-project.html" class="title-3 project__item-title">Сервис прямого геокодирования</a>
+                    <div class="project__item-list">
+                      <dl>
+                        <dt>Тип:</dt>
+                        <dd>Цифровые продукты</dd>
+                      </dl>
+                      <dl>
+                        <dt>Заказчик:</dt>
+                        <dd>ООО "Бизнес логистика" (Курьер сервис экспресс - КСЕ)</dd>
+                      </dl>
+                      <dl>
+                        <dt>Отрасль:</dt>
+                        <dd>Логистические компании</dd>
+                      </dl>
+                    </div>
+                    <div class="project__item-row">
+                      <time datetime="2025-04-25" class="project__item-date">
+                        <span class="icon">
+                          <svg class="calendar-icon">
+                            <use xlink:href="assets/img/sprite.svg#calendar"></use>
+                          </svg>
+                        </span>
+                        <span>25.04.2025</span>
+                      </time>
+                      <a href="single-project.html" class="hover-active title-5 project__item-link">Смотреть проект</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="wow fadeIn hover-translate project__item" data-wow-delay='.3s'>
+                  <a href="single-project.html" class="project__item-logo">
+                    <img src="assets/img/project/3.svg" width="327" height="90" alt="" loading="lazy" decoding="async">
+                  </a>
+                  <div class="project__item-content">
+                    <a href="single-project.html" class="title-3 project__item-title">Сервис прямого геокодирования</a>
+                    <div class="project__item-list">
+                      <dl>
+                        <dt>Тип:</dt>
+                        <dd>Цифровые продукты</dd>
+                      </dl>
+                      <dl>
+                        <dt>Заказчик:</dt>
+                        <dd>ООО "Бизнес логистика" (Курьер сервис экспресс - КСЕ)</dd>
+                      </dl>
+                      <dl>
+                        <dt>Отрасль:</dt>
+                        <dd>Логистические компании</dd>
+                      </dl>
+                    </div>
+                    <div class="project__item-row">
+                      <time datetime="2025-04-25" class="project__item-date">
+                        <span class="icon">
+                          <svg class="calendar-icon">
+                            <use xlink:href="assets/img/sprite.svg#calendar"></use>
+                          </svg>
+                        </span>
+                        <span>25.04.2025</span>
+                      </time>
+                      <a href="single-project.html" class="hover-active title-5 project__item-link">Смотреть проект</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="project__pagination">
+                <div class="section-top pagination pagination_center">
+                  <div class="pagination-wrapper">
+                    <button class="button button_small pagination__button" type="button">Загрузить еще</button>
+                    <ul class="pagination__items">
+                      <li class="active"><span>1</span></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><span>...</span></li>
+                      <li><a href="#">20</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top-wrapper">
+        <div class="container">
+          <div class="footer__top">
+            <div class="col footer__left">
+              <a href="/digimap" class="logo footer__logo">
+                <img src="assets/img/logo-white.svg" width="222" height="48" alt="">
+              </a>
+              <div class="footer__text">
+                <p>ООО “GEO CENTRE”</p>
+                <p>
+                  ОГРН: 00000000000000 <br>
+                  ИНН: 0000000000 <br>
+                  КПП: 0000000000
+                </p>
+              </div>
+            </div>
+            <div class="footer__item footer__item-menu">
+              <div class="title-3 footer__item-title">Меню</div>
+              <ul class="menu footer__menu">
+                <li class="menu-item-has-children current-menu-item">
+                  <a href="about.html">
+                    О нас
+                    <span class="menu-item-arrow"></span>
+                  </a>
+                  <div class="sub-menu-wrapper">
+                    <ul class="sub-menu">
+                      <li><a href="license.html">Лицензии</a></li>
+                      <li><a href="feedback.html">Отзывы</a></li>
+                      <li><a href="vacancy.html">Вакансии</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="feedback.html">Отзывы</a></li>
+                <li class="menu-item-has-children">
+                  <a href="category.html">
+                    Продукты
+                    <span class="menu-item-arrow"></span>
+                  </a>
+                  <div class="sub-menu-wrapper">
+                    <ul class="sub-menu">
+                      <li><a href="category-2.html">RuMap-GIS</a></li>
+                      <li><a href="category-2.html">RuMap Сервисы</a></li>
+                      <li><a href="category-2.html">Геопортал RuMap</a></li>
+                      <li><a href="category-2.html">RuMap приложения</a></li>
+                      <li><a href="category-2.html">Геоинформационные системы</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="news.html">Новости</a></li>
+                <li class="menu-item-has-children">
+                  <a href="text.html">
+                    Услуги
+                    <span class="menu-item-arrow"></span>
+                  </a>
+                  <div class="sub-menu-wrapper">
+                    <ul class="sub-menu">
+                      <li><a href="text.html">Разработка Программного обеспечения</a></li>
+                      <li><a href="text.html">Разработка пространственных данных</a></li>
+                      <li><a href="text.html">Геомаркетинговые исследования</a></li>
+                      <li><a href="text.html">Аналитические исследования</a></li>
+                      <li><a href="text.html">Разработка Программного обеспечения</a></li>
+                      <li><a href="text.html">Разработка пространственных данных</a></li>
+                      <li><a href="text.html">Геомаркетинговые исследования</a></li>
+                      <li><a href="text.html">Аналитические исследования</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="project.html">Проекты</a></li>
+              </ul>
+            </div>
+            <div class="footer__item footer__item-contacts">
+              <div class="title-3 footer__item-title">Контакты и время работы</div>
+
+              <div class="footer__contacts">
+                <div class="call footer__call">
+                  <a href="tel:+74957750549" class="hover-active tel">
+                    <div class="icon">
+                      <svg class="phone-icon">
+                        <use xlink:href="assets/img/sprite.svg#phone"></use>
+                      </svg>
+                    </div>
+                    <span>+7 (495) 775-05-49</span>
+                  </a>
+                  <div class="social header__social">
+                    <a href="https://wa.me/+79789999999" class="social__item" target="_blank">
+                      <svg class="whatsapp-icon">
+                        <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+                      </svg>
+                    </a>
+                    <a href="https://t.me/+70000000000" class="social__item" target="_blank">
+                      <svg class="telegram-icon">
+                        <use xlink:href="assets/img/sprite.svg#telegram"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <a href="mailto:sale@digimap.ru" class="hover-active email footer__email">
+                  <div class="icon">
+                    <svg class="email-icon">
+                      <use xlink:href="assets/img/sprite.svg#email"></use>
+                    </svg>
+                  </div>
+                  <span>sale@digimap.ru</span>
+                </a>
+                <div class="address">
+                  <div class="icon">
+                    <svg class="location-icon">
+                      <use xlink:href="assets/img/sprite.svg#location"></use>
+                    </svg>
+                  </div>
+                  <span>г. Москва, пр-т Маршала Жукова, д. 2, корп. 2, стр. 1, оф. 305</span>
+                </div>
+                <div class="time">
+                  <div class="icon">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_678" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                        <path d="M7 13C10.3138 13 13 10.3138 13 7C13 3.6862 10.3138 1 7 1C3.6862 1 1 3.6862 1 7C1 10.3138 3.6862 13 7 13Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round" />
+                        <path d="M7 3.57153V7.08837L9.57143 9.57153" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                      </mask>
+                      <g mask="url(#mask0_678)">
+                        <path d="M-1.23438 -1.22852H15.2228V15.2286H-1.23438V-1.22852Z" fill="#478ED0" />
+                      </g>
+                    </svg>
+                  </div>
+                  <span>Пн-Пт &nbsp; 9:00-19:00</span>
+                </div>
+                <div class="footer__buttons">
+                  <button class="button" type="button" data-modal="popup-call">PRO-Rumap</button>
+                  <button class="button button_orange" type="button" data-modal="popup-call">Связаться с нами</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom-wrapper">
+        <div class="container">
+          <div class="footer__bottom">
+            <span>Copyright ©2022 – 2025 GEOCENTRE</span>
+            <a href="sitemap.html" target="_blank">Карта сайта</a>
+            <a href="text.html" target="_blank">Политика конфиденциальности</a>
+            <a href="text.html" target="_blank">Пользовательское соглашение</a>
+            <a href="https://wsp-studio.ru" target="_blank" rel="nofollow noindex">Разработано WSP Studio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Модалки -->
+
+  <div class="popups">
+    <!-- Заказать звонок -->
+    <div class="popup popup-call" id="popup-call">
+      <div class="popup__dialog">
+        <div class="popup-wrapper">
+          <button class="popup__close" type="button" data-popup-close>
+            <svg class="close">
+              <use xlink:href="assets/img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__content">
+            <div class="form popup__form">
+              <div class="title-2 popup__title">Нужна помощь с подбором продукции?</div>
+              <form>
+                <input type="hidden" name="info" class="popup-info">
+                <div class="input-wrapper">
+                  <input class="input" type="text" name="name" placeholder="Ваше имя" required>
+                  <input class="input" type="tel" name="phone" placeholder="Телефон" data-required-choice>
+                  <input class="input" type="tel" name="phone" placeholder="Телефон" data-required-choice>
+                </div>
+                <div class="form__row">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" checked required>
+                    <span class="checkbox__text">Нажимая на кнопку “Отправить”, Вы соглашаетесь с <a href="text.html" class="underline" target="_blank">Пользовательским соглашением</a> и <a href="text.html" class="underline" target="_blank">Политикой конфиденциальности</a></span>
+                  </label>
+                  <button class="button button_orange submit">Оставить заявку</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Окно благодарности -->
+    <div class="popup popup-thank" id="popup-thank">
+      <div class="popup__dialog">
+        <div class="popup__content">
+          <div class="title-2">Спасибо за заявку!</div>
+          <img src="assets/img/icons/check.svg" width="80" alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Библиотеки -->
+  <script src="assets/js/vendor.js" defer></script>
+
+  <!-- Общие скрипты -->
+  <script src="assets/js/script.js" defer></script>
+
+  <!-- Worker -->
+  <script>
+    if (location.hostname !== 'localhost' && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register(new URL('worker.js', location.href)).catch(console.error);
+    }
+  </script>
+
+  <!-- Карта -->
+  <script>
+    function initMaps(id, address) {
+      if (document.querySelector(`#${id}`)) {
+        let locationX = parseFloat(address[0][0].split(',')[0]);
+        let locationY = parseFloat(address[0][0].split(',')[1]);
+        myMap = new ymaps.Map(id, {
+          center: [locationX, locationY],
+          zoom: 14,
+          controls: ['largeMapDefaultSet'],
+        }, {
+          searchControlProvider: 'yandex#search'
+        });
+        for (let i = 0; i < address.length; i++) {
+          myPlacemarkTemp = new ymaps.Placemark(address[i][0].split(','), {
+            balloonContent: address[i][1],
+          }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: "assets/img/icons/location.svg",
+            iconImageSize: [39, 50],
+            iconImageOffset: [-15, -44],
+          });
+          myMap.geoObjects.add(myPlacemarkTemp);
+        }
+        if (address.length > 1) {
+          // Автомасштаб меток
+          myMap.setBounds(myMap.geoObjects.getBounds(), {
+            checkZoomRange: true,
+            zoomMargin: 30
+          });
+        }
+        // Запретить скролл мышью
+        myMap.behaviors.disable('scrollZoom')
+        // Удаление прелоадера
+        layer = myMap.layers.get(0).get(0);
+        waitForTilesLoad(layer).then(function() {
+          document.querySelectorAll('.is-active').forEach(element => {
+            if (element.parentElement.querySelector(`#${id}`)) {
+              element.classList.remove('is-active')
+            }
+          });
+        });
+      }
+    }
+
+    function init() {
+      initMaps('map', [
+        [
+          '55.777864, 37.504960',
+          'г. Москва, проспект Маршала Жукова, д. 2, корп.2, стр.1, оф.305',
+        ],
+      ])
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+$search-input-font-size: 14
+$search-input-font-size-mobile: 14
+$search-input-offset: 12
+	
+$search-gap: 12 // воздух
+
+$search-button-size: 24
+$search-button-position: 'left'
+$search-button-color: #b9c8d8
+
+$search-close-size: 16
+$search-close-color: $gray
+$search-close-icon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIzLjM2MTUgMjEuMTQ5N0wxNC4wNTkyIDExLjg2TDIzLjM2MTUgMi42NzU5MUMyMy40NjcyIDIuNTcwMzQgMjMuNTcyOSAyLjQ2NDc4IDIzLjY3ODYgMi4zNTkyMUMyMy45OTU3IDEuOTM2OTUgMjQuMTAxNCAxLjQwOTEzIDIzLjg5IDAuOTg2ODY5QzIzLjY3ODYgMC41NjQ2MSAyMy4zNjE1IDAuMTQyMzUxIDIyLjgzMjkgMC4wMzY3ODYxQzIyLjMwNDQgLTAuMDY4Nzc4NyAyMS43NzU4IDAuMDM2Nzg2MSAyMS4yNDczIDAuNTY0NjFMMTEuOTQ1IDkuODU0MzFMNS4yODU0IDMuMjAzNzNDNC40Mzk3NCAyLjM1OTIxIDMuNDg4MzYgMS40MDkxMyAyLjY0MjcgMC41NjQ2MUMyLjIxOTg3IDAuMDM2Nzg2MSAxLjY5MTMzIC0wLjA2ODc3ODcgMS4xNjI3OSAwLjAzNjc4NjFDMC42MzQyNDggMC4xNDIzNTEgMC4yMTE0MTYgMC41NjQ2MSAwIDEuMDkyNDNWMS44MzEzOUMwLjEwNTcwOCAyLjI1MzY1IDAuNDIyODMyIDIuNTcwMzQgMC43Mzk5NTYgMi44ODcwNEw5LjgzMDg0IDExLjk2NTZMMC43Mzk5NTYgMjEuMDQ0MkMwLjQyMjgzMiAyMS4zNjA5IDAuMTA1NzA4IDIxLjY3NzYgMCAyMi4wOTk4VjIyLjczMzJDMC4yMTE0MTYgMjMuMzY2NiAwLjUyODU0IDIzLjc4ODkgMS4xNjI3OSAyNEgxLjc5NzA0QzIuMjE5ODcgMjMuODk0NCAyLjUzNjk5IDIzLjU3NzcgMi44NTQxMiAyMy4zNjY2TDExLjk0NSAxNC4yODhMMjEuMDM1OSAyMy4zNjY2QzIxLjM1MyAyMy42ODMzIDIxLjU2NDQgMjMuODk0NCAyMS45ODczIDI0SDIyLjYyMTVMMjIuODMyOSAyMy44OTQ0QzIzLjM2MTUgMjMuNjgzMyAyMy43ODQzIDIzLjE1NTUgMjMuNzg0MyAyMi41MjIxQzIzLjg5IDIxLjg4ODcgMjMuNjc4NiAyMS41NzIgMjMuMzYxNSAyMS4xNDk3WiIgLz4KPC9zdmc+Cg=='
+
+$search-input-height: 48
+$search-input-background: #f2f5f8
+$search-input-border: 1px solid #000
+
+@function getSearchInputPaddingLeft($search-button-position)
+	@if $search-button-position == 'left'
+		@return $search-button-size + $search-input-offset + $search-gap
+
+	@else if $search-button-position == 'right'
+		@return $search-input-offset 
+
+@function getSearchInputPaddingRight($search-button-position)
+	@if $search-button-position == 'left'
+		@return $search-input-offset + $search-close-size + $search-gap
+
+	@else if $search-button-position == 'right'
+		@return $search-button-size + $search-input-offset + $search-close-size + $search-gap + math.div($search-gap, 2)
+
+.search
+	position: relative
+	width: 100%
+
+	&__input 
+		position: relative
+
+		@if ($search-input-font-size != $search-input-font-size-mobile) 
+			+adap('font-size', $search-input-font-size, $search-input-font-size-mobile)
+ 
+		@else
+			font-size: #{$search-input-font-size+px}
+ 
+		input
+			width: 100%
+			height: em($search-input-height, $search-input-font-size)
+			padding: 0 em(getSearchInputPaddingRight($search-button-position), $search-input-font-size) 0 em(getSearchInputPaddingLeft($search-button-position), $search-input-font-size)
+
+			border-radius: 12px
+			background: $search-input-background
+
+			font: inherit
+
+			&::-webkit-search-cancel-button
+				position: absolute
+
+				@if $search-button-position == 'right'
+					right: em($search-input-offset + $search-button-size + 5, $search-input-font-size)
+
+				@if $search-button-position == 'left'
+					right: em($search-input-offset, $search-input-font-size)
+
+				top: 50%
+				translate: 0 -50%
+				width: em($search-close-size, $search-input-font-size)
+				height: em($search-close-size, $search-input-font-size)
+
+				+mask(url($search-close-icon) center / contain no-repeat, $search-close-color)
+				cursor: pointer
+				appearance: none
+				+t
+
+				font: inherit
+
+				+hov
+					background: $orange
+
+			&::placeholder
+				opacity: .5
+
+		&.active
+			&+.search__content 
+				opacity: 1
+				pointer-events: auto
+
+	&__button 
+		position: absolute
+
+		@if ($search-button-position == 'right')
+			right: em($search-input-offset, $search-input-font-size)
+
+		@else if ($search-button-position == 'left')
+			left: em($search-input-offset, $search-input-font-size)
+
+		top: 50%
+		translate: 0 -50%
+		display: flex
+		align-items: center
+		justify-content: center
+		width: em($search-button-size, $search-input-font-size)
+		height: em($search-button-size, $search-input-font-size)
+
+		svg 
+			width: 80%
+			height: 80%
+ 
+			fill: none
+			stroke: $search-button-color
+
+		+hov
+			outline: none 
+			
+			svg
+				stroke: $orange
+
+
+ 
+ 
+ 
+.search-page
+	&__title 
+		margin-bottom: 12px
+
+	&-wrapper
+		display: grid
+		+adap('gap', 40, 20)
+
+	&__item 
+		&-title 
+			span, mark, strong, b
+				padding-block: 4px
+				background: #ffbf75
+
+		&-text 
+			+line(2) 
+ 
+ 
+	&-empty
+		display: grid
+		justify-items: center
+		align-content: center
+		+adap('gap', 24, 20)
+		margin-inline: auto
+		+adap('padding-block', 200, 40)
+		text-wrap: balance
+
+		text-align: center 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

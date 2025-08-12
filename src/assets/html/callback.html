@@ -1,0 +1,44 @@
+<!-- Консультация -->
+@@if (container){<div class="section section-offset callback">}
+	@@if (container == false){
+	<div class="section callback callback_small">
+		}
+		<picture class="callback__bg">
+			<source srcset="assets/img/default.webp" media="(max-width: 575px)">
+			<img src="assets/img/callback/bg.webp" alt="" loading="lazy">
+		</picture>
+		@@if (container){
+		<div class="container">
+			}
+			<div class="callback-wrapper">
+				<div class="callbacK__left">
+					<div class="callback__top">
+						<div class="title-2">@@title</div>
+						<div class="title-4">Оставьте свои контакты, и наш менеджер свяжется с вами для <br> консультации</div>
+					</div>
+					<div class="section-top form callback__form">
+						<form>
+							<div class="input-wrapper">
+								<input class="input" type="text" name="name" placeholder="Ваше имя" required>
+								<input class="input" type="tel" name="phone" placeholder="Телефон" required>
+								<input class="input" type="email" name="email" placeholder="E-mail" data-required-choice>
+							</div>
+
+							<div class="form__row">
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" required checked>
+									<span class="checkbox__text">Нажимая на кнопку “Отправить”, Вы соглашаетесь с <a href="text.html" target="_blank" class="hover-active">Пользовательским соглашением</a> и <a href="text.html" target="_blank" class="hover-active">Политикой конфиденциальности</a></span>
+								</label>
+								<button class="button button_orange submit">Отправить заявку</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				@@if (container){
+				<img src="assets/img/callback/logo.svg" class="callback__logo" width="432" height="92" alt="" loading="lazy" decoding="async">
+				}
+			</div>
+			@@if (container){
+		</div>
+		}
+	</div>

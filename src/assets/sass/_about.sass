@@ -1,0 +1,165 @@
+.about
+	&-wrapper
+		display: grid
+		grid-template-columns: 1fr auto 
+		+adap('gap', 40, 20)
+		align-items: start
+
+	&__left 
+		display: grid
+		+adap('gap', 40, 16)
+
+	&__text 
+		>*
+			margin-bottom: 0
+			
+			&:not(:last-child)
+				+adap('margin-bottom', 12, 16)
+
+		blockquote
+			display: grid
+			grid-template-columns: auto 1fr 
+			align-items: center
+			+adap('padding', 20, 16)
+			align-items: center
+			+adap('gap', 20, 12)
+
+			+adap('border-radius', 20, 16)
+			color: $text
+
+			@media (max-width: #{$firstBreakpoint + px}) or (min-width: #{$firstBreakpoint + 1 + px})
+				min-height: auto
+
+			&:after
+				display: none
+
+			&:before
+				position: static
+
+				+adap('width', 40, 36)
+				+adap('height', 40, 36)
+				mask-image: url(../img/icons/like.svg)
+				mask-size: contain
+				opacity: 1
+
+	&__img 
+		+adap('max-width', 578, 380  , $widthTo: 992)
+
+		img 
+			width: 100%
+
+			object-fit: cover
+			border-radius: 12px
+
+	@media (max-width: 991px)
+		&-wrapper
+			grid-template-columns: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

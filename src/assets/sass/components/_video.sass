@@ -1,0 +1,89 @@
+$video-button-size: 48px
+$video-button-min-size: 32px
+
+$video-button-icon-size: 24px
+$video-button-icon-min-size: 20px
+
+$video-button-icon: ''
+// $video-button-icon: '../img/icons/play.svg'
+
+@function get-video-url($icon)
+	@if $icon == ''
+		@return url("data:image/svg+xml,%3Csvg width='320' height='384' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath id='svg_1' d='m309.20001,168.89999l-278.40001,-165.7c-3.4,-2 -6.9,-3.2 -10.9,-3.2c-10.9,0 -19.8,9 -19.8,20l-0.1,0l0,344l0.1,0c0,11 8.9,20 19.8,20c4.1,0 7.5,-1.39999 11.2,-3.39999l278.10001,-165.5c6.60001,-5.5 10.79999,-13.80002 10.79999,-23.10001s-4.19998,-17.5 -10.79999,-23.10001z'/%3E%3C/g%3E%3C/svg%3E")
+	@else 
+		@return url(#{$icon})
+
+	
+	
+.video 
+	position: relative
+	display: flex
+		
+	+adap('border-radius', 20, 16)
+	overflow: hidden
+
+	@media (max-width: 1199px)
+		aspect-ratio: 16/9	
+
+	+hov
+		&:before
+			scale: 1.05
+
+	&:before
+		content: ''
+
+		+abs 
+		z-index: 0
+
+		background: rgba($active, .4) url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 16C0 7.16344 7.16344 0 16 0H32C40.8366 0 48 7.16344 48 16V32C48 40.8366 40.8366 48 32 48H16C7.16344 48 0 40.8366 0 32V16Z' fill='%23478ED0' /%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.4581 15.5193C17.4894 15.2532 17.5815 14.9981 17.7271 14.7744C17.8727 14.5507 18.0678 14.3645 18.297 14.2306C18.5261 14.0966 18.7829 14.0187 19.047 14.003C19.3111 13.9872 19.5751 14.0341 19.8182 14.1399C21.0468 14.672 23.8002 15.9365 27.2941 17.9792C30.789 20.023 33.2474 21.8079 34.3153 22.6177C35.2269 23.3103 35.2292 24.6838 34.3164 25.3788C33.259 26.1839 30.8307 27.9453 27.2941 30.015C23.754 32.0846 21.0329 33.3339 19.8159 33.8589C18.7677 34.3125 17.5946 33.6245 17.4581 32.4796C17.2985 31.1412 17 28.1024 17 23.9982C17 19.8965 17.2973 16.8588 17.4581 15.5193Z' fill='white' /%3E%3C/svg%3E") center / 48px no-repeat
+		pointer-events: none
+		+t
+
+	&.active
+		&:before
+			display: none
+
+	&__thumbnail
+		width: 100%
+		height: 100%
+		object-fit: cover 
+
+	&__play
+		position: absolute
+		left: 50%
+		top: 50%
+		translate: -50% -50%
+		z-index: 2
+		width: 100%
+		height: 100%
+
+	iframe, video
+		width: 100%
+		height: 100%
+
+		object-fit: cover
+
+video 
+	max-width: 100%
+	height: 100%
+	object-fit: cover
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+

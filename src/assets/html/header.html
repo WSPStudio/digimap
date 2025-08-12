@@ -1,0 +1,94 @@
+<div class="header-top">
+	<div class="container">
+		<div class="header-top-wrapper">
+			<a href="/digimap" class="logo header__logo">
+				<img src="assets/img/logo.svg" width="188" height="40" alt="">
+			</a>
+			<form role="search" method="get" action="/" class="search header__search" data-da=".header__mobile,767,0">
+				<div class="search__input">
+					<input type="search" name="s" placeholder="Поиск по сайту" value="">
+					<button type="submit" class="search__button">
+						<svg class="search-icon">
+							<use xlink:href="assets/img/sprite.svg#search"></use>
+						</svg>
+					</button>
+				</div>
+			</form>
+			<div class="header__contacts" data-da=".header__mobile,1199,2">
+				<div class="address">
+					<div class="icon">
+						<svg class="location-icon">
+							<use xlink:href="assets/img/sprite.svg#location"></use>
+						</svg>
+					</div>
+					<span>Москва</span>
+				</div>
+				<div class="call header__call">
+					<a href="tel:+74957750549" class="hover-active tel">
+						<div class="icon">
+							<svg class="phone-icon">
+								<use xlink:href="assets/img/sprite.svg#phone"></use>
+							</svg>
+						</div>
+						<span>+7 (495) 775-05-49</span>
+					</a>
+					<div class="social header__social">
+						<a href="https://wa.me/+79789999999" class="social__item" target="_blank">
+							<svg class="whatsapp-icon">
+								<use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+							</svg>
+						</a>
+						<a href="https://t.me/+70000000000" class="social__item" target="_blank">
+							<svg class="telegram-icon">
+								<use xlink:href="assets/img/sprite.svg#telegram"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="time">
+					<div class="icon">
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<mask id="mask0_678_33058" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+								<path d="M7 13C10.3138 13 13 10.3138 13 7C13 3.6862 10.3138 1 7 1C3.6862 1 1 3.6862 1 7C1 10.3138 3.6862 13 7 13Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round" />
+								<path d="M7 3.57153V7.08837L9.57143 9.57153" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+							</mask>
+							<g mask="url(#mask0_678_33058)">
+								<path d="M-1.23438 -1.22852H15.2228V15.2286H-1.23438V-1.22852Z" fill="#478ED0" />
+							</g>
+						</svg>
+					</div>
+					<span>Пн-Пт &nbsp; 9:00-19:00</span>
+				</div>
+				<a href="mailto:sale@digimap.ru" class="hover-active email header__email">
+					<div class="icon">
+						<svg class="email-icon">
+							<use xlink:href="assets/img/sprite.svg#email"></use>
+						</svg>
+					</div>
+					<span>sale@digimap.ru</span>
+				</a>
+			</div>
+			<div class="header__buttons" data-da=".header__mobile,991,3">
+				<button class="button" type="button">PRO-Rumap</button>
+				<button class="button button_orange" type="button" data-modal="popup-call">Связаться с нами</button>
+			</div>
+			<button class="menu-link">
+				<span class="menu-lines"></span>
+			</button>
+		</div>
+	</div>
+</div>
+
+<header class="header">
+	<div class="header-fixed">
+		<div class="container">
+			<div class="header__mobile">
+				<nav class="nav header__nav">
+					<ul class="menu header__menu">
+						@@include("menu.html")
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>

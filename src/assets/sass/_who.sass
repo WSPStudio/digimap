@@ -1,0 +1,168 @@
+.who
+	@media (min-width: 1200px)
+		+adap('margin-top', -304, -120 , $min: true)
+		+adap('margin-bottom', 80, 48 , $min: true)
+
+		.container 
+			display: contents
+
+	color: $text
+
+	&-wrapper
+		display: grid
+		grid-template-columns: 1fr percent(700, $containerWidth)
+ 
+		box-shadow: 0 8px 28px 0 rgba(8, 32, 48, 0.16)
+		background: #fff
+		+adap('border-radius', 20, 16)
+		overflow: hidden
+
+		@media (max-width: 1199px)
+			grid-template-columns: 100%
+  
+	&__left 
+		+adap('padding-block', 40, 20)
+		+adap('padding-inline', 40, 12)
+
+	&__text 
+		display: grid
+		+adap('gap', 20, 16)
+		
+		blockquote
+			margin: 0
+			padding: 12px
+
+			border-radius: 8px
+			background: #ffead5
+			border-left-style: solid 
+			border-left-color: $orange
+			+adap('border-width', 8, 4)
+
+			color: $text
+
+
+			&:after,
+			&:before
+				display: none
+
+	.video 
+		@media (min-width: 1200px)
+			border-top-left-radius: 0
+			border-bottom-left-radius: 0
+
+		@media (max-width: 1199px)
+			border-top-left-radius: 0
+			border-top-right-radius: 0
+
+	&__button
+		@media (max-width: 1199px)
+			background: $active
+			color: #fff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

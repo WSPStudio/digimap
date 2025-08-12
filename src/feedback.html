@@ -1,0 +1,41 @@
+@@include('assets/html/head.html', {
+"class" : '" "'
+})
+@@include("assets/html/crumbs.html", {
+"list": [
+{
+"title":"Отзывы",
+"link":'"#"'
+},
+]
+})
+
+<!-- Отзывы -->
+<div class="section feedback">
+	<div class="container">
+		<div class="section__top">
+			<h1 class="title">Отзывы</h1>
+		</div>
+		<div class="feedback-wrapper" data-gallery>
+			@@for(var i = 0; i < 2; i++){
+				@@include("assets/html/feedback-item.html", {
+					"image" : '"assets/img/feedback/1'
+				})
+				@@include("assets/html/feedback-item.html", {
+					"image" : '"assets/img/feedback/2'
+				})
+				@@include("assets/html/feedback-item.html", {
+					"image" : '"assets/img/feedback/3'
+				})
+				@@include("assets/html/feedback-item.html", {
+					"image" : '"assets/img/feedback/4'
+				})
+		 } 
+		 </div>
+			@@include("assets/html/pagination.html", {
+			"center" : false
+			})
+		</div>
+</div>
+
+@@include('assets/html/foot.html')

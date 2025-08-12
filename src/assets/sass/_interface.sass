@@ -1,0 +1,575 @@
+.main	
+	+adap('padding-bottom', math.div($section_gap, 2), 24)
+
+	&:has(>.section-offset:last-child,>.section-blue:last-child)
+		padding-bottom: 0
+
+		.section-offset
+			&:last-child
+				margin-bottom: 0
+
+		
+
+body 
+	+adap('font-size', 16, 15)
+	line-height: 1.5
+	
+.section
+	+adap('padding-block', math.div($section_gap, 2), 24)
+
+	&-small
+		+adap('padding-block', math.div($section_gap, 3), 16)
+
+		&-top 
+			+adap('padding-top', math.div($section_gap, 3), 16)   
+
+		&-bottom 
+			+adap('padding-bottom', math.div($section_gap, 3), 16)
+
+	&-bottom
+		+adap('padding-bottom', math.div($section_gap, 2), 24)
+
+	&-top
+		+adap('padding-top', math.div($section_gap, 2), 24)
+
+	&-big
+		+adap('padding-block', $section_gap, 40)
+
+	&-offset
+		+adap('margin-block', math.div($section_gap, 2), 24)
+		
+		&+.section-offset
+			+adap('margin-top', math.div($section_gap*-1, 2), -24)
+
+		&-top 
+			+adap('margin-top', math.div($section_gap, 2), 24)
+
+		&-bottom 
+			+adap('margin-bottom', math.div($section_gap, 2), 24)
+
+	&-blue 
+		background: $active
+		color: #fff
+
+
+	&__top 
+		+adap('margin-bottom', 36, 20)
+
+
+
+.col 
+	display: grid
+	+adap('gap', 20, 16)
+
+
+
+.title 
+	+title
+
+	span
+		color: $active
+
+	&-2
+		+title-2
+
+	&-3
+		+title-3
+
+	&-4
+		+title-4
+
+	&-5
+		+title-5
+
+	&-center 
+		text-align: center
+
+	&-line 
+		position: relative
+		padding-bottom: 12px
+
+		&:after
+			content: ''
+
+			position: absolute
+			left: 50%
+			bottom: 0
+			translate: -50% 0
+
+			width: 72px
+			height: 2px
+
+			background: #fff
+
+.light-text 
+	color: $light
+
+.arrow-link 
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	gap: 12px
+	margin-top: auto
+
+	font-size: 14px
+	font-weight: 500
+
+	&:after
+		content: ''
+
+		flex-grow: 0
+		flex-shrink: 0
+		+adap('flex-basis', 24, 20)
+		+adap('width', 24, 20)
+		+adap('height', 24, 20)
+
+		+mask(arrow(50%), currentColor)
+
+	&.active 
+		&:after 
+			rotate: -180deg
+
+	
+.buttons 
+	display: flex
+	flex-wrap: wrap
+	gap: 12px
+
+.button 
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: 8px
+	padding: em(12, 14) em(24, 14)
+	+adap('min-width', 200, 140)
+	+adap('min-height', 48, 44)
+	
+	background: $active
+	border-radius: 8px
+
+	font-size: 14px
+	color: #fff
+	white-space: nowrap
+
+	&_auto 
+		@media (max-width: #{$firstBreakpoint + px}) or (min-width: #{$firstBreakpoint + 1 + px})
+			min-width: auto
+
+	svg 
+		max-width: 70%
+		max-height: 70%
+
+		fill: currentColor
+		transition: none
+
+	+hov
+		background: dark($active, 12%)
+		color: #fff
+
+	&_orange
+		background: $orange
+
+		+hov
+			background: dark($orange, 12%)
+	
+	&_white
+		background: #fff
+		color: $active
+
+		+hov
+			background: $orange
+
+	&_gray
+		background: $gray
+		color: $text
+
+		+hov
+			background: dark($gray, 4%)
+			color: $text
+
+	&_small
+		padding: em(8, 14) em(16, 14)
+
+		@media (max-width: #{$firstBreakpoint + px}) or (min-width: #{$firstBreakpoint + 1 + px})
+			min-width: 124px
+			min-height: 40px
+
+	&_border 
+		background: none
+		border: 1px solid $active
+		color: $active
+
+		+hov
+			background: $active
+			color: #fff
+
+		&.button_orange 
+			border-color: $orange
+			color: $orange
+
+			+hov
+				background: $orange
+				color: #fff
+
+
+	&-more 
+		justify-self: center
+
+
+
+
+
+
+
+.icon 
+	display: flex
+	align-items: center
+	justify-content: center
+
+	+adap('width', 24, 20)
+	+adap('height', 24, 20)
+
+
+.tel, .email, .time, .address
+	display: flex 
+	align-items: flex-start
+	gap: 8px
+
+	font-size: 14px
+
+	span 
+		align-self: center
+
+	svg 
+		align-self: center
+		max-width: 14px
+		max-height: 14px
+
+		fill: $active
+
+.tel, .email, .time
+	white-space: nowrap
+
+	+hov
+		svg 
+			fill: $orange
+
+.call 
+	display: flex
+	align-items: center
+	gap: 8px
+
+.social 
+	display: flex
+	gap: 4px
+
+	&__item 
+		display: flex
+		align-items: center
+		justify-content: center
+
+		width: 24px
+		height: 24px
+		+t 
+
+		+hov
+			scale: 1.1
+
+		svg 
+			max-width: 16px
+			max-height: 16px
+
+			&.whatsapp-icon 
+				fill: #08a652
+
+			&.telegram-icon 
+				fill: #478ed0
+
+
+
+
+.section-404
+	&-wrapper
+		display: grid
+		justify-items: center
+		+adap('gap', 24, 20)
+
+		text-align: center
+
+	&__img
+		+adap('max-width', 320, 240)
+		+adap('margin-bottom', 48, 12)
+
+		animation: shake 2s infinite
+
+	@keyframes shake
+		0%
+			transform: translate(0, 0) rotate(0)
+
+		3% 
+			transform: translate(-2px, 0) rotate(-1deg)
+		
+		6%
+			transform: translate(2px, 0) rotate(1deg)
+		
+		9% 
+			transform: translate(-2px, 0) rotate(-1deg)
+
+		12% 
+			transform: translate(2px, 0) rotate(1deg)
+
+		15% 
+			transform: translate(-1px, 0) rotate(-1deg)
+
+		18% 
+			transform: translate(1px, 0) rotate(1deg)
+
+		21% 
+			transform: translate(-1px, 0) rotate(0deg)
+
+		24%, 100% 
+			transform: translate(0, 0) rotate(0)
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+

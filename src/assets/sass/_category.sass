@@ -1,0 +1,491 @@
+.category
+	&-wrapper
+		display: grid
+		grid-template-columns: minmax(260px, percent(280, $containerWidth)) 1fr 
+		+adap('gap', 40, 20)
+		align-items: start
+
+	&__left 
+		@media (min-width: 992px)
+			position: sticky
+			left: 0
+			top: calc(var(--headerFixedHeight) - 28px)
+			z-index: 4
+
+			background: #fff
+
+		@media (min-width: 992px)
+			+scrollbar(calc(100dvh - var(--headerFixedHeight)), $scrollBarWidth: 4, $padding: 0) 
+			scrollbar-gutter: stable
+
+	&-menu 
+		&__item
+			&-top
+				display: grid
+				grid-template-columns: 1fr auto
+				gap: 12px
+				padding: 12px
+				+adap('padding', 12, 8)
+
+			&-button
+				display: flex
+				align-items: center
+				justify-content: center
+				
+				flex: 0 0 24px
+				width: 24px
+				height: 24px
+
+				&:after
+					background: #696969
+
+				+hov
+					&:after
+						background: $orange
+
+			// 	&.active
+			// 		&:not(:has(+ .category-menu__item-content .category-menu__item-top.active))
+			// 			background: $gray
+			// 			color: $active
+
+			&-link 
+				display: flex
+				align-items: center
+				gap: 12px
+				width: 100%
+
+				+hov
+					color: $orange
+
+			&-current 
+				background: $gray
+				color: $active
+
+			&-icon 
+				position: relative
+
+				display: flex
+				align-items: center
+				justify-content: center
+				flex-grow: 0
+				flex-shrink: 0
+				+adap('flex-basis', 24, 20)
+				+adap('width', 24, 20)
+				+adap('height', 24, 20)
+
+				&:has(img)
+					&:before
+						display: none
+
+				img 
+					z-index: 1
+
+				&:before
+					content: ''
+
+					position: absolute
+					left: 50%
+					top: 50%
+					z-index: -1
+					translate: -50% -50%
+
+					width: 6px
+					height: 6px
+
+					border-radius: 50%
+					background: $text
+
+			.category-menu 
+				.category-menu 
+					&__item
+						&-icon 
+							+adap('margin-left', 12, 8)
+
+					.category-menu 
+						&__item 
+							&-icon
+								+adap('margin-left', 24, 16)
+
+								&:before
+									display: none
+
+						.category-menu 
+							&__item 
+								&-icon
+									+adap('margin-left', 26, 24)
+
+				&:not(:has(.category-menu))
+					color: #173f64
+
+	&__content 
+		display: grid
+		align-items: start
+		+adap('gap', 40, 20)
+
+	&__blocks
+		display: grid
+		+adap('gap', 40, 20)
+
+	&__block 
+		display: grid
+		+adap('gap', 20, 12)
+
+	&__items 
+		display: grid
+		grid-template-columns: repeat(auto-fill, minmax(max(40%, 400px), 1fr))
+		+adap('gap', 20, 16)
+	
+	&__item 
+		display: grid
+		grid-template-columns: auto 1fr 
+		+adap('gap', 23, 16)
+		align-items: start
+
+		&-icon 
+			display: flex
+			align-items: center
+			justify-content: center
+
+			+adap('width', 76, 36)
+			+adap('height', 76, 36)
+
+		&-right 
+			display: grid
+			gap: 12px
+
+		&-link 
+			&:after
+				rotate: -90deg
+	
+
+	@media (max-width: 991px)
+		&-wrapper
+			grid-template-columns: 100%
+
+		&__content 
+			display: contents
+
+		&__title 
+			order: -1
+
+		&__items
+			grid-template-columns: 100%
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,245 @@
+.customers
+	&-wrapper
+		display: grid
+		gap: var(--gap)
+		--gap: min(16px + 4px, 16px + 4 * ((100vw - 320px) / 1600))
+		--min-columns-width: 310px
+		--max-columns: 2
+		
+		grid-template-columns: repeat(auto-fill, minmax(clamp(var(--min-columns-width), 30vw, calc(100% / var(--max-columns) - var(--gap)/var(--max-columns)*(var(--max-columns) - 1))), 1fr))
+
+		&[style*="--max-columns: 3"]
+			.customers__item
+				&:nth-child(odd)
+					background: #ffead5
+
+					.customers__item
+						&-icon 
+							background: $orange
+
+						&-title 
+							color: $text
+
+				&:nth-child(even)
+					background: #cee4f8
+					
+
+					&:after
+						background: #bad9f4
+
+					.customers__item
+						&-icon 
+							background: $active
+
+						&-title 
+							color: #478ed0
+
+				&:after
+					display: none
+
+	&__item 
+		position: relative
+		z-index: 1
+
+		display: grid
+		grid-template-columns: auto 1fr 
+		+adap('gap', 20, 12)
+		align-content: start
+		+adap('padding', 20, 16)
+		+adap('min-height', 136, 100)
+
+		+adap('border-radius', 20, 16)
+		overflow: hidden
+
+		&:nth-child(4n + 1),
+		&:nth-child(4n + 4)
+			background: #ffead5
+
+			.customers__item-icon 
+				background: $orange
+
+		&:nth-child(4n+2),
+		&:nth-child(4n+3)
+			background: #cee4f8
+
+			&:after
+				background: #bad9f4
+
+			.customers__item
+				&-icon 
+					background: $active
+
+				&-title 
+					color: #478ed0
+
+				&-list 
+					li 
+						&:before
+							background: #478ed0
+
+		&:after
+			content: ''
+
+			position: absolute
+			right: 0
+			z-index: -1
+			top: 50%
+			translate: 45% -50%
+			width: 75%
+			height: 100%
+
+			+mask(var(--icon) center / contain no-repeat, #ffdfbf)
+			pointer-events: none
+
+		&-icon 
+			display: flex
+			align-items: center
+			justify-content: center
+			+adap('width', 56, 40)
+			+adap('height', 56, 40)
+			+adap('border-radius', 12, 8)
+
+			&:before
+				content: ''
+
+				width: 54%
+				height: 54%
+
+				+mask(var(--icon) center / contain no-repeat, #fff)
+				+t
+
+		&-right 
+			display: grid
+			gap: 4px
+
+		&-list 
+			display: grid
+			gap: 4px
+
+			li 
+				display: grid
+				grid-template-columns: auto 1fr 
+				align-items: center
+				gap: 4px
+					 
+				&:before
+					content: ''
+
+					+adap('width', 24, 20)
+					+adap('height', 24, 20)
+
+					+mask(url(../img/icons/check.svg) center / 50% no-repeat, $orange)
+
+
+	@media (max-width: 991px)
+		&__item 
+			align-items: center
+
+			&-right 
+				display: contents
+
+			&-list, 
+			&-text 
+				grid-column: 1/-1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

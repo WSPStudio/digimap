@@ -1,0 +1,242 @@
+.footer 
+	font-size: 14px
+	line-height: 1.71429
+
+	&__top 
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		+adap('gap', 40, 16)
+		+adap('padding-block', 40, 20)
+
+		&-wrapper 
+			background: $bg
+			color: #fff
+
+	&__text 
+		p 
+			&:not(:last-child)
+				margin-bottom: 12px
+
+	&__menu 
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		+adap('column-gap', 40, 16)
+		row-gap: 12px
+		+adap('min-width', 340, 300)
+
+		&>li
+			&>a 
+				+hov
+					color: $orange
+
+		.sub-menu-wrapper 
+			color: $text
+			top: auto !important
+			bottom: 100%
+
+		@media (min-width: 1200px)
+			li.menu-item-has-children.left .sub-menu-wrapper 
+				translate: 0 0
+
+	&__item 
+		&-title 
+			margin-bottom: 12px	
+			+adap('padding-bottom', 12, 8)
+
+			border-bottom: 1px solid #555
+
+		&-contacts 
+			max-width: 510px
+
+	&__contacts 
+		columns: 2 150px
+		+adap('column-gap', 40, 20)
+
+		&>*
+			@media (min-width: 576px)
+				margin-bottom: 12px
+				break-inside: avoid
+
+	&__buttons 
+		display: grid
+		grid-template-columns: repeat(auto-fill, minmax(max(40%, 200px), 1fr))
+		align-items: center
+		+adap('gap', 20, 12)
+
+		column-span: all
+
+		@media (min-width: 576px)
+			margin-top: 12px
+
+	&__bottom 
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 12px
+		flex-wrap: wrap
+	
+		font-size: 14px
+	
+		a 
+			+hov
+				color: $orange
+	
+		&-wrapper
+			padding: 12px
+	
+			background: #000 
+			color: #fff
+	
+	
+	@media (max-width: 991px)
+		&__bottom
+			display: grid
+			grid-template-columns: repeat(2, 1fr)
+	
+			&>* 
+				&:nth-child(2n)
+					@media (min-width: 576px)
+						text-align: right
+	
+	@media (max-width: 575px)
+		&__bottom
+			grid-template-columns: 100%
+
+	@media (max-width: 1199px)
+		&__item
+			&-menu
+				display: none
+
+	@media (max-width: 767px)
+		&__top 
+			display: grid
+			grid-template-columns: 100%
+
+	@media (max-width: 575px)
+		&__contacts
+			display: grid
+			grid-template-columns: 100%
+			gap: 16px
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

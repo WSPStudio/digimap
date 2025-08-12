@@ -1,0 +1,233 @@
+$box-shadow-size: 48px 
+$sub-menu-items-gap: 8px // отступ между двумя подменю
+$wrapper-padding: #{$box-shadow-size + $sub-menu-items-gap}
+$margin-offset: 4px // отступ между пунктом меню и выпадшкой
+
+$sub-menu-item-padding: em(12) em(24)
+$sub-menu-box-shadow: 0 12px $box-shadow-size 0 rgba(28, 33, 42, 0.15)
+$sub-menu-border-radius: 12px 
+
+$item-hover-background: rgba($orange, .2)  
+$item-hover-color: $text
+$item-arrow-gap: 12px // отступ между пунктом меню и стрелкой
+
+$arrow-width: 24
+$arrow-height: 24
+$arrow-color: $active
+	
+.sub-menu-wrapper 
+	@media (min-width: #{$burgerMedia+1+px})
+		position: absolute
+		top: calc(100% + $margin-offset)
+		z-index: -1
+		width: max-content 
+		padding-top: $wrapper-padding
+		margin-top: #{-$margin-offset} 
+
+		pointer-events: none 
+		opacity: 0
+		transition: opacity .3s ease-in-out, margin .3s ease-in-out
+		box-sizing: content-box
+
+		white-space: initial 
+
+	.sub-menu
+		position: relative
+		z-index: 2
+
+		background: #fff
+
+		// &:not(:has(.sub-menu))
+		+scrollbar(50vh, $scrollBarWidth: 4, $padding: 'auto') 
+
+		@media (min-width: #{$burgerMedia+1+px})
+			border-radius: $sub-menu-border-radius
+			box-shadow: $sub-menu-box-shadow
+
+	li
+		display: flex
+		align-items: center
+
+		+hov
+			&>a
+				@media (min-width: #{$burgerMedia+1+px})
+					background: $item-hover-background
+					color: $item-hover-color
+
+	a
+		padding: 8px 16px
+
+		transition: color .3s, background .3s !important
+
+li.menu-item-has-children
+	position: relative
+
+	&_not-relative 
+		position: static !important
+
+	&.right 
+		@media (min-width: #{$burgerMedia+1+px})
+			.sub-menu-wrapper 
+				right: 0
+				translate: 0 #{-$wrapper-padding}  
+
+				text-align: right
+
+				a
+					flex-direction: row-reverse
+
+				.sub-menu-wrapper
+					right: 100%
+					translate: #{-$sub-menu-items-gap}  #{-$wrapper-padding} 
+
+				.menu-item-arrow
+					&+a
+						padding: em(12) em(16) em(12) em(32)
+
+			.top 
+				.sub-menu-wrapper
+					right: 0 !important
+					translate: 0 #{-$box-shadow-size} 
+
+				.top 
+					.sub-menu-wrapper
+						left: 100% !important
+						translate: $sub-menu-items-gap 0 
+
+	&.left 
+		@media (min-width: #{$burgerMedia+1+px})
+			.sub-menu-wrapper 
+				left: 0
+				translate: 0 #{-$wrapper-padding}
+
+				.sub-menu-wrapper
+					position: fixed
+					left: 100% 
+					
+					padding-left: $sub-menu-items-gap
+					translate: 0
+
+				.menu-item-arrow
+					&+a
+						padding: em(12) em(32) em(12) em(16)
+
+			.top 
+				.sub-menu-wrapper
+					left: 0 !important
+					translate: 0 #{-$box-shadow-size} 
+
+				.top 
+					.sub-menu-wrapper
+						translate: -100% 0 
+
+	&.left,
+	&.right
+		@media (min-width: #{$burgerMedia+1+px})
+			&>.sub-menu-wrapper
+				width: max-content
+				max-width: 50vw
+				min-width: 200px
+
+		@media (min-width: #{$burgerMedia+1+px})
+			.top 
+				position: relative
+
+				.sub-menu-wrapper
+					top: 100%  !important
+
+				.top 
+					position: relative !important
+
+					.sub-menu-wrapper
+						inset: 0
+						top: 0 !important
+						padding-top: 0
+
+	&.active
+		&>a
+			.menu-item-arrow 
+				rotate: -180deg
+		
+		&>.sub-menu-wrapper
+			margin-top: 0
+			z-index: 1
+			pointer-events: auto
+
+			opacity: 1
+
+		li
+			&:hover 
+				&>a .menu-item-arrow 
+					background: #fff
+
+	li.menu-item-has-children
+		.sub-menu-wrapper 
+			top: 0
+
+	a
+		position: relative
+		z-index: 2  
+		display: flex 
+		justify-content: space-between 
+		align-items: center
+		gap: $item-arrow-gap
+		width: 100%
+
+	.sub-menu
+		&>li
+			&:first-child
+				&>a
+					border-top-left-radius: $sub-menu-border-radius !important
+					border-top-right-radius: $sub-menu-border-radius !important
+			
+			&:last-child
+				&>a
+					border-bottom-left-radius: $sub-menu-border-radius !important 
+					border-bottom-right-radius: $sub-menu-border-radius !important
+ 
+.menu-item-arrow  
+	display: inline-block
+	flex-basis: #{$arrow-width+px}
+	width: #{$arrow-width+px}	
+	height: #{$arrow-height+px}
+	flex-grow: 0
+	flex-shrink: 0
+
+	+t
+	+mask(arrow(50%), currentColor)
+
+
+ 
+	&.active 
+		rotate: -180deg
+
+@media (max-width: #{$burgerMedia+px})
+	li.menu-item-has-children
+		width: 100%
+		
+		a
+			justify-content: space-between
+
+	.sub-menu-wrapper 
+		.sub-menu
+			display: grid
+			gap: 12px 
+			padding: 12px 0 0 12px
+
+			background: none
+			font-size: 14px
+					
+		&.active 
+			opacity: 1 
+			margin-top: 0
+			pointer-events: auto
+
+		li
+			display: grid
+
+		a
+			padding: 0
+ 
+	.menu-item-arrow 
+		-webkit-mask-size: 70%
+		mask-size: 70%

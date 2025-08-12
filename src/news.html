@@ -1,0 +1,67 @@
+@@include('assets/html/head.html', {
+"class" : '" "'
+})
+@@include("assets/html/crumbs.html", {
+"list": [
+{
+"title":"Новости",
+"link":'"#"'
+},
+]
+})
+
+<!-- Новости -->
+<div class="section news">
+	<div class="container">
+		<div class="section__top">
+			<h1 class="title">Новости</h1>
+		</div>
+		<div class="news-wrapper">
+			<a href="single-news.html" class="news__item">
+				<img src="assets/img/news/1.webp" class="news__item-img" alt="" width="345" height="260" loading="lazy" decoding="async">
+				<div class="news__item-content">
+					<div class="title-3 news__item-title">Название новости в две строки</div>
+					<div class="news__item-hidden">
+						<div class="title-3 news__item-title">Название новости в две строки</div>
+						<time datetime="2025-04-25" class="news__item-date">
+							<svg class="date-icon">
+								<use xlink:href="assets/img/sprite.svg#date"></use>
+							</svg>
+							<span>25.04.2025</span>
+						</time>
+						<div class="news__item-text">
+							Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн
+						</div>
+					</div>
+					<div class="news__item-link">Читать полностью</div>
+				</div>
+			</a>
+			@@for(var i = 2; i <= 20; i++){
+				<a href="single-news.html" class="news__item">
+					<img src="assets/img/news/`+i+`.webp" class="news__item-img" alt="" width="345" height="260" loading="lazy" decoding="async">
+					<div class="news__item-content">
+						<div class="title-3 news__item-title">Название новости</div>
+						<div class="news__item-hidden">
+							<div class="title-3 news__item-title">Название новости</div>
+							<time datetime="2025-04-25" class="news__item-date">
+								<svg class="date-icon">
+									<use xlink:href="assets/img/sprite.svg#date"></use>
+								</svg>
+								<span>25.04.2025</span>
+							</time>
+							<div class="news__item-text">
+								Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн
+							</div>
+						</div>
+						<div class="news__item-link">Читать полностью</div>
+					</div>
+				</a>
+			}
+		</div>
+		@@include("assets/html/pagination.html", {
+			"center" : true
+		})
+	</div>
+</div>
+
+@@include('assets/html/foot.html')

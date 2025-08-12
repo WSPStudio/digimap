@@ -1,0 +1,328 @@
+
+.header
+	position: sticky 
+	left: 0
+	top: 0
+	z-index: 10
+
+	width: 100%
+	+adap('margin-bottom', 40, 20)
+	will-change: transform
+
+	background: #fff
+	border-bottom: 1px solid #f2f5f8 
+
+	@media (min-width: 1200px)
+		padding-top: 12px
+
+	&.sticky 
+		box-shadow: 0px 4px 12px 0px #0820301F
+			
+	&-top
+		position: relative
+		z-index: 3
+		+adap('padding-block', 20, 12)
+		background: #fff
+
+		@media (min-width: 1200px)
+			margin-bottom: -12px
+
+		&-wrapper
+			display: flex
+			align-items: center
+			justify-content: space-between
+			+adap('gap', 40, 12)
+
+
+	&__logo 
+		flex-shrink: 0
+		+adap('flex-basis', 188, minusPercent(40, 188))
+
+		img 
+			+adap('width', 188, minusPercent(40, 188))
+			+adap('height', 40, minusPercent(40, 40))
+
+	&__contacts
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		+adap('column-gap', 20, 12)
+		order: 2
+
+	&__buttons 
+		display: flex
+		align-items: center
+		+adap('gap', 20, 12)
+		order: 3
+
+		&>* 
+			@media (max-width: #{$firstBreakpoint + px}) or (min-width: #{$firstBreakpoint + 1 + px})
+				min-width: auto
+	
+	&__menu 
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 12px
+
+		font-size: 14px
+		font-weight: 500
+
+		&>li
+			@media (min-width: 1200px)
+				padding-bottom: 8px
+
+			&>a 
+				@media (min-width: 1200px)
+					padding-inline: 12px 
+
+				+hov
+					color: $orange
+
+			
+			&.current-menu-item 
+				@media (max-width: 1199px)
+					&>a
+						color: $orange
+
+				@media (min-width: 1200px)
+					position: relative
+
+					&:after
+						content: ''
+
+						position: absolute
+						left: 0
+						bottom: 0
+						width: 100%
+						height: 4px
+
+						border-radius: 4px 4px 0 0
+						background: $orange
+
+
+	@media (max-width: #{$burgerMedia+px})
+		$padding-top: 32
+		$padding-bottom: 32
+		$padding-x: 16
+		$mobile-bg: #fff
+
+		border: none
+
+		&__mobile 
+			position: fixed
+			right: -100vw
+			top: 0
+			z-index: 5
+					
+			display: grid 
+			grid-template-columns: 100%
+			justify-items: start
+			align-content: start
+			gap: 20px
+			width: min(500px, 101vw)
+			height: calc(100dvh - #{var(--headerFixedHeight)})
+			padding: #{$padding-top+px} #{$padding-x+px} #{$padding-bottom+px}
+					
+			background: $mobile-bg
+			box-shadow: 0px 4px 12px 0px #0820301F
+					
+			opacity: 0
+			transition: right .3s, opacity .3s
+			+scrollbar(100vh, $scrollBarWidth: 4, $padding: 0) 
+
+			@media (min-width: 576px)
+				border-top-left-radius: 12px
+				border-bottom-left-radius: 12px
+
+			&.active
+				right: 0px
+				opacity: 1
+
+		&-top 
+			position: sticky
+			z-index: 10
+			left: 0
+			top: 0
+			padding-block: 8px 
+
+			background: #fff
+			box-shadow: 0px 4px 12px 0px #0820301F
+
+		&__nav 
+			width: 100%
+			order: -1
+
+		&__menu
+			display: grid
+			grid-template-columns: 100%
+			justify-items: start
+			gap: 20px  
+			width: 100%
+
+	@media (max-width: 767px)
+		&__search 
+			order: -2
+
+		&__buttons 
+			flex-wrap: wrap
+
+			&>*
+				flex-grow: 1
+
+	@media (max-width: 575px)
+		&__contacts
+			grid-template-columns: 100%
+			gap: 4px		
+
+
+
+.header-main
+	position: relative
+	z-index: 2
+	+adap('margin-bottom', 80, 24)
+	+adap('margin-top', -40, -20)
+	overflow-y: clip
+	max-width: 1920px
+	margin-inline: auto
+
+	@media (min-width: 992px)
+		min-height: clamp(400px, calc(100dvh - 126px), calc(600px + 300 * ((100vw - 375px) / 1545)))
+
+	&__bg 
+		position: absolute
+		right: 0
+		bottom: 0
+		z-index: -1
+		translate: 48% 65%
+		+adap('width', 3230, minusPercent(30, 3230))
+		+adap('height', 3017, minusPercent(30, 3017))
+
+		animation: rotate 140s infinite linear
+		pointer-events: none
+
+		@keyframes rotate
+			0%
+				rotate: 0
+					
+			100%
+				rotate: 360deg
+
+	&-wrapper
+		+adap('padding-top', 192, 40)
+		+adap('padding-bottom', 80, 40)
+
+	&__title 
+		+adap('margin-bottom', 40, 20)
+	
+	&__subtitle
+		+adap('margin-bottom', 60, 20)
+
+	&__button 
+		+adap('min-width', 160, 140)
+
+	@media (max-width: 991px)
+		&-wrapper
+			+adap('padding-block', 80, 40, 991)
+
+	@media (max-width: 767px)
+		background: $gray
+
+		&__bg 
+			display: none
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+				

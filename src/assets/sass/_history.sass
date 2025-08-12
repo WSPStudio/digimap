@@ -1,0 +1,290 @@
+.history
+	&-wrapper
+		position: relative
+		overflow: hidden
+
+		@media (min-width: 1200px)
+			&:after
+				content: ''
+
+				position: absolute
+				left: 50%
+				top: 149px
+				z-index: 1
+				translate: -50% 0
+
+				width: 3px
+				height: 10000px
+
+				background: $active
+
+			&:before
+				content: ''
+
+				position: absolute
+				left: 50%
+				top: 128px
+				translate: -50% 0
+
+				width: 60px
+				height: 60px
+
+				background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M58.5003 2L50.0002 2C38.9545 2 30.0002 10.9543 30.0002 22L30.0003' stroke='url(%23paint0_linear_1078_976)' stroke-width='3' stroke-linecap='round' /%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1078_976' x1='30.0001' y1='2' x2='30.0002' y2='1354' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.870192' stop-color='%23478ED0' /%3E%3Cstop offset='1' stop-color='%23FF8F24' /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A") center top / contain no-repeat
+
+	&__item 
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		gap: 80px
+		align-items: start
+		cursor: pointer
+
+		+hov
+			.history__item-year 
+				background: $orange
+			
+			&:not(:last-child):not(:first-child)
+				.history__item-year 
+					&:after
+						background: $orange !important
+
+		@media (min-width: 1200px)
+			&:not(:last-child)
+				margin-bottom: -72px
+
+			&:not(:first-child):not(:last-child)
+				.history
+					&__item 
+						&-year
+							&:after
+								content: ''
+
+								position: absolute
+								top: 50%
+								translate: 0 -50%
+
+								width: 30px
+								height: 3px
+
+								border-radius: 2px
+								background: $active
+								+t
+
+				&:nth-child(even)
+					.history
+						&__item 
+							&-year
+								&:after
+									left: calc(100% + 11px)
+
+				&:nth-child(odd)
+					.history
+						&__item 
+							&-year
+								&:after
+									right: calc(100% + 11px)
+
+			&:nth-child(even)
+				.history
+					&__item 
+						&-year
+							justify-self: end
+
+						&-img 
+							order: 1
+
+			&:last-child
+				.history
+					&__item 
+						&-year
+							background: $orange
+
+							&:before
+								content: ''
+								position: absolute
+								top: -4px
+
+								width: 60px
+								height: 300vh
+								background: #fff
+								z-index: 2
+
+							&:after
+								content: ''
+
+								position: absolute
+								
+								bottom: 50%
+								z-index: 2
+
+								width: 34px
+								height: 242px
+
+								background: url("data:image/svg+xml,%3Csvg width='34' height='242' viewBox='0 0 34 242' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1109_6044)'%3E%3Crect width='34' height='242' /%3E%3Cpath d='M60.0003 -1112L51.5002 -1112C40.4545 -1112 31.5002 -1103.05 31.5002 -1092L31.5003 220C31.5003 231.046 22.546 240 11.5003 240L3.00028 240M3.00001 -844L31.5 -844M31.5003 -564L60.0003 -564M3.00028 -308L31.5003 -308M31.5003 -52L60.0003 -52' stroke='url(%23paint0_linear_1109_6044)' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1109_6044' x1='31.5001' y1='-1112' x2='31.5002' y2='240' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.870192' stop-color='%23478ED0'/%3E%3Cstop offset='1' stop-color='%23FF8F24'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_1109_6044'%3E%3Crect width='34' height='242' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") center / contain no-repeat
+
+				+hov
+					.history
+						&__item 
+							&-year
+								background: $active
+
+
+				&:nth-child(even)
+					.history
+						&__item 
+							&-year
+								&:before
+									left: 100%
+
+								&:after
+									left: calc(100% + 9px)
+
+				&:nth-child(odd)
+					.history
+						&__item 
+							&-year
+								&:before
+									right: 100%
+
+								&:after
+									right: calc(100% + 9px)
+									transform: rotateY(180deg)
+									
+		&-img 
+			img
+				width: 100% 
+				max-height: 340px
+				object-fit: cover
+				+adap('border-radius', 20, 16)
+
+		&-content 
+			display: grid
+			justify-items: start
+			gap: 12px
+
+			@media (min-width: 1200px)
+				padding-block: 112px
+
+		&-year 
+			position: relative
+			padding: 4px 12px
+
+			background: $active
+			border-radius: 8px
+
+			font-weight: 700
+			color: #fff
+			+t
+
+
+	@media (max-width: 1199px)
+		&-wrapper
+			display: grid
+			+adap('gap', 40, 20, 1199)
+
+		&__item 
+			align-items: center
+			+adap('gap', 40, 12, 1199)
+
+			@media (min-width: 768px)
+				&:nth-child(even)
+					.history__item-img 
+						order: 1
+
+	@media (max-width: 767px)
+		&__item 
+			grid-template-columns: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

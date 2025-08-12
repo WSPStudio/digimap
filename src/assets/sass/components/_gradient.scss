@@ -1,0 +1,66 @@
+$gradients: (
+	'.services__item': (rgba(71, 142, 208, 0.2), rgba(71, 142, 208, 0.7), rgba($active, 0.92), rgba($active, 0.92), 180deg, 0%, 100%, ':after'),
+);
+
+@if length(map-keys($gradients))>0 {
+	@for $i from 1 through length(map-keys($gradients)) {
+		$key: nth(map-keys($gradients), $i); // Получаем селектор (например, '.block1')
+		$args: map-get($gradients, $key); // Получаем список аргументов
+
+		// Основные цвета
+		$color-start: nth($args, 1);
+		$color-end: nth($args, 2);
+
+		// Ховерные цвета
+		$color-hover-start: nth($args, 3);
+		$color-hover-end: nth($args, 4);
+
+		$after: nth($args, 8);
+
+		// Имена CSS-переменных
+		$color-name: --color-gradient-#{$i};
+		$color-end-name: --color-gradient-end-#{$i};
+
+		// Направление градиента (по умолчанию 90deg)
+		$direction: if(length($args) >=5, nth($args, 5), 90deg);
+
+		// Точка остановки первого цвета (по умолчанию 0%)
+		$color-start-percent: if(length($args) >=6, nth($args, 6), 0%);
+
+		// Точка остановки второго цвета (по умолчанию 100%)
+		$color-end-percent: if(length($args) >=7, nth($args, 7), 100%);
+
+		// Определяем CSS-свойство для первого цвета градиента
+		@property #{$color-name} {
+			syntax: '<color>';
+			inherits: false;
+			initial-value: #{$color-start};
+		}
+
+		// Определяем CSS-свойство для второго цвета градиента
+		@property #{$color-end-name} {
+			syntax: '<color>';
+			inherits: false;
+			initial-value: #{$color-end};
+		}
+
+		#{$key} {
+			@media (any-hover: hover) {
+				&:hover#{$after} {
+					#{$color-name}: $color-hover-start;
+					#{$color-end-name}: $color-hover-end;
+				}
+			}
+
+			&:focus-visible#{$after} {
+				#{$color-name}: $color-hover-start;
+				#{$color-end-name}: $color-hover-end;
+			}
+		}
+
+		#{$key}#{$after} {
+			background-image: linear-gradient($direction, var($color-name, $color-start) $color-start-percent, var($color-end-name, $color-end) $color-end-percent);
+			transition: $color-name .5s, $color-end-name .5s;
+		}
+	}
+}

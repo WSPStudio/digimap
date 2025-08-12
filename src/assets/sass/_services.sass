@@ -1,0 +1,145 @@
+.services
+	&-wrapper
+		display: grid
+		gap: var(--gap)
+		--gap: min(12px + 8px, 12px + 8 * ((100vw - 320px) / 1600))
+		--min-columns-width: 300px
+		--max-columns: 4
+		grid-template-columns: repeat(auto-fill, minmax(clamp(var(--min-columns-width), 30vw, calc(100% / var(--max-columns) - var(--gap)/var(--max-columns)*(var(--max-columns) - 1))), 1fr))
+
+	&__item 
+		position: relative
+		z-index: 1
+		+adap('min-height', 260, 200)
+
+		+adap('border-radius', 20, 16)
+		overflow: hidden
+
+		color: #fff
+
+		&:after
+			content: ''
+			+abs 
+			z-index: -1
+
+			// background: linear-gradient(180deg, rgba(71, 142, 208, 0.2) 0%, rgba(71, 142, 208, 0.7) 100%)
+
+		&-img
+			+abs 
+			z-index: -2
+			object-fit: cover
+
+		&-content 
+			position: relative
+
+			display: grid
+			align-items: end
+			height: 100%
+			+adap('padding', 20, 12)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

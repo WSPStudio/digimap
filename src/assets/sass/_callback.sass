@@ -1,0 +1,169 @@
+.callback
+	position: relative
+	z-index: 1
+	color: #fff
+	
+	&_small 
+		+adap('padding', 40, 16)
+		+adap('border-radius', 20, 16)
+		overflow: hidden
+
+		.callback__form 
+			max-width: 100%
+
+	&__bg 
+		+abs 
+		z-index: -1
+
+		img
+			width: 100%
+			object-fit: cover
+
+	&:after
+		content: ''
+
+		+abs
+		z-index: -1
+		background: linear-gradient(90deg, #478ED0 0%, rgba(71, 142, 208, 0.8) 100%)
+		pointer-events: none
+
+
+	&-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+adap('gap', 40, 20)
+
+	&__form 
+		max-width: 800px
+
+		.input-wrapper
+			grid-template-columns: repeat(6, 1fr)
+			+adap('gap', 20, 12)
+
+			@media (min-width: 576px)
+				>* 
+					grid-column: span 2
+
+					&[data-columns="2"]
+						grid-column: span 3
+
+					&[data-columns="full"]
+						grid-column: 1/-1
+
+	&__logo 
+		+adap('width', 432, minusPercent(40, 432))
+		+adap('height', 92, minusPercent(40, 92))
+	
+	@media (max-width: 991px)
+		&-wrapper
+			display: grid
+			grid-template-columns: 100%
+		
+		&__logo 
+			display: none
+
+	@media (max-width: 575px)
+		&__bg 
+			display: none
+	
+		&__form 
+			.input-wrapper 
+				grid-template-columns: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

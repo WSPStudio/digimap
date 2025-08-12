@@ -1,0 +1,196 @@
+.license
+	position: relative
+	z-index: 1
+
+	.container 
+		position: static
+
+	&__bg 
+		+abs
+		overflow: hidden
+
+		@media (min-width: 768px)
+			&:after
+				content: '' 
+
+				position: absolute
+				left: 50%
+				bottom: 45%
+				z-index: -1
+				translate: -50% 0
+				+adap('width', 1800, 1000 , $min: true)
+				+adap('height', 1800, 1000 , $min: true)
+
+				background: url(../img/info/bg.svg) center / contain no-repeat
+				animation: rotate 100s infinite linear
+				pointer-events: none
+
+				@keyframes rotate
+					0%
+						rotate: 0
+						
+					100%
+						rotate: 360deg
+
+	&-wrapper
+		display: grid
+		column-gap: var(--gap)
+		+adap('row-gap', 60, 8)
+		--gap: min(8px + 32px, 8px + 32 * ((100vw - 320px) / 1600))
+		--min-columns-width: 200px
+		--max-columns: 4
+		
+		grid-template-columns: repeat(auto-fill, minmax(clamp(var(--min-columns-width), 30vw, calc(100% / var(--max-columns) - var(--gap)/var(--max-columns)*(var(--max-columns) - 1))), 1fr))
+
+		@media (max-width: 575px)
+			grid-template-columns: repeat(2, 1fr)
+
+		&-short 
+			+adap('row-gap', 40, 8)
+
+	&__item 
+		position: relative
+		+adap('border-top-left-radius', 20, 12)
+		+adap('border-top-right-radius', 20, 12)
+		overflow: hidden
+
+		&:before
+			content: '' 
+
+			position: absolute
+			left: 0
+			top: 0
+
+			+adap('width', 40, 24)
+			+adap('height', 40, 24)
+
+			background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H18.1818H40V10.1818C40 14.6001 36.4183 18.1818 32 18.1818H26.1818C21.7635 18.1818 18.1818 21.7635 18.1818 26.1818V32C18.1818 36.4183 14.6001 40 10.1818 40H0V0Z' fill='%23FE7D00' /%3E%3C/svg%3E") center / contain no-repeat
+			pointer-events: none
+			+t
+
+		&-img 
+			height: auto
+			aspect-ratio: 330/416
+			+adap('border-radius', 20, 16)
+			overflow: hidden
+			object-fit: cover
+
+		&-title 
+			+adap('font-size', 16, 13)
+			word-break: break-all
+
+	&__link 
+		display: flex
+		align-items: center
+		gap: 12px
+
+		svg 
+			fill: none
+			stroke: #fff
+
+		+hov 
+			svg 
+				stroke: $orange
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,417 @@
+.input-wrapper 
+	+adap('gap', 16, 12)
+
+.input, .textarea
+	width: 100%
+	padding-inline: 12px
+
+	border-radius: 8px
+	background: #f2f5f8
+
+	font-size: 14px 
+	font-weight: 400
+	color: $text
+
+	$error-color: #f03
+
+	&:user-invalid
+		color: $error-color
+		border-color: $error-color
+
+		&::placeholder
+			color: $error-color
+
+	&::placeholder
+		color: #7d94ac
+
+
+.input
+	height: 48px
+
+.textarea
+	+adap('height', 160, 100)
+	padding-block: 12px
+	
+.submit 
+	min-width: 200px
+	justify-self: center
+
+	@media (max-width: 430px)
+		width: 100%
+
+.form 
+	.checkbox 
+		+adap('font-size', 16, 12)
+
+	&__row 
+		display: grid
+		grid-template-columns: 1fr auto
+		align-items: center
+		+adap('gap', 20, 12)
+		+adap('margin-top', 40, 16)
+
+		@media (max-width: 575px)
+			grid-template-columns: 100%
+			justify-items: start
+
+			.submit 
+				justify-self: start
+
+	form
+		&.form-dragover
+			position: relative
+			
+			&:before
+				content: ''
+				position: absolute
+				left: 50%
+				top: 50%
+				translate: -50% -50%
+				z-index: 5
+
+				width: calc(100% + 12px)
+				height: calc(100% + 12px)
+					
+				border: 2px dashed $orange
+				border-radius: 8px
+				background-color: rgba($orange, 0.2)
+				transition: background-color 0.2s, border-color 0.2s
+
+			&::after 
+				content: "Отпустите мышь, чтобы загрузить файлы"
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				background: $orange
+				color: #fff
+				padding: 8px 16px
+				border-radius: 6px
+				font-size: 14px
+				white-space: nowrap
+				pointer-events: none
+				opacity: 0.95
+				
+
+
+.input-file
+	$input-file-icon-color: currentColor
+
+	$input-file-icon-size: 24
+	$input-file-icon-size-mobile: 24
+
+	$input-file-gap: 20
+	$input-file-gap-mobile: 20
+
+	position: relative
+	width: auto
+	display: flex
+	justify-content: flex-start
+	
+	+t
+	+hover-underline
+
+	font-size: 14px
+	font-weight: 500	
+
+	input 
+		position: absolute
+		inset: 0
+		opacity: 0
+
+	&-text
+		display: flex
+		align-items: flex-start
+
+		@if $input-file-gap != $input-file-gap-mobile
+			+adap('gap', $input-file-gap, $input-file-gap-mobile)
+
+		@else
+			gap: #{$input-file-gap+px}
+
+		&:before 
+			content: ''
+			+abs 
+			z-index: 1
+			cursor: pointer
+
+		&:after
+			content: ''
+			position: relative
+			z-index: 2
+			align-self: center
+			flex-shrink: 0
+
+			+adap('flex-basis', 24, 20)
+			+adap('width', 24, 20)
+			+adap('height', 24, 20)
+
+
+			aspect-ratio: 1
+			+mask(url("data:image/svg+xml,%3Csvg width='14' height='18' viewBox='0 0 14 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 1L7.35355 0.646446L7 0.292893L6.64645 0.646446L7 1ZM6.5 13C6.5 13.2761 6.72386 13.5 7 13.5C7.27614 13.5 7.5 13.2761 7.5 13L6.5 13ZM13 7L13.3536 6.64645L7.35355 0.646446L7 1L6.64645 1.35355L12.6464 7.35355L13 7ZM7 1L6.64645 0.646446L0.646446 6.64645L1 7L1.35355 7.35355L7.35355 1.35355L7 1ZM7 1L6.5 1L6.5 13L7 13L7.5 13L7.5 1L7 1Z' fill='white' /%3E%3Cpath d='M0 17L14 17' stroke='white' /%3E%3C/svg%3E") left center / 50% no-repeat, $input-file-icon-color)
+
+.input-image
+	position: relative
+
+	display: flex
+	align-items: center
+	justify-content: center
+
+	width: 300px
+	height: 300px
+
+	background: #ccc 
+	border-radius: 12px
+	overflow: hidden
+	+t
+
+	input 
+		width: 100%
+		height: 100%
+ 
+		opacity: 0
+
+	&__img
+		z-index: 1
+
+		img 
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&__img,
+	&__text 
+		position: absolute
+		inset: 0
+
+	&__text
+		z-index: 2
+		display: flex
+		justify-content: center
+		align-items: center 
+
+	&__remove 
+		position: absolute
+		right: 10px
+		top: 10px
+		z-index: 4
+
+		width: 30px
+		height: 30px
+		display: flex
+		align-items: center
+		justify-content: center
+
+		font-size: 50px
+		color: $active
+		visibility: hidden
+
+		&.active
+			visibility: visible
+
+
+.input-date
+	$input-date-icon-size: 20px
+	$input-date-icon-offset: 16px
+
+	position: relative
+	z-index: 2
+
+	font: inherit
+
+
+	input
+		font: inherit
+		cursor: pointer
+
+		&::-webkit-calendar-picker-indicator
+			display: none
+
+	&:after
+		content: ''
+		position: absolute
+		top: 50%
+		right: $input-date-icon-offset
+		z-index: 1
+		transform: translateY(-50%)
+		width: $input-date-icon-size
+		aspect-ratio: 1
+
+		+mask(url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,2H19V1a1,1,0,0,0-2,0V2H7V1A1,1,0,0,0,5,1V2H4A4,4,0,0,0,0,6V20a4,4,0,0,0,4,4H20a4,4,0,0,0,4-4V6A4,4,0,0,0,20,2Zm2,18a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V6A2,2,0,0,1,4,4H5V5A1,1,0,0,0,7,5V4H17V5a1,1,0,0,0,2,0V4h1a2,2,0,0,1,2,2Z'/%3E%3Cpath d='M19,7H5A1,1,0,0,0,5,9H19a1,1,0,0,0,0-2Z'/%3E%3Cpath d='M7,12H5a1,1,0,0,0,0,2H7a1,1,0,0,0,0-2Z'/%3E%3Cpath d='M7,17H5a1,1,0,0,0,0,2H7a1,1,0,0,0,0-2Z'/%3E%3Cpath d='M13,12H11a1,1,0,0,0,0,2h2a1,1,0,0,0,0-2Z'/%3E%3Cpath d='M13,17H11a1,1,0,0,0,0,2h2a1,1,0,0,0,0-2Z'/%3E%3Cpath d='M19,12H17a1,1,0,0,0,0,2h2a1,1,0,0,0,0-2Z'/%3E%3Cpath d='M19,17H17a1,1,0,0,0,0,2h2a1,1,0,0,0,0-2Z'/%3E%3C/svg%3E") no-repeat center / contain, currentColor) 
+		pointer-events: none
+
+
+.password
+	position: relative
+
+	width: 100%
+
+	&__icon 
+		position: absolute
+		right: 15px
+		top: 50%
+		translate: 0 -50%
+
+		width: 16px
+		height: 10px
+
+		background: url(../img/icons/password-hide.svg) center / contain no-repeat 
+		+t
+
+		&.active
+			background-image: url(../img/icons/password-show.svg)
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

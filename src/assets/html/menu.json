@@ -1,0 +1,803 @@
+[
+	{
+		"title": "RuMap-GIS",
+		"link": "category-2.html",
+		"icon": "1.svg",
+		"children": [
+			{
+				"title": "RuMap Данные",
+				"link": "category-3.html",
+				"children": [
+					{
+						"title": "Базовая карта",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Единый граф движения",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Точки интереса (POI)",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Специальные данные",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "RuMap Сервисы",
+				"link": "category-3.html",
+				"children": [
+					{
+						"title": "Базовая карта",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Единый граф движения",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Точки интереса (POI)",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Специальные данные",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Геопортал RuMap",
+				"link": "category-3.html"
+			}
+		]
+	},
+	{
+		"title": "RuMap Сервисы",
+		"link": "category-2.html",
+		"icon": "2.svg",
+		"children": [
+			{
+				"title": "RuMap Данные",
+				"link": "category-3.html",
+				"children": [
+					{
+						"title": "Базовая карта",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Единый граф движения",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Точки интереса (POI)",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Специальные данные",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "RuMap Сервисы",
+				"link": "category-3.html",
+				"children": [
+					{
+						"title": "Базовая карта",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Единый граф движения",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Точки интереса (POI)",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Специальные данные",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Геопортал RuMap",
+				"link": "category-3.html"
+			}
+		]
+	},
+	{
+		"title": "Геопортал RuMap",
+		"link": "category-2.html",
+		"icon": "3.svg"
+	},
+	{
+		"title": "RuMap приложения",
+		"link": "category-2.html",
+		"icon": "4.svg",
+		"children": [
+			{
+				"title": "RuMap Данные",
+				"link": "category-3.html",
+				"children": [
+					{
+						"title": "Базовая карта",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Единый граф движения",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Точки интереса (POI)",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Специальные данные",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "RuMap Сервисы",
+				"link": "category-3.html",
+				"children": [
+					{
+						"title": "Базовая карта",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Единый граф движения",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Точки интереса (POI)",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Специальные данные",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Геопортал RuMap",
+				"link": "category-3.html"
+			}
+		]
+	},
+	{
+		"title": "Геоинформационные системы",
+		"link": "category-2.html",
+		"icon": "5.svg",
+		"children": [
+			{
+				"title": "RuMap Данные",
+				"link": "category-3.html",
+				"children": [
+					{
+						"title": "Базовая карта",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Единый граф движения",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Точки интереса (POI)",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Специальные данные",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "RuMap Сервисы",
+				"link": "category-3.html",
+				"children": [
+					{
+						"title": "Базовая карта",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Единый граф движения",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Точки интереса (POI)",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					},
+					{
+						"title": "Специальные данные",
+						"link": "category-4.html",
+						"children": [
+							{
+								"title": "Административное деление",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Адресная база и контуры зданий",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Улично-дорожная сеть",
+								"link": "category-5.html"
+							},
+							{
+								"title": "Топографические объекты",
+								"link": "category-5.html"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Геопортал RuMap",
+				"link": "category-3.html"
+			}
+		]
+	}
+]

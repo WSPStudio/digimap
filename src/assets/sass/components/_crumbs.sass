@@ -1,0 +1,46 @@
+$row-gap: 8px 
+$column-gap: 48
+$column-gap-mobile: 20
+
+.crumbs
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	+adap('column-gap', $column-gap, $column-gap-mobile)
+	row-gap: $row-gap
+	 
+	font-weight: 500
+	+adap('font-size', 14, 13)
+
+	li 
+		&:not(:last-child)
+			color: $light 
+
+			@media (any-hover: hover)
+				&:hover
+					color: $active
+
+					&:before
+						color: $light 
+
+		&:last-child
+			pointer-events: none
+
+			a
+				color: $active
+				cursor: default 
+
+		&:not(:last-child)
+			position: relative
+			
+			&:before
+				content: ''
+
+				position: absolute
+				+adap('right', math.div($column-gap, -2), math.div($column-gap-mobile, -2))
+				top: 50%
+				translate: 50% -50%
+				width: em(8, 14)
+				height: em(14, 14)
+
+				+mask(url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L1 13' stroke='%23B9C8D8' /%3E%3C/svg%3E") center / contain, #b9c8d8)

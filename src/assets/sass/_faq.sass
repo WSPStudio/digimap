@@ -1,0 +1,143 @@
+.faq
+	&-wrapper
+		display: grid
+		grid-template-columns: repeat(auto-fill, minmax(max(40%, 400px), 1fr))
+		+adap('gap', 40, 20)
+		align-items: start
+
+	&__col 
+		display: grid
+		gap: 12px
+
+	&__item
+		&-title 
+			padding: 8px 12px
+
+			border-radius: 4px	
+			background: $gray
+
+			&:not(.active)
+				+hov
+					background: dark($gray, 7%)
+
+			&.active 
+				background: #cee4f8
+
+		&-text 
+			+adap('padding-top', 20, 16)
+
+
+	@media (max-width: 991px)
+		&-wrapper
+			gap: 12px
+			grid-template-columns: 100%
+
+		&__col 
+			display: contents
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

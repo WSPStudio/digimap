@@ -1,0 +1,167 @@
+.contact
+	&-wrapper
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		+adap('gap', 40, 20)
+		align-items: start
+	
+	&__item 
+		align-content: start
+	
+		&-content 
+			display: grid
+			+adap('gap', 16, 12)
+	
+			.flex 
+				+adap('column-gap', 40, 16)
+	
+	&__right 
+		justify-items: start
+
+	&__table 
+		width: 100%
+		
+		border-radius: 12px
+		overflow: hidden
+
+		table 
+			width: 100%
+			border-collapse: collapse
+
+		tr
+			&:nth-child(odd)
+				background: #dee5eb
+
+			&:nth-child(even)
+				background: #f2f5f8
+	
+		td, th
+			padding: 16px 12px
+
+		th
+			text-align: left
+			white-space: nowrap
+
+		td
+			min-width: 200px
+	
+	
+	@media (max-width: 991px)
+		&-wrapper
+			grid-template-columns: 100%
+	
+	@media (max-width: 430px)
+		&__download 
+			width: 100%
+	
+	
+	
+	
+.contact-callback
+	&-wrapper
+		display: grid
+		grid-template-columns: 1fr minmax(340px, percent(580, $containerWidth))
+		border: 1px solid #d7d7d7
+		+adap('border-radius', 20, 16)
+		overflow: hidden
+
+	&__map 
+		min-height: 300px
+
+	&__right 
+		+adap('padding-block', 40, 20)
+		+adap('padding-inline', 40, 16)
+
+
+	@media (max-width: 767px)
+		&-wrapper
+			grid-template-columns: 100%
+
+		&__map 
+			order: 1
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

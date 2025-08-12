@@ -1,0 +1,467 @@
+$container575: 430px
+$container767: 520px
+$container991: 720px
+$container1199: 940px
+
+.container
+	position: relative
+	width: 100%
+	max-width: max(100%, $container575)
+	margin-inline: auto
+	padding-inline: 12px
+
+	&-left,
+	&-right
+		padding: 0
+
+	@media (min-width: 576px)
+		width: $container767
+		max-width: none
+		padding: 0
+
+	@media (min-width: 768px)
+		width: $container991
+
+	@media (min-width: 992px)
+		width: $container1199
+
+	@if $firstBreakpoint > 1399
+		@media (min-width: 1200px)
+			width: 1140px
+
+	@media (min-width: #{$firstBreakpoint + 1 + px})
+		width: $container
+
+	&-left,
+	&-right
+		position: relative
+		width: 100vw
+		max-width: calc(100vw - (100vw - $container575) / 2)
+
+		@media (min-width: 576px)
+			width: calc($container767 + (100vw - $container767) / 2)
+			max-width: none
+
+		@media (min-width: 768px)
+			width: calc($container991 + (100vw - $container991) / 2)
+
+		@media (min-width: 992px)
+			width: calc($container1199 + (100vw - $container1199) / 2)
+
+		@if $firstBreakpoint > 1399
+			@media (min-width: 1200px)
+				width: calc(1140px + (100vw - 1140px) / 2)
+
+		@media (min-width: #{$firstBreakpoint + 1 + px})
+			width: calc($container + (100vw - $container) / 2)
+
+	&-right
+		margin-left: auto
+		margin-right: 0
+		padding-left: 12px
+
+		@media (min-width: 576px)
+			padding-right: 20px
+			padding-left: 0
+
+	&-left
+		margin-right: auto
+		margin-left: 0
+		padding-right: 12px
+
+		@media (min-width: 576px)
+			padding-right: 0
+			padding-left: 20px
+
+:root
+	--active: #{$active}
+	--text: #{$text}
+
+*
+	box-sizing: border-box
+	outline: none
+	-webkit-tap-highlight-color: transparent
+
+	&:focus,
+	&:active
+		outline: none
+
+html
+	display: flex
+	flex-direction: column 
+	min-height: 100%
+
+	&:not(.loaded)
+		[data-da*="header__mobile"], ._dynamic_adapt_, .sub-menu-wrapper, .select__content
+			position: absolute
+			opacity: 0
+
+		.header 
+			opacity: 0
+
+	&.safari
+		-webkit-text-size-adjust: 100%
+
+		input,
+		textarea 
+			font-size: 16px !important
+				
+		input
+			appearance: none
+
+@supports not (-webkit-hyphens:none)
+	body
+		padding-right: 0 !important
+
+body
+	position: relative
+	display: flex
+	flex-direction: column
+	flex: 1
+	margin: 0
+
+	font-family: $font
+	color: $text
+	-webkit-tap-highlight-color: transparent
+	overflow-x: clip
+
+	&.no-scroll
+		overflow-y: hidden
+
+.wrapper
+	display: flex
+	flex-direction: column
+	flex: 1
+	overflow-x: clip
+
+.main
+	flex: 1
+
+html, body, .header__mobile
+	scrollbar-gutter: stable
+
+	&.scrollbar-auto
+		scrollbar-gutter: auto
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl, dt, dd,
+figure, fieldset, iframe
+	margin: 0
+	padding: 0
+	font: inherit
+
+li
+	padding: 0
+	list-style: none
+	font: inherit
+	cursor: pointer
+
+button
+	margin: 0
+	padding: 0
+	border: none
+	background: none
+	font: inherit
+	color: inherit
+	cursor: pointer
+
+a
+	text-decoration: none
+	color: inherit
+	font-family: inherit
+	cursor: pointer
+
+strong, button
+	font: inherit
+
+input, textarea
+	border: none
+	background: none
+	text-decoration: none
+	color: inherit
+	font-family: $font
+	appearance: none
+
+	&::placeholder
+		font: inherit
+		color: inherit
+		+t
+
+textarea
+	resize: none
+	+scrollbar(100%)
+
+@supports (-webkit-hyphens:none)
+	input
+		appearance: none
+		font-size: 16px !important
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance: none
+
+input[type=number]
+	-moz-appearance: textfield
+
+input[type="submit"],
+input[type="button"]
+	cursor: pointer
+
+input, textarea, button
+	+box-shadow-border(transparent)
+	+t(.3)
+
+	&:focus-visible
+		+box-shadow-border($orange)
+
+a
+	+box-shadow-border(transparent)
+
+	&:focus-visible
+		+box-shadow-border($orange)
+
+h1, h2, h3, h4, h5, h6
+	@media (min-width: 576px) and (max-width: 1199px)
+		text-wrap: balance
+
+img
+	max-width: 100%
+	object-fit: contain
+
+picture
+	display: flex
+	justify-content: center
+
+	img 
+		height: 100%
+	// 	width: 100%
+	// 	object-fit: cover
+
+
+svg
+	max-height: 100%
+	+t
+
+sup
+	font-size: .5em
+
+[data-digits-counter]
+	display: inline-block
+	white-space: nowrap
+
+[data-lines]
+	display: -webkit-box
+	-webkit-box-orient: vertical
+	overflow: hidden
+
+	&.active
+		-webkit-line-clamp: unset
+		overflow: visible
+
+.input-wrapper
+	display: grid
+
+.logo
+	display: flex
+
+.button, .submit, .menu li, a, .tel
+	transition: color .3s, background .3s, opacity .3s
+
+.menu
+	li
+		position: relative
+		z-index: 2
+
+.menu-item:not(.menu-item-has-children)
+	.menu-item-arrow
+		display: none
+
+.link-button
+	display: inline-flex
+	justify-content: center
+	align-items: center
+
+.hover-active
+	@media (any-hover: hover)
+		&:hover
+			color: $orange
+
+.hover-translate
+	transition: translate .4s
+	cursor: pointer
+
+	+hov
+		translate: 0 -3px
+
+.hover-scale
+	+t
+	cursor: pointer
+
+	[class*="-img"]
+		overflow: hidden
+
+		img
+			transition: .4s ease-in
+
+	+hov
+		[class*="-img"]
+			img
+				scale: 1.02
+
+.hover-icon
+	img, svg
+		+t
+
+	+hov
+		img, svg
+			scale: 1.08
+
+=underline
+	text-decoration: underline
+	text-decoration-skip-ink: none
+	text-underline-offset: .1lh
+	+t
+
+=hover-underline
+	+underline
+	text-decoration-color: transparent
+
+	+hov
+		text-decoration-color: currentColor
+
+.underline
+	+underline
+
+	+hov
+		text-decoration-color: transparent
+
+.hover-underline
+	+underline
+	text-decoration-color: transparent
+
+	+hov
+		text-decoration-color: currentColor
+
+[hidden]
+	display: none !important
+
+[data-scrolling]
+	* 
+		user-select: none 
+
+
+.flex
+	display: flex
+	+adap('gap', 16, 12)
+
+.flex-wrap
+	flex-wrap: wrap
+
+.col, .grid
+	display: grid
+	grid-template-columns: 100%
+	justify-items: start
+
+.grid
+	+adap('gap', 16, 12)
+
+.justify-center
+	justify-content: center
+	justify-items: center
+
+.justify-end
+	justify-content: end
+
+.justify-start
+	justify-content: start
+
+.justify-between
+	width: 100%
+	justify-content: space-between
+
+.align-center
+	align-items: center
+
+.align-start
+	align-items: start
+	align-content: start
+
+.align-end
+	align-items: end
+	align-content: end
+
+=swiper-controls
+	&.swiper
+		&-pagination,
+		&-navigation
+			display: none
+
+=hide-swiper
+	+hidden
+	+swiper-controls
+
+.hidden
+	+hidden
+
+.show-xs 
+	@media (min-width: 576px)
+		+hide-swiper
+
+.hide-xs
+	@media (max-width: 575px)
+		+hide-swiper
+
+.show-sm 
+	@media (min-width: 768px)
+		+hide-swiper
+
+.hide-sm
+	@media (max-width: 767px)
+		+hide-swiper
+
+.show-md 
+	@media (min-width: 992px)
+		+hide-swiper
+
+.hide-md
+	@media (max-width: 991px)
+		+hide-swiper
+
+.hide-lg
+	@media (max-width: 1199px)
+		+hide-swiper
+
+.show-lg 
+	@media (min-width: 1200px)
+		+hide-swiper
+
+.hide-xl
+	@media (max-width: #{$firstBreakpoint+px})
+		+hide-swiper
+
+.show-xl 
+	@media (min-width: #{$firstBreakpoint + 1 + px})
+		+hide-swiper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
