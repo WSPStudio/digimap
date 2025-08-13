@@ -77,8 +77,11 @@ li.menu-item-has-children
 					flex-direction: row-reverse
 
 				.sub-menu-wrapper
-					right: 100%
-					translate: #{-$sub-menu-items-gap}  #{-$wrapper-padding} 
+					position: fixed
+					right: 100% 
+						
+					padding-right: $sub-menu-items-gap
+					translate: 0
 
 				.menu-item-arrow
 					&+a
@@ -127,6 +130,7 @@ li.menu-item-has-children
 				width: max-content
 				max-width: 50vw
 				min-width: 200px
+				height: calc(100% - $wrapper-padding)
 
 		@media (min-width: #{$burgerMedia+1+px})
 			.top 
@@ -154,11 +158,6 @@ li.menu-item-has-children
 			pointer-events: auto
 
 			opacity: 1
-
-		li
-			&:hover 
-				&>a .menu-item-arrow 
-					background: #fff
 
 	li.menu-item-has-children
 		.sub-menu-wrapper 

@@ -2,7 +2,7 @@ import { gallery } from './components/gallery';
 import { map } from './components/map';
 import { popup } from './components/popup';
 import { spoller } from './components/spoller';
-import { subMenu } from './components/sub-menu';
+import { subMenu } from './components/subMenu';
 import { numbers } from './components/numbers';
 import { burger } from './components/burger';
 import { showMore } from './components/showmore';

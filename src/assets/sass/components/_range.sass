@@ -4,6 +4,11 @@
 	gap: 8px
 	grid-template-columns: 100% 
 
+	&.active 
+		.range__input
+			input 
+				color: $text
+
 	&__inputs 
 		display: grid
 		grid-template-columns: repeat(2, 1fr)
@@ -41,6 +46,7 @@
 			width: 100%
 			height: 100%
 			cursor: pointer
+			color: #b9c8d8
 
 			&:focus
 				box-shadow: none

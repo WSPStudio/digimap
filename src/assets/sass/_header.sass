@@ -197,15 +197,7 @@
 		+adap('width', 3230, minusPercent(30, 3230))
 		+adap('height', 3017, minusPercent(30, 3017))
 
-		animation: rotate 140s infinite linear
 		pointer-events: none
-
-		@keyframes rotate
-			0%
-				rotate: 0
-					
-			100%
-				rotate: 360deg
 
 	&-wrapper
 		+adap('padding-top', 192, 40)
@@ -220,15 +212,19 @@
 	&__button 
 		+adap('min-width', 160, 140)
 
-	@media (max-width: 991px)
-		&-wrapper
-			+adap('padding-block', 80, 40, 991)
+	&__pin 
+		position: absolute
+		left: 40%
+		bottom: 20%
 
-	@media (max-width: 767px)
+	@media (max-width: 991px)
 		background: $gray
 
 		&__bg 
 			display: none
+
+		&-wrapper
+			+adap('padding-block', 80, 40, 991)
 
 
 

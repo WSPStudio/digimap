@@ -20,6 +20,7 @@ if (document.querySelector('.project-container')) {
 	let projectSlider = new Swiper('.project-container', {
 		autoplay: {
 			delay: 4000,
+			pauseOnMouseEnter: true
 		},
 		loop: true,
 		pagination: {
@@ -82,9 +83,15 @@ if (ranges) {
 		let isTouched = false
 
 		function activateBetween() {
+
 			if (!isTouched) {
 				rangeBetween.style.display = 'block'
 				isTouched = true
+			} else {
+				if (!rangeBlock.classList.contains('active')) {
+					rangeBlock.classList.add('active')
+				}
+
 			}
 		}
 

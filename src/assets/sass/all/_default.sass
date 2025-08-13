@@ -87,7 +87,7 @@ $container1199: 940px
 		outline: none
 
 html
-	display: flex
+	display: flex 
 	flex-direction: column 
 	min-height: 100%
 
@@ -97,6 +97,9 @@ html
 			opacity: 0
 
 		.header 
+			opacity: 0
+
+		[data-lines]
 			opacity: 0
 
 	&.safari
@@ -288,14 +291,12 @@ sup
 
 .hover-translate
 	transition: translate .4s
-	cursor: pointer
 
 	+hov
 		translate: 0 -3px
 
 .hover-scale
 	+t
-	cursor: pointer
 
 	[class*="-img"]
 		overflow: hidden
@@ -399,6 +400,17 @@ sup
 =hide-swiper
 	+hidden
 	+swiper-controls
+
+.hidd
+	display: block
+	overflow: hidden
+	max-height: 0
+	opacity: 0
+	transition: max-height 1s ease, opacity .5s ease
+
+	&.show
+		max-height: 500px
+		opacity: 1
 
 .hidden
 	+hidden

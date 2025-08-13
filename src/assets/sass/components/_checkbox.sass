@@ -75,6 +75,11 @@ $checkbox-border-radius: 2px
 	&-text 
 		position: relative
 
+		@supports (selector(:has(*))) 
+			&:has(:checked)
+				background: $orange !important
+				color: #fff !important
+
 		.checkbox
 			&__text 
 				+t 
@@ -95,6 +100,8 @@ $checkbox-border-radius: 2px
 				&:before
 					display: none
 
-				&:checked~.checkbox__text
-					color: $orange
+				@supports not (selector(:has(*))) 
+					&:checked~.checkbox__text
+						background: $active
+						color: #fff
 

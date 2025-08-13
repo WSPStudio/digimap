@@ -58,7 +58,8 @@ html:not(.loaded) [data-da*=header__mobile] {
   opacity: 0
 }
 
-html:not(.loaded) .header {
+html:not(.loaded) .header,
+html:not(.loaded) [data-lines] {
   opacity: 0
 }
 
@@ -335,8 +336,7 @@ a {
 }
 
 .hover-translate {
-  transition: translate .4s;
-  cursor: pointer
+  transition: translate .4s
 }
 
 .hover-translate:focus-visible {
@@ -344,8 +344,7 @@ a {
 }
 
 .hover-scale {
-  transition: all .4s;
-  cursor: pointer
+  transition: all .4s
 }
 
 .hover-scale [class*=-img] {
@@ -451,6 +450,19 @@ a {
   align-content: end
 }
 
+.hidd {
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1s ease, opacity .5s ease
+}
+
+.hidd.show {
+  max-height: 500px;
+  opacity: 1
+}
+
 .hidden {
   position: absolute;
   width: 1px;
@@ -530,6 +542,10 @@ body {
   width: 72px;
   height: 2px;
   background: #fff
+}
+
+.active-text {
+  color: #fe7d00
 }
 
 .light-text {
@@ -1199,18 +1215,13 @@ body {
   bottom: 0;
   z-index: -1;
   translate: 48% 65%;
-  animation: b 140s infinite linear;
   pointer-events: none
 }
 
-@keyframes b {
-  0% {
-    rotate: 0
-  }
-
-  to {
-    rotate: 1turn
-  }
+.header-main__pin {
+  position: absolute;
+  left: 40%;
+  bottom: 20%
 }
 
 .footer {
@@ -1353,10 +1364,10 @@ body {
   border: 8px solid #fff;
   border-left-color: transparent;
   border-radius: 50%;
-  animation: c .7s linear infinite
+  animation: b .7s linear infinite
 }
 
-@keyframes c {
+@keyframes b {
   0% {
     transform: rotate(0)
   }
@@ -1617,6 +1628,10 @@ body {
   grid-template-columns: 100%
 }
 
+.range.active .range__input input {
+  color: #082030
+}
+
 .range__inputs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1654,7 +1669,8 @@ body {
 .range__input input {
   width: 100%;
   height: 100%;
-  cursor: pointer
+  cursor: pointer;
+  color: #b9c8d8
 }
 
 .range__input input:focus {
@@ -1822,6 +1838,13 @@ body {
   position: relative
 }
 
+@supports (selector(:has(*))) {
+  .checkbox-text:has(:checked) {
+    background: #fe7d00 !important;
+    color: #fff !important
+  }
+}
+
 .checkbox-text .checkbox__text {
   transition: all .4s
 }
@@ -1848,8 +1871,11 @@ body {
   display: none
 }
 
-.checkbox-text .checkbox__input:checked~.checkbox__text {
-  color: #fe7d00
+@supports not (selector(:has(*))) {
+  .checkbox-text .checkbox__input:checked~.checkbox__text {
+    background: #478ed0;
+    color: #fff
+  }
 }
 
 .slider {
@@ -2313,10 +2339,6 @@ li.menu-item-has-children.active>.sub-menu-wrapper {
   z-index: 1;
   pointer-events: auto;
   opacity: 1
-}
-
-li.menu-item-has-children.active li:hover>a .menu-item-arrow {
-  background: #fff
 }
 
 li.menu-item-has-children li.menu-item-has-children .sub-menu-wrapper {
@@ -3188,6 +3210,7 @@ video {
 
 .callback__bg img {
   width: 100%;
+  object-position: top;
   object-fit: cover
 }
 
@@ -3287,6 +3310,10 @@ video {
   background: currentColor
 }
 
+.feedback-home .feedback__item-link {
+  color: #fff
+}
+
 .info {
   position: relative;
   z-index: 1
@@ -3297,13 +3324,22 @@ video {
 }
 
 .info__bg {
-  position: absolute;
-  left: 0;
   top: 0;
   z-index: -1;
-  width: 100%;
-  height: 100%;
   overflow: hidden
+}
+
+.info__bg,
+.info__bg-wrapper {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+
+.info__bg-wrapper {
+  bottom: 0;
+  pointer-events: none
 }
 
 .info-wrapper {
@@ -3349,8 +3385,7 @@ video {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 80px;
-  align-items: start;
-  cursor: pointer
+  align-items: start
 }
 
 .history__item:focus-visible .history__item-year {
@@ -3626,7 +3661,7 @@ video {
 }
 
 .news__item:focus-visible .news__item-content>.news__item-title {
-  animation: d .4s forwards
+  animation: c .4s forwards
 }
 
 .news__item:focus-visible .news__item-title {
@@ -3670,7 +3705,7 @@ video {
   width: calc(100% - 40px)
 }
 
-@keyframes d {
+@keyframes c {
   0% {
     opacity: 1;
     translate: 0 0
@@ -3969,6 +4004,7 @@ video {
 }
 
 .who {
+  overflow: hidden;
   color: #082030
 }
 
@@ -4096,7 +4132,7 @@ video {
     width: round(clamp(1000px, 840px + 50vw, 1800px), 1px);
     height: round(clamp(1000px, 840px + 50vw, 1800px), 1px);
     background: url(../img/info/bg.svg) 50%/contain no-repeat;
-    animation: b 100s infinite linear;
+    animation: d 100s infinite linear;
     pointer-events: none
   }
 
@@ -4113,17 +4149,17 @@ video {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: 45%;
+    bottom: 20px;
     z-index: -1;
     translate: -50% 0;
     width: round(clamp(1000px, 840px + 50vw, 1800px), 1px);
     height: round(clamp(1000px, 840px + 50vw, 1800px), 1px);
     background: url(../img/info/bg.svg) 50%/contain no-repeat;
-    animation: b 100s infinite linear;
+    animation: d 100s infinite linear;
     pointer-events: none
   }
 
-  @keyframes b {
+  @keyframes d {
     0% {
       rotate: 0
     }
@@ -4371,8 +4407,10 @@ video {
   }
 
   li.menu-item-has-children.right .sub-menu-wrapper .sub-menu-wrapper {
+    position: fixed;
     right: 100%;
-    translate: -8px -56px
+    padding-right: 8px;
+    translate: 0
   }
 
   li.menu-item-has-children.right .sub-menu-wrapper .menu-item-arrow+a {
@@ -4418,7 +4456,8 @@ video {
   li.menu-item-has-children.right>.sub-menu-wrapper {
     width: max-content;
     max-width: 50vw;
-    min-width: 200px
+    min-width: 200px;
+    height: calc(100% - 56px)
   }
 
   li.menu-item-has-children.left .top,
@@ -5155,6 +5194,10 @@ video {
   .feedback__item-link:after {
     width: 24px;
     height: 24px
+  }
+
+  .info:has(.who) .info__bg-wrapper {
+    height: 530px
   }
 
   .info-wrapper {
@@ -5941,6 +5984,10 @@ video {
     height: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
   }
 
+  .info:has(.who) .info__bg-wrapper {
+    height: round(clamp(380px, 350px + 9.375vw, 530px), 1px)
+  }
+
   .info-wrapper {
     gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
   }
@@ -6364,6 +6411,14 @@ video {
     display: none
   }
 
+  .header-main {
+    background: #f2f5f8
+  }
+
+  .header-main__bg {
+    display: none
+  }
+
   .header-main-wrapper {
     padding-block: round(clamp(40px, 20.9239940387px + 5.9612518629vw, 80px), 1px)
   }
@@ -6602,14 +6657,6 @@ video {
 
   .header__buttons>* {
     flex-grow: 1
-  }
-
-  .header-main {
-    background: #f2f5f8
-  }
-
-  .header-main__bg {
-    display: none
   }
 
   .footer__top {
@@ -7041,7 +7088,7 @@ video {
   }
 
   .news__item:hover .news__item-content>.news__item-title {
-    animation: d .4s forwards
+    animation: c .4s forwards
   }
 
   .news__item:hover .news__item-title {
