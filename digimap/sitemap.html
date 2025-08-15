@@ -100,7 +100,7 @@
               </a>
             </div>
             <div class="header__buttons" data-da=".header__mobile,991,3">
-              <button class="button" type="button">PRO-Rumap</button>
+              <button class="button" type="button" data-modal="popup-call">PRO-Rumap</button>
               <button class="button button_orange" type="button" data-modal="popup-call">Связаться с нами</button>
             </div>
             <button class="menu-link">
@@ -136,6 +136,7 @@
                     </a>
                     <div class="sub-menu-wrapper">
                       <ul class="sub-menu">
+                        <li><a href="category-2.html">RuMap-GIS</a></li>
                         <li class="menu-item-has-children">
                           <a href="category-2.html">
                             RuMap-GIS
@@ -152,19 +153,6 @@
                         <li><a href="category-2.html">RuMap Сервисы</a></li>
                         <li><a href="category-2.html">Геопортал RuMap</a></li>
                         <li><a href="category-2.html">RuMap приложения</a></li>
-                        <li class="menu-item-has-children">
-                          <a href="category-2.html">
-                            RuMap приложения
-                            <span class="menu-item-arrow"></span>
-                          </a>
-                          <div class="sub-menu-wrapper">
-                            <ul class="sub-menu">
-                              <li><a href="category-3.html">RuMap Данные</a></li>
-                              <li><a href="category-3.html">RuMap Сервисы</a></li>
-                              <li><a href="category-3.html">Геопортал RuMap</a></li>
-                            </ul>
-                          </div>
-                        </li>
                         <li><a href="category-2.html">Геоинформационные системы</a></li>
                       </ul>
                     </div>
@@ -441,7 +429,7 @@
                 <div class="form__row">
                   <label class="checkbox">
                     <input class="checkbox__input" type="checkbox" checked required>
-                    <span class="checkbox__text">Нажимая на кнопку “Отправить”, Вы соглашаетесь с <a href="text.html" class="underline" target="_blank">Пользовательским соглашением</a> и <a href="text.html" class="underline" target="_blank">Политикой конфиденциальности</a></span>
+                    <span class="checkbox__text">Нажимая на кнопку “Оставить заявку”, Вы соглашаетесь с <a href="text.html" class="underline" target="_blank">Пользовательским соглашением</a> и <a href="text.html" class="underline" target="_blank">Политикой конфиденциальности</a></span>
                   </label>
                   <button class="button button_orange submit">Оставить заявку</button>
                 </div>
@@ -454,9 +442,16 @@
     <!-- Окно благодарности -->
     <div class="popup popup-thank" id="popup-thank">
       <div class="popup__dialog">
-        <div class="popup__content">
-          <div class="title-2">Спасибо за заявку!</div>
-          <img src="assets/img/icons/check.svg" width="80" alt="img">
+        <div class="popup-wrapper">
+          <button class="popup__close" type="button" data-popup-close>
+            <svg class="close">
+              <use xlink:href="assets/img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__content">
+            <div class="title-2">Спасибо за заявку!</div>
+            <img src="assets/img/icons/check.svg" width="80" alt="img">
+          </div>
         </div>
       </div>
     </div>

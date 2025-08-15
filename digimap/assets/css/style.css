@@ -874,6 +874,16 @@ body {
   opacity: .95
 }
 
+.form form.form-dragover-error:before {
+  border-color: #f03;
+  background-color: rgba(255, 0, 51, .2)
+}
+
+.form form.form-dragover-error:after {
+  content: "Недопустимый тип файла";
+  background: #f03
+}
+
 .input-file {
   position: relative;
   width: auto;
@@ -1690,7 +1700,8 @@ body {
 .range__track {
   position: relative;
   width: 100%;
-  height: 16px
+  height: 16px;
+  cursor: pointer
 }
 
 .range__track:before {
@@ -3055,6 +3066,7 @@ video {
 }
 
 .category-menu__item-current {
+  border-radius: 8px;
   background: #f2f5f8;
   color: #478ed0
 }
@@ -3376,6 +3388,12 @@ video {
   bottom: 0
 }
 
+.info__item:first-child .info__item-img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top
+}
+
 .history-wrapper {
   position: relative;
   overflow: hidden
@@ -3646,48 +3664,21 @@ video {
 
 .news__item:after {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
   background: rgba(254, 125, 0, .92);
   transition: all .4s
 }
 
-.news__item:focus-visible:after {
-  opacity: 1
-}
-
-.news__item:focus-visible .news__item-content>.news__item-title {
-  animation: c .4s forwards
-}
-
-.news__item:focus-visible .news__item-title {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2
-}
-
-.news__item:focus-visible .news__item-hidden {
-  top: 0;
-  opacity: 1
-}
-
-.news__item:focus-visible .news__item-link {
-  opacity: 1;
-  translate: 0 0
-}
-
-.news__item-img {
+.news__item-img,
+.news__item:after {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -1
+}
+
+.news__item-img {
   object-fit: cover
 }
 
@@ -4294,6 +4285,31 @@ video {
     opacity: 0
   }
 
+  .news__item:focus-visible:after {
+    opacity: 1
+  }
+
+  .news__item:focus-visible .news__item-content>.news__item-title {
+    animation: c .4s forwards
+  }
+
+  .news__item:focus-visible .news__item-title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+  }
+
+  .news__item:focus-visible .news__item-hidden {
+    top: 0;
+    opacity: 1
+  }
+
+  .news__item:focus-visible .news__item-link {
+    opacity: 1;
+    translate: 0 0
+  }
+
   .news__item-hidden {
     position: absolute;
     left: 0;
@@ -4306,6 +4322,33 @@ video {
   .news__item-link {
     translate: 0 100px;
     opacity: 0
+  }
+}
+
+@media (any-hover:hover) and (min-width:992px) {
+  .news__item:hover:after {
+    opacity: 1
+  }
+
+  .news__item:hover .news__item-content>.news__item-title {
+    animation: c .4s forwards
+  }
+
+  .news__item:hover .news__item-title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+  }
+
+  .news__item:hover .news__item-hidden {
+    top: 0;
+    opacity: 1
+  }
+
+  .news__item:hover .news__item-link {
+    opacity: 1;
+    translate: 0 0
   }
 }
 
@@ -4407,10 +4450,8 @@ video {
   }
 
   li.menu-item-has-children.right .sub-menu-wrapper .sub-menu-wrapper {
-    position: fixed;
     right: 100%;
-    padding-right: 8px;
-    translate: 0
+    translate: -8px -56px
   }
 
   li.menu-item-has-children.right .sub-menu-wrapper .menu-item-arrow+a {
@@ -4456,8 +4497,7 @@ video {
   li.menu-item-has-children.right>.sub-menu-wrapper {
     width: max-content;
     max-width: 50vw;
-    min-width: 200px;
-    height: calc(100% - 56px)
+    min-width: 200px
   }
 
   li.menu-item-has-children.left .top,
@@ -6629,22 +6669,10 @@ video {
     display: none
   }
 
-  .popup__title {
-    max-width: 96%
-  }
-
   .popup__close {
-    right: 8px;
-    top: 8px;
-    translate: 0 0
-  }
-
-  .popup__close svg {
-    stroke: #082030
-  }
-
-  .popup__content {
-    max-width: 96vw
+    top: -12px;
+    right: 0;
+    translate: 0 -100%
   }
 
   .header__search {
@@ -7081,31 +7109,6 @@ video {
 
   .history__item:hover:not(:last-child):not(:first-child) .history__item-year:after {
     background: #fe7d00 !important
-  }
-
-  .news__item:hover:after {
-    opacity: 1
-  }
-
-  .news__item:hover .news__item-content>.news__item-title {
-    animation: c .4s forwards
-  }
-
-  .news__item:hover .news__item-title {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2
-  }
-
-  .news__item:hover .news__item-hidden {
-    top: 0;
-    opacity: 1
-  }
-
-  .news__item:hover .news__item-link {
-    opacity: 1;
-    translate: 0 0
   }
 
   .other__item:hover .other__item-title {

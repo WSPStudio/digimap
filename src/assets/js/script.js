@@ -39,10 +39,58 @@ if (document.querySelector('.project-container')) {
 		speed: 500,
 		breakpoints: {
 			1: {
-
+				slidesPerView: 1,
+				spaceBetween: 12,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 16,
 			},
 			1200: {
 				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+		},
+	});
+}
+
+// Новости
+if (document.querySelector('.news-container')) {
+	let newsSlider = new Swiper('.news-container', {
+		autoplay: {
+			delay: 4000,
+			pauseOnMouseEnter: true
+		},
+		loop: true,
+		pagination: {
+			el: '.news__pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.news__next',
+			prevEl: '.news__prev',
+		},
+		keyboard: {
+			enabled: true,
+			onlyInViewport: false,
+		},
+		speed: 500,
+		breakpoints: {
+			1: {
+				slidesPerView: 1,
+				spaceBetween: 12,
+			},
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 16,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 16,
+			},
+			1200: {
+				slidesPerView: 4,
 				spaceBetween: 20,
 			},
 		},
@@ -77,13 +125,13 @@ if (ranges) {
 		const inputMin = rangeBlock.querySelector('input[type=number][data-role="min"]')
 		const inputMax = rangeBlock.querySelector('input[type=number][data-role="max"]')
 		const rangeBetween = rangeBlock.querySelector('.range__between')
+		const track = rangeBlock.querySelector('.range__track')
 
 		const minValue = parseInt(rangeMin.min)
 		const maxValue = parseInt(rangeMax.max)
 		let isTouched = false
 
 		function activateBetween() {
-
 			if (!isTouched) {
 				rangeBetween.style.display = 'block'
 				isTouched = true
@@ -91,7 +139,6 @@ if (ranges) {
 				if (!rangeBlock.classList.contains('active')) {
 					rangeBlock.classList.add('active')
 				}
-
 			}
 		}
 
@@ -135,6 +182,27 @@ if (ranges) {
 			updateBetween(min, max)
 		}
 
+		track.addEventListener('click', (e) => {
+			if (!(e.target.classList.contains('range__track') || e.target.classList.contains('range__between'))) {
+				return;
+			}
+
+			const rect = track.getBoundingClientRect();
+			const clickX = e.clientX - rect.left;
+			const clickRatio = clickX / rect.width; // 0..1
+			const clickedValue = Math.round(minValue + clickRatio * (maxValue - minValue));
+
+			const distToMin = Math.abs(clickedValue - parseInt(rangeMin.value));
+			const distToMax = Math.abs(clickedValue - parseInt(rangeMax.value));
+
+			if (distToMin <= distToMax) {
+				rangeMin.value = clickedValue;
+			} else {
+				rangeMax.value = clickedValue;
+			}
+			syncFromRange();
+		});
+
 		rangeMin.addEventListener('input', syncFromRange)
 		rangeMax.addEventListener('input', syncFromRange)
 		inputMin.addEventListener('change', syncFromInput)
@@ -177,4 +245,17 @@ if (info && who) {
 	ro.observe(document.body)
 }
 
+
+// Кнопка Все вопросы в FAQ 
+let faqButton = document.querySelector('.faq__button');
+
+if (faqButton) {
+	faqButton.addEventListener('click', function () {
+		this.closest('.faq').querySelectorAll('.faq__item[hidden]').forEach(item => {
+			item.hidden = false
+
+			this.remove()
+		});
+	});
+}
 

@@ -3,9 +3,12 @@ import { _slideToggle, _slideUp } from "../scripts/other/animation";
 
 /* 
 	================================================
+	  
 	Спойлеры
+	
 	================================================
 */
+
 export function spoller() {
 	const spollersArray = document.querySelectorAll('[data-spollers]');
 	if (!spollersArray.length) return;

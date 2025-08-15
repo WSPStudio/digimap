@@ -106,24 +106,13 @@ $close-color: $gray
  
 		img 
 			+adap('width', 100, 60)
-			+adap('height', 100, 60)
-
-
+			+adap('height', 100, 60) 
 
 	@media (max-width: 767px)
-		&__title 
-			max-width: 96%
-
 		&__close
-			right: 8px
-			top: 8px
-			translate: 0 0
-
-			svg 
-				stroke: $text
-
-		&__content
-			max-width: 96vw
+			top: -12px
+			right: 0
+			translate: 0 -100%
 
 	@media (max-width: 575px)
 		&__dialog

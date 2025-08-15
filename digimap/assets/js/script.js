@@ -171,7 +171,7 @@
 			const element = document.querySelector(closedElement);
 			const withinBoundaries = e.composedPath().includes(element);
 
-			if (!withinBoundaries && button?.classList.contains(clickedButtonActiveClass) && e.target !== button) {
+			if (!withinBoundaries && button?.classList.contains(clickedButtonActiveClass) && e.target !== button && !e.target.closest('.popup')) {
 				element.classList.remove('active');
 				button.classList.remove(clickedButtonActiveClass);
 			}
@@ -336,51 +336,113 @@
 			const textEl = wrapper.querySelector('.input-file-text');
 			const defaultText = textEl.textContent;
 			const form = wrapper.closest('form');
-
 			let dragCounter = 0;
+
+			const allowedExt = (input.getAttribute('accept') || '')
+				.split(',')
+				.map(e => e.trim().replace(/^\./, '').toLowerCase())
+				.filter(e => e);
+
+			const isAllowed = file =>
+				allowedExt.includes(file.name.split('.').pop().toLowerCase());
+
+			const filterFiles = files =>
+				Array.from(files).filter(f => isAllowed(f));
 
 			const updateFileText = () => {
 				if (!input.files.length) {
 					textEl.textContent = defaultText;
 					return
 				}
-
 				const names = Array.from(input.files).map(f => f.name).join(', ');
 				textEl.textContent = names;
 			};
 
-			input.addEventListener('change', updateFileText);
+			input.addEventListener('change', () => {
+				const filtered = filterFiles(input.files);
+				if (filtered.length !== input.files.length) {
+					form?.classList.add('form-dragover-error');
+					const dataTransfer = new DataTransfer();
+					filtered.forEach(f => dataTransfer.items.add(f));
+					input.files = dataTransfer.files;
+				}
+				updateFileText();
+			});
 
 			form?.addEventListener('reset', () => {
 				textEl.textContent = defaultText;
 			});
 
+			const hasDisallowedDragItems = dt => {
+				if (!dt?.items?.length) return false
+
+				const allowedExt = (input.getAttribute('accept') || '')
+					.split(',')
+					.map(e => e.trim().replace(/^\./, '').toLowerCase())
+					.filter(Boolean);
+
+				const mimeMap = {
+					'plain': 'txt'
+				};
+
+				return Array.from(dt.items).some(item => {
+					if (item.kind !== 'file') return false
+
+					const file = item.getAsFile?.();
+					if (file) {
+						const ext = file.name.split('.').pop().toLowerCase();
+						return !allowedExt.includes(ext)
+					}
+
+					if (item.type) {
+						let mimeExt = item.type.split('/').pop().toLowerCase();
+						if (mimeMap[mimeExt]) {
+							mimeExt = mimeMap[mimeExt];
+						}
+						return !allowedExt.includes(mimeExt)
+					}
+
+					return false
+				})
+			};
+
 			form?.addEventListener('dragenter', e => {
 				e.preventDefault();
 				dragCounter++;
 				form.classList.add('form-dragover');
+				if (hasDisallowedDragItems(e.dataTransfer)) {
+					form.classList.add('form-dragover-error');
+				} else {
+					form.classList.remove('form-dragover-error');
+				}
 			});
 
 			form?.addEventListener('dragleave', e => {
 				e.preventDefault();
 				dragCounter--;
 				if (dragCounter === 0) {
-					form.classList.remove('form-dragover');
+					form.classList.remove('form-dragover', 'form-dragover-error');
 				}
 			});
 
 			form?.addEventListener('dragover', e => {
 				e.preventDefault();
+				if (hasDisallowedDragItems(e.dataTransfer)) {
+					form.classList.add('form-dragover-error');
+				} else {
+					form.classList.remove('form-dragover-error');
+				}
 			});
 
 			form?.addEventListener('drop', e => {
 				e.preventDefault();
 				dragCounter = 0;
-				form.classList.remove('form-dragover');
+				form.classList.remove('form-dragover', 'form-dragover-error');
 
 				if (e.dataTransfer.files.length) {
+					const filtered = filterFiles(e.dataTransfer.files);
 					const dataTransfer = new DataTransfer();
-					Array.from(e.dataTransfer.files).forEach(f => dataTransfer.items.add(f));
+					filtered.forEach(f => dataTransfer.items.add(f));
 					input.files = dataTransfer.files;
 					updateFileText();
 				}
@@ -837,7 +899,7 @@
 
 			// Валидация email
 			if (input.type === 'email') {
-				input.value = input.value.replace(/[^0-9a-zA-Zа-яА-ЯёЁ@.-]+/g, '');
+				input.value = input.value.replace(/[^0-9a-zA-Z@.-]+/g, '');
 			}
 
 			// Валидация имени
@@ -1053,9 +1115,12 @@
 
 	/* 
 		================================================
+		  
 		Спойлеры
+		
 		================================================
 	*/
+
 	function spoller() {
 		const spollersArray = document.querySelectorAll('[data-spollers]');
 		if (!spollersArray.length) return;
@@ -1257,9 +1322,7 @@
 				item.addEventListener('mouseout', function (e) {
 					if (!isDesktop()) return;
 					timeoutId = setTimeout(() => {
-						if (!item.contains(e.relatedTarget)) {
-							item.classList.remove('active');
-						}
+						if (!item.contains(e.relatedTarget)) ;
 					}, 300);
 				});
 
@@ -2114,10 +2177,58 @@
 			speed: 500,
 			breakpoints: {
 				1: {
-
+					slidesPerView: 1,
+					spaceBetween: 12,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 16,
 				},
 				1200: {
 					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+			},
+		});
+	}
+
+	// Новости
+	if (document.querySelector('.news-container')) {
+		new Swiper('.news-container', {
+			autoplay: {
+				delay: 4000,
+				pauseOnMouseEnter: true
+			},
+			loop: true,
+			pagination: {
+				el: '.news__pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.news__next',
+				prevEl: '.news__prev',
+			},
+			keyboard: {
+				enabled: true,
+				onlyInViewport: false,
+			},
+			speed: 500,
+			breakpoints: {
+				1: {
+					slidesPerView: 1,
+					spaceBetween: 12,
+				},
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 16,
+				},
+				1200: {
+					slidesPerView: 4,
 					spaceBetween: 20,
 				},
 			},
@@ -2152,13 +2263,13 @@
 			const inputMin = rangeBlock.querySelector('input[type=number][data-role="min"]');
 			const inputMax = rangeBlock.querySelector('input[type=number][data-role="max"]');
 			const rangeBetween = rangeBlock.querySelector('.range__between');
+			const track = rangeBlock.querySelector('.range__track');
 
 			const minValue = parseInt(rangeMin.min);
 			const maxValue = parseInt(rangeMax.max);
 			let isTouched = false;
 
 			function activateBetween() {
-
 				if (!isTouched) {
 					rangeBetween.style.display = 'block';
 					isTouched = true;
@@ -2166,7 +2277,6 @@
 					if (!rangeBlock.classList.contains('active')) {
 						rangeBlock.classList.add('active');
 					}
-
 				}
 			}
 
@@ -2210,6 +2320,27 @@
 				updateBetween(min, max);
 			}
 
+			track.addEventListener('click', (e) => {
+				if (!(e.target.classList.contains('range__track') || e.target.classList.contains('range__between'))) {
+					return;
+				}
+
+				const rect = track.getBoundingClientRect();
+				const clickX = e.clientX - rect.left;
+				const clickRatio = clickX / rect.width; // 0..1
+				const clickedValue = Math.round(minValue + clickRatio * (maxValue - minValue));
+
+				const distToMin = Math.abs(clickedValue - parseInt(rangeMin.value));
+				const distToMax = Math.abs(clickedValue - parseInt(rangeMax.value));
+
+				if (distToMin <= distToMax) {
+					rangeMin.value = clickedValue;
+				} else {
+					rangeMax.value = clickedValue;
+				}
+				syncFromRange();
+			});
+
 			rangeMin.addEventListener('input', syncFromRange);
 			rangeMax.addEventListener('input', syncFromRange);
 			inputMin.addEventListener('change', syncFromInput);
@@ -2250,6 +2381,20 @@
 			}
 		});
 		ro.observe(document.body);
+	}
+
+
+	// Кнопка Все вопросы в FAQ 
+	let faqButton = document.querySelector('.faq__button');
+
+	if (faqButton) {
+		faqButton.addEventListener('click', function () {
+			this.closest('.faq').querySelectorAll('.faq__item[hidden]').forEach(item => {
+				item.hidden = false;
+
+				this.remove();
+			});
+		});
 	}
 
 })();

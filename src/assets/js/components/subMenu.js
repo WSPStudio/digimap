@@ -91,7 +91,7 @@ export function subMenu() {
 				if (!isDesktop()) return;
 				timeoutId = setTimeout(() => {
 					if (!item.contains(e.relatedTarget)) {
-						item.classList.remove('active');
+						// item.classList.remove('active'); 
 					}
 				}, 300);
 			});
@@ -200,4 +200,3 @@ export function subMenu() {
 		return e.target.closest('.menu') ? offset(e.target.closest('.menu>.menu-item-has-children')).left > (windowWidth / 2) ? 'right' : 'left' : 'left'
 	}
 }
-

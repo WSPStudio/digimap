@@ -44,24 +44,25 @@
 				background: rgba(254, 125, 0, .62)
 
 		+hov
-			&:after
-				opacity: 1
-
-			.news__item 
-				&-content
-					&>.news__item-title 
-						animation: newsTitle .4s forwards
-
-				&-title 
-					+line(2)
-
-				&-hidden
-					top: 0
+			@media (min-width: 992px)
+				&:after
 					opacity: 1
 
-				&-link 
-					opacity: 1
-					translate: 0 0
+				.news__item 
+					&-content
+						&>.news__item-title 
+							animation: newsTitle .4s forwards
+
+					&-title 
+						+line(2)
+
+					&-hidden
+						top: 0
+						opacity: 1
+
+					&-link 
+						opacity: 1
+						translate: 0 0
 
 		&-img 
 			position: absolute
