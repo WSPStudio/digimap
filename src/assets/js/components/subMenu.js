@@ -91,7 +91,7 @@ export function subMenu() {
 				if (!isDesktop()) return;
 				timeoutId = setTimeout(() => {
 					if (!item.contains(e.relatedTarget)) {
-						// item.classList.remove('active'); 
+						item.classList.remove('active');
 					}
 				}, 300);
 			});

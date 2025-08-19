@@ -152,7 +152,19 @@
                         </li>
                         <li><a href="category-2.html">RuMap Сервисы</a></li>
                         <li><a href="category-2.html">Геопортал RuMap</a></li>
-                        <li><a href="category-2.html">RuMap приложения</a></li>
+                        <li class="menu-item-has-children">
+                          <a href="category-2.html">
+                            RuMap приложения
+                            <span class="menu-item-arrow"></span>
+                          </a>
+                          <div class="sub-menu-wrapper">
+                            <ul class="sub-menu">
+                              <li><a href="category-3.html">RuMap Данные</a></li>
+                              <li><a href="category-3.html">RuMap Сервисы</a></li>
+                              <li><a href="category-3.html">Геопортал RuMap</a></li>
+                            </ul>
+                          </div>
+                        </li>
                         <li><a href="category-2.html">Геоинформационные системы</a></li>
                       </ul>
                     </div>
@@ -493,13 +505,6 @@
 
   <!-- Общие скрипты -->
   <script src="assets/js/script.js" defer></script>
-
-  <!-- Worker -->
-  <script>
-    if (location.hostname !== 'localhost' && 'serviceWorker' in navigator) {
-      navigator.serviceWorker.register(new URL('worker.js', location.href)).catch(console.error);
-    }
-  </script>
 
   <!-- Карта -->
   <script>

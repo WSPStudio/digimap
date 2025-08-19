@@ -1322,7 +1322,9 @@
 				item.addEventListener('mouseout', function (e) {
 					if (!isDesktop()) return;
 					timeoutId = setTimeout(() => {
-						if (!item.contains(e.relatedTarget)) ;
+						if (!item.contains(e.relatedTarget)) {
+							item.classList.remove('active');
+						}
 					}, 300);
 				});
 
