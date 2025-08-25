@@ -179,29 +179,29 @@
 .header-main
 	position: relative
 	z-index: 2
-	+adap('margin-bottom', 80, 24)
+	+adap('margin-bottom', 40, 24)
 	+adap('margin-top', -40, -20)
 	overflow-y: clip
 	max-width: 1920px
 	margin-inline: auto
 
 	@media (min-width: 992px)
-		min-height: clamp(400px, calc(100dvh - 126px), calc(600px + 300 * ((100vw - 375px) / 1545)))
+		min-height: 400px
 
 	&__bg 
 		position: absolute
-		right: 0
+		right: 0 
 		bottom: 0
 		z-index: -1
-		translate: 48% 65%
-		+adap('width', 3230, minusPercent(30, 3230))
-		+adap('height', 3017, minusPercent(30, 3017))
+		translate: 25% 63%
+		+adap('width', minusPercent(40, 3230), minusPercent(50, 3230))
+		+adap('height', minusPercent(40, 3017), minusPercent(50, 3017)) 
 
 		pointer-events: none
 
-	&-wrapper
-		+adap('padding-top', 192, 40)
-		+adap('padding-bottom', 80, 40)
+	&-wrapper 
+		+adap('padding-top', 160, 40)
+		+adap('padding-bottom', 80, 40) 
 
 	&__title 
 		+adap('margin-bottom', 40, 20)
@@ -211,11 +211,6 @@
 
 	&__button 
 		+adap('min-width', 160, 140)
-
-	&__pin 
-		position: absolute
-		left: 40%
-		bottom: 20%
 
 	@media (max-width: 991px)
 		background: $gray

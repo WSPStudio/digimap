@@ -1224,14 +1224,8 @@ body {
   right: 0;
   bottom: 0;
   z-index: -1;
-  translate: 48% 65%;
+  translate: 25% 63%;
   pointer-events: none
-}
-
-.header-main__pin {
-  position: absolute;
-  left: 40%;
-  bottom: 20%
 }
 
 .footer {
@@ -4186,7 +4180,7 @@ video {
   }
 
   .header-main {
-    min-height: clamp(400px, 100dvh - 126px, 600px + 300*(100vw - 375px)/1545)
+    min-height: 400px
   }
 
   .pagination_center .pagination-wrapper:before {
@@ -4892,17 +4886,17 @@ video {
   }
 
   .header-main {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     margin-top: -40px
   }
 
   .header-main__bg {
-    width: 3230px;
-    height: 3017px
+    width: 1938px;
+    height: 1810.2px
   }
 
   .header-main-wrapper {
-    padding-top: 192px;
+    padding-top: 160px;
     padding-bottom: 80px
   }
 
@@ -5326,8 +5320,7 @@ video {
 
   .product-wrapper {
     column-gap: 140px;
-    row-gap: 20px;
-    padding-block: 40px
+    row-gap: 20px
   }
 
   .product__item-icon {
@@ -5671,17 +5664,17 @@ video {
   }
 
   .header-main {
-    margin-bottom: round(clamp(24px, 12.8px + 3.5vw, 80px), 1px);
+    margin-bottom: round(clamp(24px, 20.8px + 1vw, 40px), 1px);
     margin-top: round(clamp(-40px, -16px - 1.25vw, -20px), 1px)
   }
 
   .header-main__bg {
-    width: round(clamp(2261px, 2067.2px + 60.5625vw, 3230px), 1px);
-    height: round(clamp(2111.9px, 1930.88px + 56.56875vw, 3017px), 1px)
+    width: round(clamp(1615px, 1550.4px + 20.1875vw, 1938px), 1px);
+    height: round(clamp(1508.5px, 1448.16px + 18.85625vw, 1810.2px), 1px)
   }
 
   .header-main-wrapper {
-    padding-top: round(clamp(40px, 9.6px + 9.5vw, 192px), 1px);
+    padding-top: round(clamp(40px, 16px + 7.5vw, 160px), 1px);
     padding-bottom: round(clamp(40px, 32px + 2.5vw, 80px), 1px)
   }
 
