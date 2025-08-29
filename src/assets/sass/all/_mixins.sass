@@ -6,6 +6,7 @@
 	+a
 	+adap('font-size', 48, 28)
 	line-height: 1.08333
+
 	// font-weight: 600
 
 =title-2
@@ -272,7 +273,7 @@
 		$minSize: 0.01
 
 	// Получение значения свойства 
-	$propertyValue: #{"round(clamp(min(#{$startSize + px}, #{$minSize + px}), " $flyValue ", max(#{$startSize + px}, #{$minSize + px})), 1px)"}
+	$propertyValue: #{"clamp(min(#{$startSize + px}, #{$minSize + px}), " $flyValue ", max(#{$startSize + px}, #{$minSize + px}))"}
 
 	@if $widthFrom == 1
 		@if $min
@@ -434,13 +435,13 @@
 
 // Горизонтальный скроллбар
 =scrollbar-x($maxWidth, $scrollBarHeight: 4, $padding: 5)
-	max-width: $maxWidth 
+	max-width: $maxWidth  
 
 	@if $scrollBarHeight != 0
 		@if $padding != 'auto'
 			padding-bottom: #{$scrollBarHeight + $padding + px} 
 		
-	overflow-x: auto
+	overflow-x: auto 
 	overflow-y: hidden
 
 	@supports (-moz-appearance: none)

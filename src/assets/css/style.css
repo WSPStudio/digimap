@@ -4114,8 +4114,8 @@ video {
     top: 20px;
     z-index: -1;
     translate: -50% 0;
-    width: round(clamp(1000px, 840px + 50vw, 1800px), 1px);
-    height: round(clamp(1000px, 840px + 50vw, 1800px), 1px);
+    width: clamp(1000px, 840px + 50vw, 1800px);
+    height: clamp(1000px, 840px + 50vw, 1800px);
     background: url(../img/info/bg.svg) 50%/contain no-repeat;
     animation: d 100s infinite linear;
     pointer-events: none
@@ -4137,8 +4137,8 @@ video {
     bottom: 20px;
     z-index: -1;
     translate: -50% 0;
-    width: round(clamp(1000px, 840px + 50vw, 1800px), 1px);
-    height: round(clamp(1000px, 840px + 50vw, 1800px), 1px);
+    width: clamp(1000px, 840px + 50vw, 1800px);
+    height: clamp(1000px, 840px + 50vw, 1800px);
     background: url(../img/info/bg.svg) 50%/contain no-repeat;
     animation: d 100s infinite linear;
     pointer-events: none
@@ -4192,15 +4192,15 @@ video {
   }
 
   .text-block img[style*="float: right"] {
-    margin-left: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    margin-left: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .text-block img[style*="float: left"] {
-    margin-right: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    margin-right: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .about__img {
-    max-width: round(clamp(380px, 168.3448275862px + 21.3362068966vw, 578px), 1px)
+    max-width: clamp(380px, 168.3448275862px + 21.3362068966vw, 578px)
   }
 
   .category__left {
@@ -4310,7 +4310,7 @@ video {
     top: 100%;
     opacity: 0;
     transition: all .4s;
-    padding: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    padding: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .news__item-link {
@@ -4517,7 +4517,7 @@ video {
   }
 
   .feedback__item-img img {
-    max-width: round(clamp(200px, 58.3333333333px + 11.8055555556vw, 285px), 1px)
+    max-width: clamp(200px, 58.3333333333px + 11.8055555556vw, 285px)
   }
 
   .feedback__item-link {
@@ -4542,7 +4542,7 @@ video {
   }
 
   .info:has(.who) {
-    margin-top: round(clamp(100px, 68px + 10vw, 260px), 1px)
+    margin-top: clamp(100px, 68px + 10vw, 260px)
   }
 
   .history-wrapper:after {
@@ -4650,8 +4650,8 @@ video {
   }
 
   .who {
-    margin-top: round(clamp(-304px, -83.2px - 11.5vw, -120px), 1px);
-    margin-bottom: round(clamp(48px, 41.6px + 2vw, 80px), 1px)
+    margin-top: clamp(-304px, -83.2px - 11.5vw, -120px);
+    margin-bottom: clamp(48px, 41.6px + 2vw, 80px)
   }
 
   .who .container {
@@ -5464,7 +5464,7 @@ video {
 
   .flex,
   .grid {
-    gap: round(clamp(12px, 11.2px + .25vw, 16px), 1px)
+    gap: clamp(12px, 11.2px + .25vw, 16px)
   }
 
   .hide-xl {
@@ -5482,626 +5482,626 @@ video {
   }
 
   .main {
-    padding-bottom: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    padding-bottom: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   body {
-    font-size: round(clamp(15px, 14.8px + .0625vw, 16px), 1px)
+    font-size: clamp(15px, 14.8px + .0625vw, 16px)
   }
 
   .section {
-    padding-block: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    padding-block: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   .section-small {
-    padding-block: round(clamp(16px, 13.8666666667px + .6666666667vw, 26.6666666667px), 1px)
+    padding-block: clamp(16px, 13.8666666667px + .6666666667vw, 26.6666666667px)
   }
 
   .section-small-top {
-    padding-top: round(clamp(16px, 13.8666666667px + .6666666667vw, 26.6666666667px), 1px)
+    padding-top: clamp(16px, 13.8666666667px + .6666666667vw, 26.6666666667px)
   }
 
   .section-small-bottom {
-    padding-bottom: round(clamp(16px, 13.8666666667px + .6666666667vw, 26.6666666667px), 1px)
+    padding-bottom: clamp(16px, 13.8666666667px + .6666666667vw, 26.6666666667px)
   }
 
   .section-bottom {
-    padding-bottom: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    padding-bottom: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   .section-top {
-    padding-top: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    padding-top: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   .section-big {
-    padding-block: round(clamp(40px, 32px + 2.5vw, 80px), 1px)
+    padding-block: clamp(40px, 32px + 2.5vw, 80px)
   }
 
   .section-offset {
-    margin-block: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    margin-block: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   .section-offset+.section-offset {
-    margin-top: round(clamp(-40px, -20.8px - 1vw, -24px), 1px)
+    margin-top: clamp(-40px, -20.8px - 1vw, -24px)
   }
 
   .section-offset-top {
-    margin-top: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    margin-top: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   .section-offset-bottom {
-    margin-bottom: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    margin-bottom: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   .section__top {
-    margin-bottom: round(clamp(20px, 16.8px + 1vw, 36px), 1px)
+    margin-bottom: clamp(20px, 16.8px + 1vw, 36px)
   }
 
   .col {
-    gap: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    gap: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .title {
-    font-size: round(clamp(28px, 24px + 1.25vw, 48px), 1px)
+    font-size: clamp(28px, 24px + 1.25vw, 48px)
   }
 
   .title-2 {
-    font-size: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    font-size: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   .title-3 {
-    font-size: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    font-size: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .title-4 {
-    font-size: round(clamp(16px, 14.4px + .5vw, 24px), 1px)
+    font-size: clamp(16px, 14.4px + .5vw, 24px)
   }
 
   .arrow-link:after {
-    flex-basis: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    width: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    height: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    flex-basis: clamp(20px, 19.2px + .25vw, 24px);
+    width: clamp(20px, 19.2px + .25vw, 24px);
+    height: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .button {
-    min-width: round(clamp(140px, 128px + 3.75vw, 200px), 1px);
-    min-height: round(clamp(44px, 43.2px + .25vw, 48px), 1px)
+    min-width: clamp(140px, 128px + 3.75vw, 200px);
+    min-height: clamp(44px, 43.2px + .25vw, 48px)
   }
 
   .icon {
-    width: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    height: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    width: clamp(20px, 19.2px + .25vw, 24px);
+    height: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .section-404-wrapper {
-    gap: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    gap: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .section-404__img {
-    max-width: round(clamp(240px, 224px + 5vw, 320px), 1px);
-    margin-bottom: round(clamp(12px, 4.8px + 2.25vw, 48px), 1px)
+    max-width: clamp(240px, 224px + 5vw, 320px);
+    margin-bottom: clamp(12px, 4.8px + 2.25vw, 48px)
   }
 
   .input-wrapper {
-    gap: round(clamp(12px, 11.2px + .25vw, 16px), 1px)
+    gap: clamp(12px, 11.2px + .25vw, 16px)
   }
 
   .textarea {
-    height: round(clamp(100px, 88px + 3.75vw, 160px), 1px)
+    height: clamp(100px, 88px + 3.75vw, 160px)
   }
 
   .form .checkbox {
-    font-size: round(clamp(12px, 11.2px + .25vw, 16px), 1px)
+    font-size: clamp(12px, 11.2px + .25vw, 16px)
   }
 
   .form__row {
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px);
-    margin-top: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px)
+    gap: clamp(12px, 10.4px + .5vw, 20px);
+    margin-top: clamp(16px, 11.2px + 1.5vw, 40px)
   }
 
   .input-file-text:after {
-    flex-basis: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    width: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    height: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    flex-basis: clamp(20px, 19.2px + .25vw, 24px);
+    width: clamp(20px, 19.2px + .25vw, 24px);
+    height: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .popup__content {
-    padding-block: round(clamp(20px, 12px + 2.5vw, 60px), 1px);
-    padding-inline: round(clamp(16px, 7.2px + 2.75vw, 60px), 1px);
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    padding-block: clamp(20px, 12px + 2.5vw, 60px);
+    padding-inline: clamp(16px, 7.2px + 2.75vw, 60px);
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .popup__title {
-    margin-bottom: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    margin-bottom: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .popup__form .input-wrapper {
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    gap: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .popup__close {
-    right: round(clamp(-20px, -.8px - 1vw, -4px), 1px);
-    width: round(clamp(24px, 20.8px + 1vw, 40px), 1px);
-    height: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    right: clamp(-20px, -.8px - 1vw, -4px);
+    width: clamp(24px, 20.8px + 1vw, 40px);
+    height: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   .popup-thank .popup__content {
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    gap: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .popup-thank img {
-    width: round(clamp(60px, 52px + 2.5vw, 100px), 1px);
-    height: round(clamp(60px, 52px + 2.5vw, 100px), 1px)
+    width: clamp(60px, 52px + 2.5vw, 100px);
+    height: clamp(60px, 52px + 2.5vw, 100px)
   }
 
   .header {
-    margin-bottom: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    margin-bottom: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .header-top {
-    padding-block: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    padding-block: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .header-top-wrapper {
-    gap: round(clamp(12px, 6.4px + 1.75vw, 40px), 1px)
+    gap: clamp(12px, 6.4px + 1.75vw, 40px)
   }
 
   .header__logo {
-    flex-basis: round(clamp(112.8px, 97.76px + 4.7vw, 188px), 1px)
+    flex-basis: clamp(112.8px, 97.76px + 4.7vw, 188px)
   }
 
   .header__logo img {
-    width: round(clamp(112.8px, 97.76px + 4.7vw, 188px), 1px);
-    height: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    width: clamp(112.8px, 97.76px + 4.7vw, 188px);
+    height: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   .header__contacts {
-    column-gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    column-gap: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .header__buttons {
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    gap: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .header-main {
-    margin-bottom: round(clamp(24px, 20.8px + 1vw, 40px), 1px);
-    margin-top: round(clamp(-40px, -16px - 1.25vw, -20px), 1px)
+    margin-bottom: clamp(24px, 20.8px + 1vw, 40px);
+    margin-top: clamp(-40px, -16px - 1.25vw, -20px)
   }
 
   .header-main__bg {
-    width: round(clamp(1615px, 1550.4px + 20.1875vw, 1938px), 1px);
-    height: round(clamp(1508.5px, 1448.16px + 18.85625vw, 1810.2px), 1px)
+    width: clamp(1615px, 1550.4px + 20.1875vw, 1938px);
+    height: clamp(1508.5px, 1448.16px + 18.85625vw, 1810.2px)
   }
 
   .header-main-wrapper {
-    padding-top: round(clamp(40px, 16px + 7.5vw, 160px), 1px);
-    padding-bottom: round(clamp(40px, 32px + 2.5vw, 80px), 1px)
+    padding-top: clamp(40px, 16px + 7.5vw, 160px);
+    padding-bottom: clamp(40px, 32px + 2.5vw, 80px)
   }
 
   .header-main__title {
-    margin-bottom: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    margin-bottom: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .header-main__subtitle {
-    margin-bottom: round(clamp(20px, 12px + 2.5vw, 60px), 1px)
+    margin-bottom: clamp(20px, 12px + 2.5vw, 60px)
   }
 
   .header-main__button {
-    min-width: round(clamp(140px, 136px + 1.25vw, 160px), 1px)
+    min-width: clamp(140px, 136px + 1.25vw, 160px)
   }
 
   .footer__top {
-    gap: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px);
-    padding-block: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(16px, 11.2px + 1.5vw, 40px);
+    padding-block: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .footer__menu {
-    column-gap: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px);
-    min-width: round(clamp(300px, 292px + 2.5vw, 340px), 1px)
+    column-gap: clamp(16px, 11.2px + 1.5vw, 40px);
+    min-width: clamp(300px, 292px + 2.5vw, 340px)
   }
 
   .footer__item-title {
-    padding-bottom: round(clamp(8px, 7.2px + .25vw, 12px), 1px)
+    padding-bottom: clamp(8px, 7.2px + .25vw, 12px)
   }
 
   .footer__contacts {
-    column-gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    column-gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .footer__buttons {
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    gap: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .pagination__items li {
-    min-width: round(clamp(32px, 30.4px + .5vw, 40px), 1px);
-    height: round(clamp(32px, 30.4px + .5vw, 40px), 1px)
+    min-width: clamp(32px, 30.4px + .5vw, 40px);
+    height: clamp(32px, 30.4px + .5vw, 40px)
   }
 
   .search-page-wrapper {
-    gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .search-page-empty {
-    gap: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    padding-block: round(clamp(40px, 8px + 10vw, 200px), 1px)
+    gap: clamp(20px, 19.2px + .25vw, 24px);
+    padding-block: clamp(40px, 8px + 10vw, 200px)
   }
 
   .crumbs {
-    column-gap: round(clamp(20px, 14.4px + 1.75vw, 48px), 1px);
-    font-size: round(clamp(13px, 12.8px + .0625vw, 14px), 1px)
+    column-gap: clamp(20px, 14.4px + 1.75vw, 48px);
+    font-size: clamp(13px, 12.8px + .0625vw, 14px)
   }
 
   .crumbs li:not(:last-child):before {
-    right: round(clamp(-24px, -7.2px - .875vw, -10px), 1px)
+    right: clamp(-24px, -7.2px - .875vw, -10px)
   }
 
   .checkbox {
-    gap: round(clamp(8px, 6.4px + .5vw, 16px), 1px)
+    gap: clamp(8px, 6.4px + .5vw, 16px)
   }
 
   .slider__arrow {
-    width: round(clamp(40px, 38.4px + .5vw, 48px), 1px);
-    height: round(clamp(40px, 38.4px + .5vw, 48px), 1px)
+    width: clamp(40px, 38.4px + .5vw, 48px);
+    height: clamp(40px, 38.4px + .5vw, 48px)
   }
 
   .swiper-pagination-bullet {
-    width: round(clamp(8px, 7.2px + .25vw, 12px), 1px);
-    height: round(clamp(8px, 7.2px + .25vw, 12px), 1px)
+    width: clamp(8px, 7.2px + .25vw, 12px);
+    height: clamp(8px, 7.2px + .25vw, 12px)
   }
 
   .text-block>:not(:last-child) {
-    margin-bottom: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px)
+    margin-bottom: clamp(16px, 11.2px + 1.5vw, 40px)
   }
 
   .text-block>h2:not(:last-child),
   .text-block>h3:not(:last-child),
   .text-block>h4:not(:last-child),
   .text-block>h5:not(:last-child) {
-    margin-bottom: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    margin-bottom: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .text-block h1 {
-    font-size: round(clamp(28px, 24px + 1.25vw, 48px), 1px)
+    font-size: clamp(28px, 24px + 1.25vw, 48px)
   }
 
   .text-block h2 {
-    font-size: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    font-size: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   .text-block h3 {
-    font-size: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    font-size: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .text-block h4 {
-    font-size: round(clamp(16px, 14.4px + .5vw, 24px), 1px)
+    font-size: clamp(16px, 14.4px + .5vw, 24px)
   }
 
   .text-block ol:not(:first-child),
   .text-block ul:not(:first-child) {
-    padding-top: round(clamp(12px, 11.2px + .25vw, 16px), 1px)
+    padding-top: clamp(12px, 11.2px + .25vw, 16px)
   }
 
   .text-block ol:not(:last-child),
   .text-block ul:not(:last-child) {
-    padding-bottom: round(clamp(12px, 11.2px + .25vw, 16px), 1px)
+    padding-bottom: clamp(12px, 11.2px + .25vw, 16px)
   }
 
   .text-block ul>li:before {
-    width: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    height: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    flex-basis: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    width: clamp(20px, 19.2px + .25vw, 24px);
+    height: clamp(20px, 19.2px + .25vw, 24px);
+    flex-basis: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .text-block ol li {
-    gap: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    gap: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .text-block ol>li:before {
-    font-size: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    font-size: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .text-block blockquote {
-    padding-block: round(clamp(16px, 15.2px + .25vw, 20px), 1px);
-    padding-inline: round(clamp(48px, 36px + 3.75vw, 108px), 1px);
-    min-height: round(clamp(100px, 92px + 2.5vw, 140px), 1px);
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    padding-block: clamp(16px, 15.2px + .25vw, 20px);
+    padding-inline: clamp(48px, 36px + 3.75vw, 108px);
+    min-height: clamp(100px, 92px + 2.5vw, 140px);
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .text-block blockquote:after,
   .text-block blockquote:before {
-    width: round(clamp(28px, 20px + 2.5vw, 68px), 1px);
-    height: round(clamp(28px, 20px + 2.5vw, 68px), 1px)
+    width: clamp(28px, 20px + 2.5vw, 68px);
+    height: clamp(28px, 20px + 2.5vw, 68px)
   }
 
   .text-block blockquote:before {
-    top: round(clamp(16px, 15.2px + .25vw, 20px), 1px);
-    left: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    top: clamp(16px, 15.2px + .25vw, 20px);
+    left: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .text-block blockquote:after {
-    bottom: round(clamp(16px, 15.2px + .25vw, 20px), 1px);
-    right: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    bottom: clamp(16px, 15.2px + .25vw, 20px);
+    right: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .text-block img {
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .text-block table td,
   .text-block table th {
-    padding-block: round(clamp(12px, 11.2px + .25vw, 16px), 1px);
-    padding-inline: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    padding-block: clamp(12px, 11.2px + .25vw, 16px);
+    padding-inline: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .text-block video {
-    min-height: round(clamp(190px, 148.8px + 12.875vw, 396px), 1px);
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    min-height: clamp(190px, 148.8px + 12.875vw, 396px);
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .text-block-wrapper {
-    gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .video {
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .about-wrapper {
-    gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .about__left {
-    gap: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px)
+    gap: clamp(16px, 11.2px + 1.5vw, 40px)
   }
 
   .about__text>:not(:last-child) {
-    margin-bottom: round(clamp(12px, 16.8px - .25vw, 16px), 1px)
+    margin-bottom: clamp(12px, 16.8px - .25vw, 16px)
   }
 
   .about__text blockquote {
-    padding: round(clamp(16px, 15.2px + .25vw, 20px), 1px);
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px);
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    padding: clamp(16px, 15.2px + .25vw, 20px);
+    gap: clamp(12px, 10.4px + .5vw, 20px);
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .about__text blockquote:before {
-    width: round(clamp(36px, 35.2px + .25vw, 40px), 1px);
-    height: round(clamp(36px, 35.2px + .25vw, 40px), 1px)
+    width: clamp(36px, 35.2px + .25vw, 40px);
+    height: clamp(36px, 35.2px + .25vw, 40px)
   }
 
   .contact-wrapper {
-    gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .contact__item-content {
-    gap: round(clamp(12px, 11.2px + .25vw, 16px), 1px)
+    gap: clamp(12px, 11.2px + .25vw, 16px)
   }
 
   .contact__item-content .flex {
-    column-gap: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px)
+    column-gap: clamp(16px, 11.2px + 1.5vw, 40px)
   }
 
   .contact-callback-wrapper {
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .contact-callback__right {
-    padding-block: round(clamp(20px, 16px + 1.25vw, 40px), 1px);
-    padding-inline: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px)
+    padding-block: clamp(20px, 16px + 1.25vw, 40px);
+    padding-inline: clamp(16px, 11.2px + 1.5vw, 40px)
   }
 
   .customers__item {
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px);
-    padding: round(clamp(16px, 15.2px + .25vw, 20px), 1px);
-    min-height: round(clamp(100px, 92.8px + 2.25vw, 136px), 1px);
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    gap: clamp(12px, 10.4px + .5vw, 20px);
+    padding: clamp(16px, 15.2px + .25vw, 20px);
+    min-height: clamp(100px, 92.8px + 2.25vw, 136px);
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .customers__item-icon {
-    width: round(clamp(40px, 36.8px + 1vw, 56px), 1px);
-    height: round(clamp(40px, 36.8px + 1vw, 56px), 1px);
-    border-radius: round(clamp(8px, 7.2px + .25vw, 12px), 1px)
+    width: clamp(40px, 36.8px + 1vw, 56px);
+    height: clamp(40px, 36.8px + 1vw, 56px);
+    border-radius: clamp(8px, 7.2px + .25vw, 12px)
   }
 
   .customers__item-list li:before {
-    width: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    height: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    width: clamp(20px, 19.2px + .25vw, 24px);
+    height: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .category-wrapper {
-    gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .category-menu__item-top {
-    padding: round(clamp(8px, 7.2px + .25vw, 12px), 1px)
+    padding: clamp(8px, 7.2px + .25vw, 12px)
   }
 
   .category-menu__item-icon {
-    flex-basis: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    width: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    height: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    flex-basis: clamp(20px, 19.2px + .25vw, 24px);
+    width: clamp(20px, 19.2px + .25vw, 24px);
+    height: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .category-menu__item .category-menu .category-menu__item-icon {
-    margin-left: round(clamp(8px, 7.2px + .25vw, 12px), 1px)
+    margin-left: clamp(8px, 7.2px + .25vw, 12px)
   }
 
   .category-menu__item .category-menu .category-menu .category-menu__item-icon {
-    margin-left: round(clamp(16px, 14.4px + .5vw, 24px), 1px)
+    margin-left: clamp(16px, 14.4px + .5vw, 24px)
   }
 
   .category-menu__item .category-menu .category-menu .category-menu .category-menu__item-icon {
-    margin-left: round(clamp(24px, 23.6px + .125vw, 26px), 1px)
+    margin-left: clamp(24px, 23.6px + .125vw, 26px)
   }
 
   .category__blocks,
   .category__content {
-    gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .category__block {
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    gap: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .category__items {
-    gap: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    gap: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .category__item {
-    gap: round(clamp(16px, 14.6px + .4375vw, 23px), 1px)
+    gap: clamp(16px, 14.6px + .4375vw, 23px)
   }
 
   .category__item-icon {
-    width: round(clamp(36px, 28px + 2.5vw, 76px), 1px);
-    height: round(clamp(36px, 28px + 2.5vw, 76px), 1px)
+    width: clamp(36px, 28px + 2.5vw, 76px);
+    height: clamp(36px, 28px + 2.5vw, 76px)
   }
 
   .document-wrapper {
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    gap: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .document__item {
-    padding-inline: round(clamp(12px, 11.2px + .25vw, 16px), 1px)
+    padding-inline: clamp(12px, 11.2px + .25vw, 16px)
   }
 
   .document__item:before {
-    width: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    height: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    width: clamp(20px, 19.2px + .25vw, 24px);
+    height: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .faq-wrapper {
-    gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .faq__item-text {
-    padding-top: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    padding-top: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .callback_small {
-    padding: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px);
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    padding: clamp(16px, 11.2px + 1.5vw, 40px);
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .callback-wrapper {
-    gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .callback__form .input-wrapper {
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    gap: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .callback__logo {
-    width: round(clamp(259.2px, 224.64px + 10.8vw, 432px), 1px);
-    height: round(clamp(55.2px, 47.84px + 2.3vw, 92px), 1px)
+    width: clamp(259.2px, 224.64px + 10.8vw, 432px);
+    height: clamp(55.2px, 47.84px + 2.3vw, 92px)
   }
 
   .feedback-wrapper {
-    gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .feedback__item {
-    gap: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    gap: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .feedback__item-img {
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .feedback__item-img:before {
-    width: round(clamp(32px, 30.4px + .5vw, 40px), 1px);
-    height: round(clamp(32px, 30.4px + .5vw, 40px), 1px)
+    width: clamp(32px, 30.4px + .5vw, 40px);
+    height: clamp(32px, 30.4px + .5vw, 40px)
   }
 
   .feedback__item-link:after {
-    width: round(clamp(20px, 19.2px + .25vw, 24px), 1px);
-    height: round(clamp(20px, 19.2px + .25vw, 24px), 1px)
+    width: clamp(20px, 19.2px + .25vw, 24px);
+    height: clamp(20px, 19.2px + .25vw, 24px)
   }
 
   .info:has(.who) .info__bg-wrapper {
-    height: round(clamp(380px, 350px + 9.375vw, 530px), 1px)
+    height: clamp(380px, 350px + 9.375vw, 530px)
   }
 
   .info-wrapper {
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    gap: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .info__item {
-    padding-top: round(clamp(16px, 15.2px + .25vw, 20px), 1px);
-    padding-inline: round(clamp(16px, 15.2px + .25vw, 20px), 1px);
-    padding-bottom: round(clamp(88px, 69.2px + 5.875vw, 182px), 1px);
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    padding-top: clamp(16px, 15.2px + .25vw, 20px);
+    padding-inline: clamp(16px, 15.2px + .25vw, 20px);
+    padding-bottom: clamp(88px, 69.2px + 5.875vw, 182px);
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .info__item-top {
-    font-size: round(clamp(18px, 17.6px + .125vw, 20px), 1px)
+    font-size: clamp(18px, 17.6px + .125vw, 20px)
   }
 
   .info__item-title {
-    font-size: round(clamp(28px, 24.8px + 1vw, 44px), 1px)
+    font-size: clamp(28px, 24.8px + 1vw, 44px)
   }
 
   .info__item-img {
-    max-height: round(clamp(80px, 65.2px + 4.625vw, 154px), 1px)
+    max-height: clamp(80px, 65.2px + 4.625vw, 154px)
   }
 
   .history__item-img img {
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .project-wrapper {
-    gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .project__items {
-    row-gap: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px)
+    row-gap: clamp(16px, 11.2px + 1.5vw, 40px)
   }
 
   .project__item {
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .project__item-logo {
-    height: round(clamp(140px, 112px + 8.75vw, 280px), 1px)
+    height: clamp(140px, 112px + 8.75vw, 280px)
   }
 
   .project__item-content {
-    gap: round(clamp(16px, 15.2px + .25vw, 20px), 1px);
-    padding-top: round(clamp(16px, 15.2px + .25vw, 20px), 1px);
-    padding-inline: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px);
-    padding-bottom: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px)
+    gap: clamp(16px, 15.2px + .25vw, 20px);
+    padding-top: clamp(16px, 15.2px + .25vw, 20px);
+    padding-inline: clamp(16px, 11.2px + 1.5vw, 40px);
+    padding-bottom: clamp(16px, 11.2px + 1.5vw, 40px)
   }
 
   .project__item-list,
   .project__item-list dl {
-    gap: round(clamp(8px, 7.2px + .25vw, 12px), 1px)
+    gap: clamp(8px, 7.2px + .25vw, 12px)
   }
 
   .single-project-wrapper {
-    gap: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    gap: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .single-project__img img {
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .single-project__content {
-    padding: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px)
+    padding: clamp(16px, 11.2px + 1.5vw, 40px)
   }
 
   .single-project__info {
-    gap: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    gap: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .single-project__item {
-    gap: round(clamp(8px, 7.2px + .25vw, 12px), 1px)
+    gap: clamp(8px, 7.2px + .25vw, 12px)
   }
 
   .filter {
-    gap: round(clamp(20px, 16.8px + 1vw, 36px), 1px)
+    gap: clamp(20px, 16.8px + 1vw, 36px)
   }
 
   .filter__items {
-    gap: round(clamp(16px, 12px + 1.25vw, 36px), 1px)
+    gap: clamp(16px, 12px + 1.25vw, 36px)
   }
 
   .filter__buttons {
@@ -6113,144 +6113,144 @@ video {
   }
 
   .product-wrapper {
-    column-gap: round(clamp(20px, -4px + 7.5vw, 140px), 1px);
-    row-gap: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    column-gap: clamp(20px, -4px + 7.5vw, 140px);
+    row-gap: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .product__item-icon {
-    width: round(clamp(48px, 33.6px + 4.5vw, 120px), 1px);
-    height: round(clamp(48px, 33.6px + 4.5vw, 120px), 1px);
-    margin-bottom: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    width: clamp(48px, 33.6px + 4.5vw, 120px);
+    height: clamp(48px, 33.6px + 4.5vw, 120px);
+    margin-bottom: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .product__item-icon img {
-    max-width: round(clamp(48px, 39.6px + 2.625vw, 90px), 1px);
-    max-height: round(clamp(48px, 39.6px + 2.625vw, 90px), 1px)
+    max-width: clamp(48px, 39.6px + 2.625vw, 90px);
+    max-height: clamp(48px, 39.6px + 2.625vw, 90px)
   }
 
   .news-wrapper {
-    row-gap: round(clamp(16px, 12px + 1.25vw, 36px), 1px)
+    row-gap: clamp(16px, 12px + 1.25vw, 36px)
   }
 
   .news__item {
-    padding: round(clamp(12px, 10.4px + .5vw, 20px), 1px);
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    padding: clamp(12px, 10.4px + .5vw, 20px);
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .news__item-content,
   .news__item-hidden {
-    gap: round(clamp(8px, 7.2px + .25vw, 12px), 1px)
+    gap: clamp(8px, 7.2px + .25vw, 12px)
   }
 
   .news__item-link {
-    right: round(clamp(12px, 10.4px + .5vw, 20px), 1px);
-    bottom: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    right: clamp(12px, 10.4px + .5vw, 20px);
+    bottom: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .single-news-wrapper {
-    gap: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
+    gap: clamp(20px, 16px + 1.25vw, 40px)
   }
 
   .single-news__title {
-    margin-bottom: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    margin-bottom: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .single-news__date {
-    margin-bottom: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px)
+    margin-bottom: clamp(16px, 11.2px + 1.5vw, 40px)
   }
 
   .single-news__pagination {
-    margin-top: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    margin-top: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .other {
-    gap: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    gap: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .other__item,
   .other__items {
-    gap: round(clamp(16px, 14.4px + .5vw, 24px), 1px)
+    gap: clamp(16px, 14.4px + .5vw, 24px)
   }
 
   .services__item {
-    min-height: round(clamp(200px, 188px + 3.75vw, 260px), 1px);
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    min-height: clamp(200px, 188px + 3.75vw, 260px);
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .services__item-content {
-    padding: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    padding: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .vacancy-wrapper {
-    gap: round(clamp(16px, 14.4px + .5vw, 24px), 1px)
+    gap: clamp(16px, 14.4px + .5vw, 24px)
   }
 
   .vacancy__item {
-    padding-block: round(clamp(20px, 16px + 1.25vw, 40px), 1px);
-    padding-inline: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px);
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    padding-block: clamp(20px, 16px + 1.25vw, 40px);
+    padding-inline: clamp(16px, 11.2px + 1.5vw, 40px);
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .vacancy__item-logo {
-    flex-basis: round(clamp(36px, 35.2px + .25vw, 40px), 1px)
+    flex-basis: clamp(36px, 35.2px + .25vw, 40px)
   }
 
   .vacancy__item-logo img {
-    width: round(clamp(36px, 35.2px + .25vw, 40px), 1px);
-    height: round(clamp(36px, 35.2px + .25vw, 40px), 1px)
+    width: clamp(36px, 35.2px + .25vw, 40px);
+    height: clamp(36px, 35.2px + .25vw, 40px)
   }
 
   .vacancy__item-text ol,
   .vacancy__item-text p,
   .vacancy__item-text ul {
-    margin-bottom: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    margin-bottom: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .vacancy__item-text ul {
-    padding-left: round(clamp(12px, 11.2px + .25vw, 16px), 1px)
+    padding-left: clamp(12px, 11.2px + .25vw, 16px)
   }
 
   .license-wrapper {
-    row-gap: round(clamp(8px, -2.4px + 3.25vw, 60px), 1px)
+    row-gap: clamp(8px, -2.4px + 3.25vw, 60px)
   }
 
   .license-wrapper-short {
-    row-gap: round(clamp(8px, 1.6px + 2vw, 40px), 1px)
+    row-gap: clamp(8px, 1.6px + 2vw, 40px)
   }
 
   .license__item {
-    border-top-left-radius: round(clamp(12px, 10.4px + .5vw, 20px), 1px);
-    border-top-right-radius: round(clamp(12px, 10.4px + .5vw, 20px), 1px)
+    border-top-left-radius: clamp(12px, 10.4px + .5vw, 20px);
+    border-top-right-radius: clamp(12px, 10.4px + .5vw, 20px)
   }
 
   .license__item:before {
-    width: round(clamp(24px, 20.8px + 1vw, 40px), 1px);
-    height: round(clamp(24px, 20.8px + 1vw, 40px), 1px)
+    width: clamp(24px, 20.8px + 1vw, 40px);
+    height: clamp(24px, 20.8px + 1vw, 40px)
   }
 
   .license__item-img {
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .license__item-title {
-    font-size: round(clamp(13px, 12.4px + .1875vw, 16px), 1px)
+    font-size: clamp(13px, 12.4px + .1875vw, 16px)
   }
 
   .who-wrapper {
-    border-radius: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    border-radius: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .who__left {
-    padding-block: round(clamp(20px, 16px + 1.25vw, 40px), 1px);
-    padding-inline: round(clamp(12px, 6.4px + 1.75vw, 40px), 1px)
+    padding-block: clamp(20px, 16px + 1.25vw, 40px);
+    padding-inline: clamp(12px, 6.4px + 1.75vw, 40px)
   }
 
   .who__text {
-    gap: round(clamp(16px, 15.2px + .25vw, 20px), 1px)
+    gap: clamp(16px, 15.2px + .25vw, 20px)
   }
 
   .who__text blockquote {
-    border-width: round(clamp(4px, 3.2px + .25vw, 8px), 1px)
+    border-width: clamp(4px, 3.2px + .25vw, 8px)
   }
 }
 
@@ -6406,12 +6406,12 @@ video {
 
   .history-wrapper {
     display: grid;
-    gap: round(clamp(20px, 12.7189988623px + 2.2753128555vw, 40px), 1px)
+    gap: clamp(20px, 12.7189988623px + 2.2753128555vw, 40px)
   }
 
   .history__item {
     align-items: center;
-    gap: round(clamp(12px, 1.8065984073px + 3.1854379977vw, 40px), 1px)
+    gap: clamp(12px, 1.8065984073px + 3.1854379977vw, 40px)
   }
 
   .who-wrapper {
@@ -6453,7 +6453,7 @@ video {
   }
 
   .header-main-wrapper {
-    padding-block: round(clamp(40px, 20.9239940387px + 5.9612518629vw, 80px), 1px)
+    padding-block: clamp(40px, 20.9239940387px + 5.9612518629vw, 80px)
   }
 
   .footer__bottom {
@@ -6707,7 +6707,7 @@ video {
   }
 
   .feedback__item-img img {
-    max-width: round(clamp(200px, 139.1498881432px + 19.0156599553vw, 285px), 1px)
+    max-width: clamp(200px, 139.1498881432px + 19.0156599553vw, 285px)
   }
 
   .info__item {
